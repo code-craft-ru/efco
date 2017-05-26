@@ -1,0 +1,149 @@
+.top-search
+	width: 110px
+	display: inline-block
+	background: #fff
+	height: 14px
+	border-top: 1px solid #a3a3a3
+	border-bottom: 1px solid #a3a3a3
+	margin-top: 0
+	position: relative
+	@extend .cf
+	input
+		height: 100%
+		width: 97px
+		float: left
+		padding: 0 3px
+		font-size: 12px
+	button
+		width: 10px
+		font-size: 10px
+		color: #b0b0b0
+		cursor: pointer
+	input,button
+		display: block
+
+
+.social
+	li
+		display: inline-block
+		padding: 0 2px
+
+
+
+.stick
+	position: absolute
+	right: 100px
+	top: -5px
+	transition: top 0.3s
+	width: 93px
+	height: 125px
+	background: url(../images/sticker.png) no-repeat 0 0
+	&:hover
+		top: -1px
+	p
+		font-size: 15px
+		font-weight: bold
+		color: #676761
+		text-align: center
+		margin: 16px 0 3px
+
+	img
+		display: block
+		margin: 0 auto
+
+	a
+		text-decoration: none
+
+
+.sticker2
+	position: absolute
+	top: -110px
+	right: 40px
+	&--bottom
+		top: auto
+		bottom: -60px
+
+.news
+	position: relative
+	overflow: hidden
+	text-align: center
+	&__title
+		margin: 40px
+		text-transform: uppercase
+		font-size: 15px
+		font-weight: bold
+		position: relative
+		&:after
+			content: ''
+			display: block
+			width: 46px
+			height: 4px
+			background: #4c8bca
+			position: absolute
+			top: 100%
+			left: 50%
+			margin-left: -23px
+			margin-top: 6px
+
+	&__nav
+		@extend .cf
+		li
+			float: left
+			width: 50%
+			a
+				display: block
+				text-decoration: none
+				font: bold 14px $baseFont
+				color: #fff
+				padding: 8px
+
+			&:first-child
+				a
+					background: #4c8bca
+
+			&:last-child
+				a
+					background: #373737
+
+	&__items
+		margin: 16px 0
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+
+	&__more-btn
+		margin-bottom: 50px
+
+
+.news-item
+	width: 304px
+	border: 1px solid #f6f6f6
+	margin: 0 0 15px
+	a
+		text-decoration: none
+	&__content
+		padding: 5px 7px 25px 7px
+		color: #000
+
+	&__title
+		font-size: 12px
+		font-weight: bold
+		text-align: left
+		position: relative
+		margin: 3px 0 10px
+		font-family: $fGotic
+		&:after
+			content: ''
+			display: block
+			width: 30px
+			height: 2px 
+			position: absolute
+			top: 100%
+			left: 0
+			background: #4c8bca
+
+	&__desc
+		font-size: 12px
+		text-align: left
+		font-family: $fGotic
+
