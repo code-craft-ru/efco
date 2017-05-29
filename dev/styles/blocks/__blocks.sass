@@ -147,3 +147,405 @@
 		text-align: left
 		font-family: $fGotic
 
+
+.text-block
+	overflow: hidden
+	text-align: center
+	margin: 85px 0 0 0
+	padding: 0 30px
+	p
+		font: normal 15px $fBenguiat
+
+	.par
+		margin-bottom: 43px
+
+.text-block2
+	overflow: hidden
+	text-align: center
+	padding: 0 30px
+	color: #525351
+	margin: 25px 0 40px 0
+	h2
+		font: bold 16px $fGotic
+		text-transform: uppercase
+		margin: 0 0 5px 0
+
+	p 
+		font: bold 14px $fGotic
+		text-transform: uppercase
+
+.text-block3
+	display: flex
+	padding: 15px 0
+	&__text
+		width: 65%
+		text-align: center
+		h2
+			text-transform: uppercase
+			font: normal 15px $fBenguiat
+			margin: 25px 0 0
+		p
+			font: normal 15px $fBenguiat
+			margin: 0
+
+	&__items
+		width: 35%
+		display: flex
+		
+	&__item
+		width: 110px
+		height: 95px
+		text-align: center
+
+		img
+			width: 70px
+			margin: 0 auto 7px
+			display: block
+
+		p
+			font: normal 10px $fBenguiat
+
+
+.text-block4
+	overflow: hidden
+	text-align: center
+
+	p
+		font: normal 15px $fBenguiat
+		margin: 55px 0 0
+
+	h2
+		font: bold 30px $fBenguiat
+		text-transform: uppercase
+		margin: 40 0 25px
+
+
+.tiles
+	margin: 24px 0 0 0
+	overflow: hidden
+	position: relative
+	&__row
+		@extend .cf
+		height: 320px
+		margin: 0 0 20px 0
+		
+	&__col1
+		width: 680px
+		float: left
+
+	&__col2
+		width: 300px
+		float: right
+		padding: 20px 25px 
+		background: #e2eff0
+		box-shadow: 0 2px 0px 1px rgba(0,0,0,0.1)
+		height: 320px
+
+	&__col3
+		width: 530px
+		padding: 25px 
+		background: #e2eff0
+		box-shadow: 0 1px 1px 1px rgba(0,0,0,0.1)
+		float: left
+		height: 300px
+
+	&__col4
+		width: 450px
+		float: right
+
+	&__title
+		font: bold 20px $fBenguiat
+		color: #0a5a98
+		margin: 0 0 8px 0
+
+	&__text
+		font: bold 16px $fBenguiat
+
+.tiles2
+	margin: 0
+	position: relative
+
+	&__wr
+		padding: 0 50px
+
+
+	&__row
+		@extend .cf
+		margin: 0 0 15px 0
+		
+	&__col1
+		width: 66%
+		float: left
+
+	&__col2
+		width: 32%
+		float: right
+
+	&__col3
+		width: 49%
+		float: left
+
+	&__col4
+		width: 49%
+		float: right
+
+	&__title
+		font: bold 20px $fBenguiat
+		color: #0a5a98
+		margin: 0 0 8px 0
+
+	&__text
+		font: bold 16px $fBenguiat
+
+	&--bg
+		&-lpink
+			background: #fefced
+
+		&-skyblue
+			background: #e2eff0
+
+		&-blue
+			background: #285181
+
+	&--pad
+		padding: 34px 26px
+
+	&--border-shadow
+		box-shadow: 0 1px 1px 1px rgba(0,0,0,0.1)
+
+	&--par
+		padding-bottom: 17px
+
+	&--h
+		&-265
+			height: 265px
+
+		&-200
+			height: 200px
+
+	&--c
+		&-white
+			color: #fff
+			p,h2
+				color: #fff
+
+
+
+
+.reviews
+	background: linear-gradient(to top , #cdd5dc 0% ,  #f6f7f7 10%, #f6f7f7 90% , #cdd5dc 100%)
+	padding: 35px 0 
+	overflow: hidden
+	position: relative
+	@extend .cf
+
+	&__items
+		width: 750px
+		margin: 0 auto
+
+	&__nav
+		text-align: center
+		li
+			margin: 0 5px
+			display: inline-block
+			a
+				width: 10px
+				height: 10px
+				display: block
+				border-radius: 100%
+				background: #acb8c3
+				&.active
+					background: #5089b6
+
+
+
+
+.reviews-item
+	display: flex
+
+	&__img
+		width: 130px
+	
+	&__content
+		width: 620px
+
+	&__title
+		font: bold 15px $fBenguiat
+		color: #000
+		margin: 0 0 12px
+
+	&__desc
+		font: normal 15px $fBenguiat
+		color: #054989
+		margin-left: 33px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			display: block
+			width: 1px
+			height: 80%
+			top: 10%
+			left: -15px
+			background: #7d9ebf
+
+
+
+.maps
+	padding-bottom: 15px
+	position: relative
+	&:before
+		content: ''
+		display: block
+		width: 100%
+		height: 13px
+		position: absolute
+		background: linear-gradient(to bottom , #8597a7 , transparent)
+		top: 0
+		left: 0
+		z-index: 9
+
+	&:after
+		content: ''
+		display: block
+		width: 100%
+		height: 13px
+		position: absolute
+		background: linear-gradient(to top , #8597a7 , transparent)
+		bottom: 15px
+		left: 0
+		z-index: 9
+
+.b-circle
+	position: relative
+	overflow: hidden
+	padding: 35px 0
+	
+	&__left-txt
+		position: absolute
+		top: 74px
+		left: 0
+		text-align: left
+
+	&__right-txt
+		position: absolute
+		top: 340px
+		right: 0
+		text-align: right
+
+	&__img
+		img
+			height: 610px
+			margin: 0 auto
+			display: block
+
+	&--txt-lg
+		font: bold 31px $fMaryedpro
+		color: #999999
+		line-height: 27px
+
+	&--txt-sm
+		font: normal 16px $baseFont
+		color: #999999
+		line-height: 14px
+		margin-top: 6px
+
+
+.text-block5
+	text-align: center
+	overflow: hidden
+	p
+		font: normal 15px $fBenguiat
+		color: #000
+		margin: 0 0 20px
+
+.text-block6
+	text-align: center
+	overflow: hidden
+	padding: 25px 0 40px
+	p
+		font: bold 35px $baseFont
+		color: #27821b
+
+.text-block7
+	text-align: justify
+	
+	&__wr
+		padding: 60px 65px
+
+	h2
+		font: bold 27px $fBenguiat
+		margin: 0 0 20px
+		color: #0a5a98
+
+	&__p
+		font: normal 20px $fBenguiat
+
+	&__style-title
+		font: bold 20px $fBenguiat
+		line-height: 22px
+		color: #0a5a98
+		padding-right: 20px
+
+	&__img
+		margin: 0 auto
+		display: block
+
+
+.thumb
+	padding: 50px 0 0
+	text-align: center
+	@extend .cf
+	position: relative
+	&:after
+		content: ''
+		display: block
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 25px
+		background: linear-gradient(to bottom , #d6e1e0 , transparent)
+	&__title
+		font-size: 25px
+		font-weight: bold
+		margin: 23px 0 0
+		color: #777777
+
+	&__sub
+		font-size: 15px
+		font-weight: bold
+		color: #777777
+		margin: 3px 0 20px
+
+
+
+.text-block8
+	text-align: justify
+	overflow: hidden
+	h2
+		font: bold 27px $fBenguiat 
+		color: #0a5a98
+		margin: 0 0 12px
+
+	p
+		font: normal 20px $fBenguiat 
+
+
+.box-shadow
+	width: 824px
+	margin: 0 auto
+	box-shadow: 0 0 12px 12px rgba(241,241,241,1)
+	background: #fff
+	overflow: hidden
+	padding: 26px 0
+
+	&--pad2
+		padding: 30px 35px 35px 40px
+
+	&__line
+		height: 1px 
+		background: #333333
+
+	&__p
+		font: normal 12.5px $fBenguiat
+		color: #333333

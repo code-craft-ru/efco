@@ -19,7 +19,9 @@
                         </div>
                         <div class="contain">
                             <img src="../images/baner2.jpg" alt="" class="baner">
-                            <img src="../images/sticker2.png" alt="" class="sticker2">
+                            <a href="#!">
+                                 <img src="../images/sticker2.png" alt="" class="sticker2">
+                            </a>
                         </div>
                         <img src="../images/baner3.jpg" alt="" class="baner">
 

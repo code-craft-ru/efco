@@ -74,7 +74,7 @@ gulp.task('build-copy', function (callback) {
 
 gulp.task('build', gulp.series(
     gulp.parallel('clean-prod', 'bowerUpdate'),
-    gulp.parallel('styles', 'images', 'scripts:build'),
+    gulp.parallel('styles', 'scripts:build'),
     'build-copy'
 ));
 

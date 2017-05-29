@@ -87,6 +87,24 @@
   src: url("../fonts/allformats/MyriadPro-BoldIt.eot?#iefix") format("embedded-opentype"), url("../fonts/allformats/MyriadPro-BoldIt.woff") format("woff"), url("../fonts/allformats/MyriadPro-BoldIt.ttf") format("truetype"), url("../fonts/allformats/MyriadPro-BoldIt.svg#MyriadPro-BoldIt") format("svg");
   font-weight: bold;
   font-style: italic; }
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("../fonts/allformats/MyriadPro-Bold.eot");
+  src: url("../fonts/allformats/MyriadPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/allformats/MyriadPro-Bold.woff") format("woff"), url("../fonts/allformats/MyriadPro-Bold.ttf") format("truetype"), url("../fonts/allformats/MyriadPro-Bold.svg#MyriadPro-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "BenguiatGothicC";
+  src: url("../fonts/allformats/BenguiatGothicC-Bold.eot");
+  src: url("../fonts/allformats/BenguiatGothicC-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/allformats/BenguiatGothicC-Bold.woff") format("woff"), url("../fonts/allformats/BenguiatGothicC-Bold.ttf") format("truetype"), url("../fonts/allformats/BenguiatGothicC-Bold.svg#BenguiatGothicC-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "BenguiatGothicC";
+  src: url("../fonts/allformats/BenguiatGothicC-Book.eot");
+  src: url("../fonts/allformats/BenguiatGothicC-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/allformats/BenguiatGothicC-Book.woff") format("woff"), url("../fonts/allformats/BenguiatGothicC-Book.ttf") format("truetype"), url("../fonts/allformats/BenguiatGothicC-Book.svg#BenguiatGothicC-Book") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 *,
 *:after,
 *:before {
@@ -189,6 +207,10 @@ IMG {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+  .cols--h-center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .cols--gap-xs {
     margin-left: -5px;
     margin-right: -5px; }
@@ -416,15 +438,14 @@ IMG {
     position: relative; }
   .header__top2 {
     height: 28px;
-    background: url(../images/head-top.jpg) no-repeat right top, #fff;
-    margin-top: 16px; }
+    background: url(../images/head-top.jpg) no-repeat right top, #fff; }
   .header__wr {
     background: #fff;
-    overflow: hidden;
     width: 1000px;
     margin: 0 auto;
     position: relative;
-    height: 161px; }
+    height: 161px;
+    padding-top: 16px; }
   .header__logo {
     border-bottom: 1px solid #b0b0b0;
     padding: 10px 0; }
@@ -449,6 +470,7 @@ IMG {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    position: relative;
     background: #fff; }
     .header__menu._fixed {
       position: fixed;
@@ -461,12 +483,24 @@ IMG {
       text-decoration: none;
       padding: 7px 0;
       display: inline-block; }
+    .header__menu--theme-shadow-bottom:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 20px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: linear-gradient(to bottom, #d7e1e1, transparent);
+      z-index: 9; }
   .header__top-search {
     float: right;
     width: 50%;
-    text-align: right; }
+    text-align: right;
+    position: relative;
+    right: -60px; }
     .header__top-search p {
-      font: normal 9px "Myriad Pro", sans-serif;
+      font: italic 9px "Myriad Pro", sans-serif;
       color: #fff;
       display: inline-block;
       margin-left: 14px; }
@@ -541,6 +575,10 @@ IMG {
     width: 30px;
     height: 13px;
     background: url(../images/icons/youtube.png) no-repeat 0 0; }
+  .icon--mail-white {
+    width: 18px;
+    height: 13px;
+    background: url(../images/icons/mail-white.png) no-repeat 0 0; }
 
 .btn {
   display: inline-block;
@@ -573,6 +611,32 @@ IMG {
     font-size: 8px;
     text-transform: uppercase;
     color: #000; }
+  .btn--link {
+    color: #fff;
+    padding: 8px 10px;
+    background: #70a3d6;
+    display: inline-block;
+    position: relative; }
+    .btn--link:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #70a3d6;
+      bottom: -4px;
+      left: 0;
+      transition: bottom 0.4s; }
+    .btn--link:hover:after {
+      bottom: -1px; }
+  .btn--feedback-submit {
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 42px;
+    border-radius: 15px;
+    background: #4c8ccc; }
+    .btn--feedback-submit--min {
+      padding: 8px 20px; }
 
 .link {
   color: inherit;
@@ -587,6 +651,84 @@ IMG {
     border-bottom-color: transparent; }
   .link--dotted {
     border-bottom-style: dotted; }
+
+.title--fill {
+  font-size: 34px;
+  font-weight: bold;
+  color: #fff;
+  background: #0a5a98;
+  padding: 2px 0 2px 42px;
+  text-transform: uppercase; }
+
+.input {
+  border-bottom: 1px solid #989798;
+  padding: 10px 0;
+  width: 100%; }
+  .input::-webkit-input-placeholder {
+    font: normal 16px "BenguiatGothicC"; }
+  .input:-ms-input-placeholder {
+    font: normal 16px "BenguiatGothicC"; }
+  .input::placeholder {
+    font: normal 16px "BenguiatGothicC"; }
+  .input.error {
+    border-bottom: 1px solid red; }
+
+.textarea {
+  border-bottom: 1px solid #989798;
+  padding: 10px 0;
+  width: 100%; }
+  .textarea::-webkit-input-placeholder {
+    font: normal 16px "BenguiatGothicC"; }
+  .textarea:-ms-input-placeholder {
+    font: normal 16px "BenguiatGothicC"; }
+  .textarea::placeholder {
+    font: normal 16px "BenguiatGothicC"; }
+  .textarea.error {
+    border-bottom: 1px solid red; }
+
+.form-feedback {
+  width: 824px;
+  margin: 0 auto;
+  box-shadow: 0 0 12px 12px #f1f1f1;
+  background: #fff;
+  overflow: hidden;
+  padding: 26px 0; }
+  .form-feedback__row {
+    padding: 0 26px 0 9px;
+    margin-bottom: 15px; }
+    .form-feedback__row--no-m {
+      margin-bottom: 0; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse; }
+  .table p {
+    font-size: 10px; }
+  .table thead {
+    background: #e5e5e5;
+    margin-bottom: 2px; }
+    .table thead tr {
+      border-bottom: 3px solid #fff; }
+    .table thead td {
+      padding: 7px 10px;
+      text-align: center; }
+    .table thead td:first-child {
+      border-radius: 5px 0 0 5px; }
+    .table thead td:last-child {
+      border-radius: 0 5px 5px 0; }
+  .table tbody tr {
+    border-bottom: 3px solid #fff; }
+  .table tbody td {
+    background: #f4f4f4;
+    text-align: left;
+    padding: 7px 10px;
+    height: 26px; }
+    .table tbody td:nth-child(2n) {
+      background: #dbdbdb; }
+  .table tbody td:first-child {
+    border-radius: 5px 0 0 5px; }
+  .table tbody td:last-child {
+    border-radius: 0 5px 5px 0; }
 
 .top-search {
   width: 110px;
@@ -721,15 +863,351 @@ IMG {
     text-align: left;
     font-family: "Century Gothic", sans-serif; }
 
-.cf:before, .footer__top:before, .top-search:before, .news__nav:before,
+.text-block {
+  overflow: hidden;
+  text-align: center;
+  margin: 85px 0 0 0;
+  padding: 0 30px; }
+  .text-block p {
+    font: normal 15px "BenguiatGothicC"; }
+  .text-block .par {
+    margin-bottom: 43px; }
+
+.text-block2 {
+  overflow: hidden;
+  text-align: center;
+  padding: 0 30px;
+  color: #525351;
+  margin: 25px 0 40px 0; }
+  .text-block2 h2 {
+    font: bold 16px "Century Gothic", sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 5px 0; }
+  .text-block2 p {
+    font: bold 14px "Century Gothic", sans-serif;
+    text-transform: uppercase; }
+
+.text-block3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 0; }
+  .text-block3__text {
+    width: 65%;
+    text-align: center; }
+    .text-block3__text h2 {
+      text-transform: uppercase;
+      font: normal 15px "BenguiatGothicC";
+      margin: 25px 0 0; }
+    .text-block3__text p {
+      font: normal 15px "BenguiatGothicC";
+      margin: 0; }
+  .text-block3__items {
+    width: 35%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .text-block3__item {
+    width: 110px;
+    height: 95px;
+    text-align: center; }
+    .text-block3__item img {
+      width: 70px;
+      margin: 0 auto 7px;
+      display: block; }
+    .text-block3__item p {
+      font: normal 10px "BenguiatGothicC"; }
+
+.text-block4 {
+  overflow: hidden;
+  text-align: center; }
+  .text-block4 p {
+    font: normal 15px "BenguiatGothicC";
+    margin: 55px 0 0; }
+  .text-block4 h2 {
+    font: bold 30px "BenguiatGothicC";
+    text-transform: uppercase;
+    margin: 40 0 25px; }
+
+.tiles {
+  margin: 24px 0 0 0;
+  overflow: hidden;
+  position: relative; }
+  .tiles__row {
+    height: 320px;
+    margin: 0 0 20px 0; }
+  .tiles__col1 {
+    width: 680px;
+    float: left; }
+  .tiles__col2 {
+    width: 300px;
+    float: right;
+    padding: 20px 25px;
+    background: #e2eff0;
+    box-shadow: 0 2px 0px 1px rgba(0, 0, 0, 0.1);
+    height: 320px; }
+  .tiles__col3 {
+    width: 530px;
+    padding: 25px;
+    background: #e2eff0;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
+    float: left;
+    height: 300px; }
+  .tiles__col4 {
+    width: 450px;
+    float: right; }
+  .tiles__title {
+    font: bold 20px "BenguiatGothicC";
+    color: #0a5a98;
+    margin: 0 0 8px 0; }
+  .tiles__text {
+    font: bold 16px "BenguiatGothicC"; }
+
+.tiles2 {
+  margin: 0;
+  position: relative; }
+  .tiles2__wr {
+    padding: 0 50px; }
+  .tiles2__row {
+    margin: 0 0 15px 0; }
+  .tiles2__col1 {
+    width: 66%;
+    float: left; }
+  .tiles2__col2 {
+    width: 32%;
+    float: right; }
+  .tiles2__col3 {
+    width: 49%;
+    float: left; }
+  .tiles2__col4 {
+    width: 49%;
+    float: right; }
+  .tiles2__title {
+    font: bold 20px "BenguiatGothicC";
+    color: #0a5a98;
+    margin: 0 0 8px 0; }
+  .tiles2__text {
+    font: bold 16px "BenguiatGothicC"; }
+  .tiles2--bg-lpink {
+    background: #fefced; }
+  .tiles2--bg-skyblue {
+    background: #e2eff0; }
+  .tiles2--bg-blue {
+    background: #285181; }
+  .tiles2--pad {
+    padding: 34px 26px; }
+  .tiles2--border-shadow {
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1); }
+  .tiles2--par {
+    padding-bottom: 17px; }
+  .tiles2--h-265 {
+    height: 265px; }
+  .tiles2--h-200 {
+    height: 200px; }
+  .tiles2--c-white {
+    color: #fff; }
+    .tiles2--c-white p, .tiles2--c-white h2 {
+      color: #fff; }
+
+.reviews {
+  background: linear-gradient(to top, #cdd5dc 0%, #f6f7f7 10%, #f6f7f7 90%, #cdd5dc 100%);
+  padding: 35px 0;
+  overflow: hidden;
+  position: relative; }
+  .reviews__items {
+    width: 750px;
+    margin: 0 auto; }
+  .reviews__nav {
+    text-align: center; }
+    .reviews__nav li {
+      margin: 0 5px;
+      display: inline-block; }
+      .reviews__nav li a {
+        width: 10px;
+        height: 10px;
+        display: block;
+        border-radius: 100%;
+        background: #acb8c3; }
+        .reviews__nav li a.active {
+          background: #5089b6; }
+
+.reviews-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .reviews-item__img {
+    width: 130px; }
+  .reviews-item__content {
+    width: 620px; }
+  .reviews-item__title {
+    font: bold 15px "BenguiatGothicC";
+    color: #000;
+    margin: 0 0 12px; }
+  .reviews-item__desc {
+    font: normal 15px "BenguiatGothicC";
+    color: #054989;
+    margin-left: 33px;
+    position: relative; }
+    .reviews-item__desc:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 1px;
+      height: 80%;
+      top: 10%;
+      left: -15px;
+      background: #7d9ebf; }
+
+.maps {
+  padding-bottom: 15px;
+  position: relative; }
+  .maps:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 13px;
+    position: absolute;
+    background: linear-gradient(to bottom, #8597a7, transparent);
+    top: 0;
+    left: 0;
+    z-index: 9; }
+  .maps:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 13px;
+    position: absolute;
+    background: linear-gradient(to top, #8597a7, transparent);
+    bottom: 15px;
+    left: 0;
+    z-index: 9; }
+
+.b-circle {
+  position: relative;
+  overflow: hidden;
+  padding: 35px 0; }
+  .b-circle__left-txt {
+    position: absolute;
+    top: 74px;
+    left: 0;
+    text-align: left; }
+  .b-circle__right-txt {
+    position: absolute;
+    top: 340px;
+    right: 0;
+    text-align: right; }
+  .b-circle__img img {
+    height: 610px;
+    margin: 0 auto;
+    display: block; }
+  .b-circle--txt-lg {
+    font: bold 31px "Myriad Pro", sans-serif;
+    color: #999999;
+    line-height: 27px; }
+  .b-circle--txt-sm {
+    font: normal 16px "Avanti", sans-serif;
+    color: #999999;
+    line-height: 14px;
+    margin-top: 6px; }
+
+.text-block5 {
+  text-align: center;
+  overflow: hidden; }
+  .text-block5 p {
+    font: normal 15px "BenguiatGothicC";
+    color: #000;
+    margin: 0 0 20px; }
+
+.text-block6 {
+  text-align: center;
+  overflow: hidden;
+  padding: 25px 0 40px; }
+  .text-block6 p {
+    font: bold 35px "Avanti", sans-serif;
+    color: #27821b; }
+
+.text-block7 {
+  text-align: justify; }
+  .text-block7__wr {
+    padding: 60px 65px; }
+  .text-block7 h2 {
+    font: bold 27px "BenguiatGothicC";
+    margin: 0 0 20px;
+    color: #0a5a98; }
+  .text-block7__p {
+    font: normal 20px "BenguiatGothicC"; }
+  .text-block7__style-title {
+    font: bold 20px "BenguiatGothicC";
+    line-height: 22px;
+    color: #0a5a98;
+    padding-right: 20px; }
+  .text-block7__img {
+    margin: 0 auto;
+    display: block; }
+
+.thumb {
+  padding: 50px 0 0;
+  text-align: center;
+  position: relative; }
+  .thumb:after {
+    content: "";
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to bottom, #d6e1e0, transparent); }
+  .thumb__title {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 23px 0 0;
+    color: #777777; }
+  .thumb__sub {
+    font-size: 15px;
+    font-weight: bold;
+    color: #777777;
+    margin: 3px 0 20px; }
+
+.text-block8 {
+  text-align: justify;
+  overflow: hidden; }
+  .text-block8 h2 {
+    font: bold 27px "BenguiatGothicC";
+    color: #0a5a98;
+    margin: 0 0 12px; }
+  .text-block8 p {
+    font: normal 20px "BenguiatGothicC"; }
+
+.box-shadow {
+  width: 824px;
+  margin: 0 auto;
+  box-shadow: 0 0 12px 12px #f1f1f1;
+  background: #fff;
+  overflow: hidden;
+  padding: 26px 0; }
+  .box-shadow--pad2 {
+    padding: 30px 35px 35px 40px; }
+  .box-shadow__line {
+    height: 1px;
+    background: #333333; }
+  .box-shadow__p {
+    font: normal 12.5px "BenguiatGothicC";
+    color: #333333; }
+
+.cf:before, .page-body:before, .footer__top:before, .top-search:before, .news__nav:before, .tiles__row:before, .tiles2__row:before, .reviews:before, .thumb:before,
 .cf:after,
+.page-body:after,
 .footer__top:after,
 .top-search:after,
-.news__nav:after {
+.news__nav:after,
+.tiles__row:after,
+.tiles2__row:after,
+.reviews:after,
+.thumb:after {
   content: " ";
   display: table; }
 
-.cf:after, .footer__top:after, .top-search:after, .news__nav:after {
+.cf:after, .page-body:after, .footer__top:after, .top-search:after, .news__nav:after, .tiles__row:after, .tiles2__row:after, .reviews:after, .thumb:after {
   clear: both; }
 
 .fl {
@@ -761,14 +1239,28 @@ IMG {
   margin-bottom: 20px !important; }
 .h-mrg-b-35 {
   margin-bottom: 35px !important; }
+.h-mrg-b-40 {
+  margin-bottom: 40px !important; }
+.h-mrg-b-45 {
+  margin-bottom: 45px !important; }
+.h-mrg-b-50 {
+  margin-bottom: 50px !important; }
+.h-mrg-b-60 {
+  margin-bottom: 60px !important; }
 .h-mrg-t-5 {
   margin-top: 5px !important; }
 .h-mrg-t-10 {
   margin-top: 10px !important; }
+.h-mrg-t-15 {
+  margin-top: 15px !important; }
 .h-mrg-t-20 {
   margin-top: 20px !important; }
+.h-mrg-t-30 {
+  margin-top: 30px !important; }
 .h-mrg-t-35 {
   margin-top: 35px !important; }
+.h-mrg-t-65 {
+  margin-top: 65px !important; }
 .h-mrg-l-5 {
   margin-left: 5px !important; }
 .h-mrg-l-10 {
@@ -802,6 +1294,12 @@ IMG {
   text-transform: uppercase; }
 .h-itl {
   font-style: italic; }
+.h-alg-l {
+  text-align: left; }
+.h-alg-r {
+  text-align: right; }
+.h-alg-c {
+  text-align: center; }
 .h-c-white {
   color: #fff; }
 .h-c-black {

@@ -31,6 +31,36 @@
         text-transform: uppercase
         color: #000
 
+    &--link
+        color: #fff
+        padding: 8px 10px
+        background: #70a3d6
+        display: inline-block
+        position: relative
+            
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            height: 1px 
+            background: #70a3d6
+            bottom: -4px
+            left: 0
+            transition: bottom 0.4s
+        &:hover
+            &:after
+                bottom: -1px
+
+
+    &--feedback-submit
+        color: #fff
+        font-size: 16px
+        padding: 8px 42px
+        border-radius: 15px
+        background: #4c8ccc
+        &--min
+            padding: 8px 20px
 
     /* sizes */
 

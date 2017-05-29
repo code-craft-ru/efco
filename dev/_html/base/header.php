@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header ">
 	<div class="header__top">
 		<div class="wrapper">
 			<ul class="header__top-menu">
@@ -22,9 +22,11 @@
 <div class="header__wr">
 	<div class="header__top2"></div>
 	<div class="header__logo">
-		<img src="../images/logo.svg" alt="">
+		<a href="/">
+			<img src="../images/logo.svg" alt="">
+		</a>
 	</div>
-	<ul class="header__menu js-header-fix">
+	<ul class="header__menu js-header-fix <?php if(isset($menuTheme)){echo $menuTheme;}?>">
 		<li><a href="#!">Молоко</a></li>
 		<li><a href="#!">Правильный белок</a></li>
 		<li><a href="#!">А2 в мире</a></li>

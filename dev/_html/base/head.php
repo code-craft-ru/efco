@@ -7,7 +7,7 @@ $links_url = str_replace('_html','',$links_url);
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Новый проект</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <meta name="viewport" content="width=1200, height=device-height, initial-scale=1">
 
     <!-- build:css ../css/styles.css -->
 
@@ -15,6 +15,8 @@ $links_url = str_replace('_html','',$links_url);
     <link rel="stylesheet" href="../../bower_components/normalize-css/normalize.css" />
     <link rel="stylesheet" href="../../bower_components/slick-carousel/slick/slick.css" />
     <!-- endbower-->
+
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
     <link rel="stylesheet" href="../css/styles.css">
 
