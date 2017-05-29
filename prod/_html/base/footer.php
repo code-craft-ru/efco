@@ -1,3 +1,5 @@
+
+
 <div class="wrapper">
 	<div class="footer">
 		<div class="footer__top">
@@ -25,3 +27,5 @@
 		</div>
 	</div>
 </div>
+
+<?php include'popups.php';?>

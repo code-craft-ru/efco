@@ -105,6 +105,12 @@
   src: url("../fonts/allformats/BenguiatGothicC-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/allformats/BenguiatGothicC-Book.woff") format("woff"), url("../fonts/allformats/BenguiatGothicC-Book.ttf") format("truetype"), url("../fonts/allformats/BenguiatGothicC-Book.svg#BenguiatGothicC-Book") format("svg");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: "Segoe Print";
+  src: url("../fonts/allformats/SegoePrint-Bold.eot");
+  src: url("../fonts/allformats/SegoePrint-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/allformats/SegoePrint-Bold.woff") format("woff"), url("../fonts/allformats/SegoePrint-Bold.ttf") format("truetype"), url("../fonts/allformats/SegoePrint-Bold.svg#SegoePrint-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
 *,
 *:after,
 *:before {
@@ -161,6 +167,9 @@ IMG {
   margin: 0 auto;
   width: 1060px;
   padding: 0 30px; }
+  .wrapper--900 {
+    width: 900px;
+    margin: 0 auto; }
   @media screen and (max-width: 960px) {
     .wrapper {
       padding-left: 25px;
@@ -579,6 +588,18 @@ IMG {
     width: 18px;
     height: 13px;
     background: url(../images/icons/mail-white.png) no-repeat 0 0; }
+  .icon--ok {
+    width: 18px;
+    height: 18px;
+    background: url(../images/icons/ok.jpg) no-repeat 0 0; }
+  .icon--arr-b {
+    width: 12px;
+    height: 7px;
+    background: url(../images/icons/arr-b.png) no-repeat 0 0; }
+  .icon--close {
+    width: 21px;
+    height: 20px;
+    background: url(../images/icons/close-popup.png) no-repeat 0 0; }
 
 .btn {
   display: inline-block;
@@ -649,6 +670,8 @@ IMG {
   /* other */ }
   .link:hover {
     border-bottom-color: transparent; }
+  .link--accordion {
+    color: #306ba1; }
   .link--dotted {
     border-bottom-style: dotted; }
 
@@ -810,17 +833,25 @@ IMG {
       margin-top: 6px; }
   .news__nav li {
     float: left;
-    width: 50%; }
+    width: 50%;
+    list-style: none; }
     .news__nav li a {
       display: block;
       text-decoration: none;
       font: bold 14px "Avanti", sans-serif;
       color: #fff;
-      padding: 8px; }
+      padding: 8px;
+      text-align: center; }
     .news__nav li:first-child a {
       background: #4c8bca; }
     .news__nav li:last-child a {
       background: #373737; }
+  .news__nav--color2.news__nav li:first-child a {
+    background: #4c8bca; }
+  .news__nav--color2.news__nav li:last-child a {
+    background: #e85d45; }
+  .news__nav--color2.news__nav a {
+    font-weight: normal; }
   .news__items {
     margin: 16px 0;
     display: -webkit-box;
@@ -886,6 +917,8 @@ IMG {
   .text-block2 p {
     font: bold 14px "Century Gothic", sans-serif;
     text-transform: uppercase; }
+  .text-block2--color-gray h2, .text-block2--color-gray p {
+    color: #888b8b; }
 
 .text-block3 {
   display: -webkit-box;
@@ -1029,6 +1062,26 @@ IMG {
         border-radius: 100%;
         background: #acb8c3; }
         .reviews__nav li a.active {
+          background: #5089b6; }
+  .reviews .slick-dots {
+    text-align: center; }
+    .reviews .slick-dots li {
+      margin: 0 5px;
+      display: inline-block; }
+      .reviews .slick-dots li.slick-active button {
+        background: #5089b6;
+        color: #5089b6; }
+      .reviews .slick-dots li button {
+        content: "";
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+        display: block;
+        border-radius: 100%;
+        background: #acb8c3;
+        color: #acb8c3;
+        overflow: hidden; }
+        .reviews .slick-dots li button.active {
           background: #5089b6; }
 
 .reviews-item {
@@ -1194,6 +1247,169 @@ IMG {
     font: normal 12.5px "BenguiatGothicC";
     color: #333333; }
 
+.accordion {
+  overflow: hidden; }
+  .accordion__wr {
+    width: 870px;
+    margin: 0 auto; }
+  .accordion__item {
+    border-bottom: 1px solid #b7b7b8;
+    position: relative; }
+    .accordion__item .accordion__content {
+      height: 0;
+      visibility: hidden; }
+    .accordion__item .accordion__arr {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg); }
+    .accordion__item._open .accordion__content {
+      height: auto;
+      visibility: visible; }
+    .accordion__item._open .accordion__arr {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
+  .accordion__title {
+    cursor: pointer; }
+    .accordion__title p {
+      font: bold 20px "BenguiatGothicC";
+      color: #0e5a98;
+      padding: 11px 0; }
+  .accordion__arr {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s; }
+  .accordion__content p {
+    font: bold 15px "BenguiatGothicC";
+    color: #888b8b;
+    margin: 0 0 18px; }
+
+.mfp-bg {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.7); }
+
+.popup__mailing {
+  position: relative;
+  width: 610px;
+  padding: 25px;
+  margin: 0 auto;
+  background: #fdfdfd; }
+  .popup__mailing .mfp-close {
+    color: transparent; }
+  .popup__mailing .mailingimg {
+    display: block;
+    margin: 0 auto 28px; }
+  .popup__mailing .p {
+    font: bold 18px "BenguiatGothicC";
+    color: #676767; }
+  .popup__mailing input {
+    border: 2px solid #939393;
+    border-radius: 20px;
+    padding: 4px 11px;
+    font: bold 18px "BenguiatGothicC"; }
+    .popup__mailing input::-webkit-input-placeholder {
+      font: bold 18px "BenguiatGothicC";
+      color: #bfbcbc; }
+    .popup__mailing input:-ms-input-placeholder {
+      font: bold 18px "BenguiatGothicC";
+      color: #bfbcbc; }
+    .popup__mailing input::placeholder {
+      font: bold 18px "BenguiatGothicC";
+      color: #bfbcbc; }
+.popup__close {
+  position: absolute;
+  top: 11px;
+  right: 11px; }
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  transition: all 0.15s ease-out; }
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8; }
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0; }
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  transition: all 0.15s ease-out; }
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1; }
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0; }
+
+.txt1 {
+  overflow: hidden; }
+  .txt1 h2 {
+    font: bold 20px "Avanti", sans-serif;
+    color: #888b8b;
+    margin: 50px 0 28px 60px; }
+
+.prod-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 55px 0 0; }
+  .prod-info__img {
+    width: 50%; }
+    .prod-info__img img {
+      height: 725px;
+      display: block;
+      margin: 0 auto; }
+  .prod-info__info {
+    width: 50%; }
+  .prod-info__sub {
+    font: bold 17px "Avanti", sans-serif;
+    color: #888b8b;
+    margin: 10px 0 23px; }
+  .prod-info__title {
+    font: bold 38px "Avanti", sans-serif;
+    margin: 0 0 55px;
+    color: #37850d; }
+  .prod-info__sub2 {
+    font: bold 16px "Avanti", sans-serif;
+    color: #37850d;
+    margin: 0 0 20px; }
+  .prod-info__wr1 {
+    padding: 0 0 0 42px; }
+  .prod-info__wr2 {
+    padding: 0 0 0 18px; }
+  .prod-info__ul {
+    padding-left: 25px; }
+    .prod-info__ul li {
+      position: relative;
+      font: bold 17px "Segoe Print";
+      color: #23336d;
+      margin: 0 0 9px;
+      line-height: 20px; }
+      .prod-info__ul li .icon {
+        position: absolute;
+        top: 3px;
+        left: -26px; }
+
+.prod-info-list {
+  width: 296px;
+  height: 353px;
+  position: relative;
+  left: -15px;
+  background: url(../images/info.jpg) no-repeat 0 0;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 11px;
+  padding: 86px 20px 0 28px; }
+  .prod-info-list__row {
+    padding: 7px 0;
+    border-bottom: 1px solid #404041; }
+
 .cf:before, .page-body:before, .footer__top:before, .top-search:before, .news__nav:before, .tiles__row:before, .tiles2__row:before, .reviews:before, .thumb:before,
 .cf:after,
 .page-body:after,
@@ -1237,6 +1453,8 @@ IMG {
   margin-bottom: 10px !important; }
 .h-mrg-b-20 {
   margin-bottom: 20px !important; }
+.h-mrg-b-30 {
+  margin-bottom: 30px !important; }
 .h-mrg-b-35 {
   margin-bottom: 35px !important; }
 .h-mrg-b-40 {
@@ -1247,6 +1465,8 @@ IMG {
   margin-bottom: 50px !important; }
 .h-mrg-b-60 {
   margin-bottom: 60px !important; }
+.h-mrg-b-65 {
+  margin-bottom: 65px !important; }
 .h-mrg-t-5 {
   margin-top: 5px !important; }
 .h-mrg-t-10 {
@@ -1255,6 +1475,8 @@ IMG {
   margin-top: 15px !important; }
 .h-mrg-t-20 {
   margin-top: 20px !important; }
+.h-mrg-t-25 {
+  margin-top: 25px !important; }
 .h-mrg-t-30 {
   margin-top: 30px !important; }
 .h-mrg-t-35 {
@@ -1265,6 +1487,8 @@ IMG {
   margin-left: 5px !important; }
 .h-mrg-l-10 {
   margin-left: 10px !important; }
+.h-mrg-l-15 {
+  margin-left: 15px !important; }
 .h-mrg-l-20 {
   margin-left: 20px !important; }
 .h-mrg-l-35 {
@@ -1280,6 +1504,8 @@ IMG {
 
 .h-f-s0 {
   font-size: 0; }
+.h-f-s18 {
+  font-size: 18px !important; }
 .h-f-s20 {
   font-size: 20px; }
 .h-f-s24 {
@@ -1304,3 +1530,5 @@ IMG {
   color: #fff; }
 .h-c-black {
   color: #000; }
+.h-c-gray {
+  color: #5c5c5d; }

@@ -23,25 +23,40 @@
                         </div>
 
                         <div class="reviews">
-                            <div class="reviews__items">
-                                <div class="reviews-item">
-                                    <div class="reviews-item__img">
-                                        <img src="../images/userfiles/face.png" alt="">
+                            <div class="reviews__items js-slider-fade">
+                                <div class="reviews-item__slide-wr">
+                                    <div class="reviews-item">
+                                        <div class="reviews-item__img">
+                                            <img src="../images/userfiles/face.png" alt="">
+                                        </div>
+                                        <div class="reviews-item__content">
+                                            <p class="reviews-item__title">История Лизы</p>
+                                            <div class="reviews-item__desc">
+                                                Я очень требовательно отношусь к выбору продуктов для своей семьи, особенно для моего ребенка. Услышала про молоко А2, стало интересно. Почитала подробнее в интернете, проконсультировалась с нашим семейным доктором. Оказалось, что белок, который содержитсяв этом молоке такой же, как в материнском, а значит для ребенка А2 подойдетбольше, чем обычное коровье молоко. Теперь покупаем только А2.
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="reviews-item__content">
-                                        <p class="reviews-item__title">История Лизы</p>
-                                        <div class="reviews-item__desc">
-                                            Я очень требовательно отношусь к выбору продуктов для своей семьи, особенно для моего ребенка. Услышала про молоко А2, стало интересно. Почитала подробнее в интернете, проконсультировалась с нашим семейным доктором. Оказалось, что белок, который содержитсяв этом молоке такой же, как в материнском, а значит для ребенка А2 подойдетбольше, чем обычное коровье молоко. Теперь покупаем только А2.
+                                </div>
+                                <div class="reviews-item__slide-wr">
+                                    <div class="reviews-item">
+                                        <div class="reviews-item__img">
+                                            <img src="../images/userfiles/face.png" alt="">
+                                        </div>
+                                        <div class="reviews-item__content">
+                                            <p class="reviews-item__title">История Лизы2</p>
+                                            <div class="reviews-item__desc">
+                                                Я очень требовательно отношусь к выбору продуктов для своей семьи, особенно для моего ребенка. Услышала про молоко А2, стало интересно. Почитала подробнее в интернете, проконсультировалась с нашим семейным доктором. Оказалось, что белок, который содержитсяв этом молоке такой же, как в материнском, а значит для ребенка А2 подойдетбольше, чем обычное коровье молоко. Теперь покупаем только А2.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <ul class="reviews__nav">
+                           <!--  <ul class="reviews__nav slick-dots">
                                 <li><a href="" class='active'></a></li>
                                 <li><a href=""></a></li>
                                 <li><a href=""></a></li>
                                 <li><a href=""></a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <img src="../images/baner10.jpg" alt="">
 

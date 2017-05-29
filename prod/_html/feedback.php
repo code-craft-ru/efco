@@ -15,7 +15,7 @@
                             ОБРАТНАЯ СВЯЗЬ
                         </div>
 
-                        <form action="/" class="form-feedback h-mrg-t-35">
+                        <form action="/" class="form-feedback h-mrg-t-35 js-form">
                             <div class="form-feedback__row">
                                 <input type="text" name='feedback[name]' class="input" placeholder="Ваша фамилия и имя" >
                             </div>
@@ -40,6 +40,9 @@
                             <div class="form-feedback__row h-alg-r">
                                 <button type='submit' class='btn btn--feedback-submit'>Отправить</button>
                             </div>
+                            <div class="h-mrg-t-10">
+                              <div class="js-form__all-msg"></div>
+                            </div>
                         </form>
 
                         <div class="box-shadow h-mrg-t-15 h-mrg-b-60">
@@ -51,7 +54,7 @@
                                         <p class='box-shadow__p h-mrg-t-5'>ГОРЯЧАЯ ЛИНИЯ 8-800-200-70-80 (бесплатный звонок по России)</p>
                                     </div>
                                     <div class="col--30 h-alg-r">
-                                        <button type='submit' class='btn btn--feedback-submit btn--feedback-submit--min'>
+                                        <button data-mfp-src='#popup-mailing' type='submit' class='btn btn--feedback-submit btn--feedback-submit--min js-link-popup'>
                                             <span class="icon icon--mail-white"></span>
                                             Подписаться
                                         </button>

@@ -3,7 +3,7 @@ window.$D = $(document);
 window.$H = $('html');
 window.$B = $('body');
 
-
+require('./formValidate.js');
 /* -- Общие плагины и функции -- */
 
 // "Scroll to" function
@@ -76,4 +76,51 @@ $(function(){
             el.removeClass('_fixed');
         }
     })
+});
+
+$(function(){
+    var el = $('.js-accordion');
+    if(!el.length) return;
+
+    el.find('.js-accordion__item').on('click', function(){
+        $(this).toggleClass('_open');
+    });
+});
+
+$(function(){
+    var el = $('.js-slider-fade');
+    if(!el.length) return;
+
+    require('slick-carousel');
+
+    el.slick({
+        fade: true,
+        dots: true,
+        arrows: false
+    });
+});
+
+
+$(function(){
+    require('magnific-popup');
+    $('.js-link-popup').magnificPopup({
+        type: 'inline',
+        midClick: true,
+    });
+
+   
+});
+
+
+$(function(){
+    // логика для попапа подпики отписки
+    var el = $('.js-switch-subscript__input');
+    if(!el.length) return;
+
+    $('.js-switch-subscript__on').on('click' ,function(){
+        el.val(true);
+    });
+    $('.js-switch-subscript__off').on('click' ,function(){
+        el.val(false);
+    });
 });
