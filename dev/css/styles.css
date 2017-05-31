@@ -465,11 +465,11 @@ IMG {
     width: 1000px;
     margin: 0 auto;
     position: relative;
-    height: 161px;
+    height: 152px;
     padding-top: 16px; }
   .header__logo {
     border-bottom: 1px solid #b0b0b0;
-    padding: 10px 0; }
+    padding: 5px 0; }
     .header__logo img {
       width: 254px;
       height: 55px;
@@ -519,12 +519,12 @@ IMG {
     width: 50%;
     text-align: right;
     position: relative;
-    right: -60px; }
+    right: -80px; }
     .header__top-search p {
       font: italic 9px "Myriad Pro", sans-serif;
       color: #fff;
       display: inline-block;
-      margin-left: 14px; }
+      margin-left: 9px; }
 
 .footer {
   background: #fff; }
@@ -654,7 +654,7 @@ IMG {
   .btn:hover > SPAN {
     border-color: transparent; }
   .btn--more {
-    padding: 8px 10px;
+    padding: 6px 9px;
     border-radius: 3px;
     border: 1px solid #000;
     font-size: 8px;
@@ -966,7 +966,7 @@ IMG {
 
 .stick {
   position: absolute;
-  right: 100px;
+  right: 94px;
   top: -5px;
   transition: top 0.3s;
   width: 93px;
@@ -999,11 +999,12 @@ IMG {
   overflow: hidden;
   text-align: center; }
   .news__title {
-    margin: 40px;
+    margin: 39px 0 26px;
     text-transform: uppercase;
     font-size: 15px;
     font-weight: bold;
-    position: relative; }
+    position: relative;
+    letter-spacing: 1px; }
     .news__title:after {
       content: "";
       display: block;
@@ -1014,7 +1015,7 @@ IMG {
       top: 100%;
       left: 50%;
       margin-left: -23px;
-      margin-top: 6px; }
+      margin-top: 3px; }
   .news__nav li {
     float: left;
     width: 50%;
@@ -1024,7 +1025,7 @@ IMG {
       text-decoration: none;
       font: bold 14px "Avanti", sans-serif;
       color: #fff;
-      padding: 8px;
+      padding: 7px;
       text-align: center; }
     .news__nav li:first-child a {
       background: #4c8bca; }
@@ -1037,7 +1038,7 @@ IMG {
   .news__nav--color2.news__nav a {
     font-weight: normal; }
   .news__items {
-    margin: 16px 0;
+    margin: 16px 0 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1046,35 +1047,36 @@ IMG {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
   .news__more-btn {
-    margin-bottom: 50px; }
+    margin-bottom: 41px; }
 
 .news-item {
   width: 304px;
   border: 1px solid #f6f6f6;
-  margin: 0 0 15px; }
+  margin: 0; }
   .news-item a {
     text-decoration: none; }
   .news-item__content {
-    padding: 5px 7px 25px 7px;
+    padding: 5px 7px 22px 7px;
     color: #000; }
   .news-item__title {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: bold;
     text-align: left;
     position: relative;
-    margin: 3px 0 10px;
+    margin: 0 0 14px;
     font-family: "Century Gothic", sans-serif; }
     .news-item__title:after {
       content: "";
       display: block;
-      width: 30px;
+      width: 40px;
       height: 2px;
       position: absolute;
       top: 100%;
       left: 0;
+      margin-top: 2px;
       background: #4c8bca; }
   .news-item__desc {
-    font-size: 12px;
+    font-size: 11px;
     text-align: left;
     font-family: "Century Gothic", sans-serif; }
 

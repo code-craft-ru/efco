@@ -11,9 +11,6 @@ $links_url = str_replace('_html','',$links_url);
 
     <!-- build:css ../css/styles.css -->
 
-    <!-- bower:css-->
-   
-    <!-- endbower-->
 
 
     <link rel="stylesheet" href="../css/styles.css">
