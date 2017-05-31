@@ -12,9 +12,7 @@ $links_url = str_replace('_html','',$links_url);
     <!-- build:css ../css/styles.css -->
 
     <!-- bower:css-->
-   <!--  <link rel="stylesheet" href="../../bower_components/normalize-css/normalize.css" />
-    <link rel="stylesheet" href="../../bower_components/slick-carousel/slick/slick.css" />
-    <link rel="stylesheet" href="../../bower_components/magnific-popup/dist/magnific-popup.css" /> -->
+   
     <!-- endbower-->
 
 
