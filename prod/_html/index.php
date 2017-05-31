@@ -33,7 +33,7 @@
                             </ul>
                             <div class="news__items">
                                 <div class="news-item">
-                                    <a href="#!">
+                                    <a href="#popup-about-milk" class='js-link-popup' data-postid=''>
                                         <div class="news-item__content">
                                             <div class="news-item__title">Lorem ipsum dolor.</div>
                                             <div class="news-item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aut iste ducimus quae, blanditiis, perspiciatis optio maiores odio culpa sit!</div>
@@ -44,7 +44,7 @@
                                     </a>
                                 </div>
                                 <div class="news-item">
-                                    <a href="#!">
+                                    <a href="#popup-about-milk" class='js-link-popup' data-postid=''>
                                         <div class="news-item__content">
                                             <div class="news-item__title">Lorem ipsum dolor.</div>
                                             <div class="news-item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aut iste ducimus quae, blanditiis, perspiciatis optio maiores odio culpa sit!</div>
@@ -55,7 +55,7 @@
                                     </a>
                                 </div>
                                 <div class="news-item">
-                                    <a href="#!">
+                                    <a href="#popup-about-milk" class='js-link-popup' data-postid=''>
                                         <div class="news-item__content">
                                             <div class="news-item__title">Lorem ipsum dolor.</div>
                                             <div class="news-item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aut iste ducimus quae, blanditiis, perspiciatis optio maiores odio culpa sit!</div>

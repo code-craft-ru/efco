@@ -105,7 +105,11 @@
                                         <p class='box-shadow__p h-mrg-t-5'>ГОРЯЧАЯ ЛИНИЯ 8-800-200-70-80 (бесплатный звонок по России)</p>
                                     </div>
                                     <div class="col--30 h-alg-r">
-                                        <button type='submit' class='btn btn--feedback-submit btn--feedback-submit--min'>
+                                        <button 
+                                            type='submit' 
+                                            data-mfp-src="#popup-mailing" 
+                                            class='btn btn--feedback-submit btn--feedback-submit--min js-link-popup'
+                                        >
                                             <span class="icon icon--mail-white"></span>
                                             Подписаться
                                         </button>

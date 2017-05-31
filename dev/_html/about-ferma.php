@@ -54,7 +54,7 @@
                         </div>
 
                         <div class="btn__wr h-alg-c">
-                            <a href="#!" class="btn btn--link h-mrg-b-50">www.greendale31.ru</a>
+                            <a href='#!'  class="btn btn--link h-mrg-b-50 ">www.greendale31.ru</a>
                         </div>
 
 

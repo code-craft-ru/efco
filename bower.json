@@ -22,6 +22,7 @@
     "normalize-css": "^4.1.1",
     "slick-carousel": "^1.6.0",
     "magnific-popup": "^1.1.0",
-    "jquery-validation": "^1.16.0"
+    "jquery-validation": "^1.16.0",
+    "tinyscrollbar": "^2.5.0"
   }
 }

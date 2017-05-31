@@ -14,6 +14,79 @@
 
 
 .typography
+    border: 1px solid transparent
+    h2
+        color: #000
+        font: bold 22px $fBenguiat
+        margin: 0 0 10px
+    p
+        font: normal 18px $fBenguiat
+        color: #000
+
+    ul
+        margin: 35px 0
+        padding-left: 58px
+        list-style-type: none
+        li
+            font: normal 18px $fBenguiat
+            color: #000
+            position: relative
+            &:after
+                content: ''
+                display: block
+                width: 5px
+                height: 5px
+                background: #000
+                position: absolute
+                top: 8px
+                left: -15px
+                border-radius: 100%
+
+    .table-blue
+        border-collapse: collapse
+        width: 100%
+        thead
+            td
+                padding: 15px
+                text-align: center
+                background: #4385b5
+                p
+                    font: bold 18px $fBenguiat
+                    color: #fff
+
+        tbody
+            td
+                padding: 15px
+                text-align: center
+                p
+                    font: normal 18px $fBenguiat
+                    color: #000
+
+
+
+
+    .b-offset
+        margin-bottom: 10px
+
+    .date
+        color: #b2b2b2
+        font: normal 14px $fBenguiat
+
+    .blue-tab
+        font: bold 18px $fBenguiat
+        color: #4385b5
+        padding-left: 77px
+        margin: 40px 0
+        position: relative
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            width: 2px
+            height: 94%
+            left: 55px
+            top: 3%
+            background: #4385b5
 
     //@extend .h1
     //@extend .h2

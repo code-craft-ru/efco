@@ -4,6 +4,10 @@ window.$H = $('html');
 window.$B = $('body');
 
 require('./formValidate.js');
+
+
+  
+
 /* -- Общие плагины и функции -- */
 
 // "Scroll to" function
@@ -102,12 +106,34 @@ $(function(){
 
 
 $(function(){
+    var link = $('.js-link-popup');
+    if(!link.length) return; 
+    
     require('magnific-popup');
     $('.js-link-popup').magnificPopup({
         type: 'inline',
         midClick: true,
     });
 
+    var isInit = false;
+
+    function initPopupSlider(){
+        var slider = $('.js-slider-popup');
+        if(!slider) return;
+
+        if(isInit) return;
+        
+        slider.sliderPopup();
+
+        isInit= true;
+        
+    }
+    $('.js-link-popup').on('mfpOpen' , function(){
+        var inst = $.magnificPopup.instance;
+        if(inst.currItem.src === "#popup-about-milk"){
+            initPopupSlider();            
+        }
+    });
    
 });
 
@@ -124,3 +150,86 @@ $(function(){
         el.val(false);
     });
 });
+
+$(function(){
+    var scroller = $('.js-sсroller');
+    if(!scroller.length) return;
+    // scroller.perfectScrollbar();
+    // require('jquery');
+    
+    // scroller.tinyscrollbar();
+
+
+});
+
+$(document).ready(function(){
+    var scroller = $('.js-sсroller');
+    if(!scroller.length) return;
+
+
+    // scroller.tinyscrollbar();
+    
+});
+
+(function($){
+    $.fn.sliderPopup = function(){
+
+        require('slick-carousel');
+
+        $(this).each(function(i , el){
+            
+        var $el = $(this),
+            $slides = $el.find('.js-slider-popup__slides'),
+            $arrl = $el.find('.js-slider-popup__arr-l'),
+            $arrr = $el.find('.js-slider-popup__arr-r'),
+            $slideTitle = $el.find('.js-slider-popup__slide-title'),
+            $magnific = $el.find('.js-slider-popup__magnific');
+
+            $slides.slick({
+                dots: false,
+                arrows: false,
+                fade: true
+            });
+
+            $arrl.on('click' ,function(){
+                $slides.slick('slickPrev');
+            });
+            $arrr.on('click' ,function(){
+                $slides.slick('slickNext');
+            });
+
+            // setTitle
+            $slides.on('afterChange' , function(e, slick ,curr,next){
+                var currentSlide = slick.$slides[curr];
+                $slideTitle.html($(currentSlide).find('img').attr('alt'));
+            });
+            $slides.on('init' , function(e, slick ,curr,next){
+                var currentSlide = slick.$slides[curr];
+                $slideTitle.html($(currentSlide).find('img').attr('alt'));
+            });
+
+            $magnific.on('click' ,function(){
+                var slick = $slides.slick('getSlick');
+                console.log(slick)
+                var currentSlide = slick.$slides[slick.currentSlide],
+                    imgSrc = $(currentSlide).find('img').attr('src');
+                    console.log(imgSrc)
+                $.magnificPopup.open({
+                  items: {
+                    src: imgSrc,
+                    type: 'image',
+                    markup: '<div id="popup-mailing" class="popup__mailing mfp-hide">'+
+                              '<div class="popup__close">'+
+                                    '<span class="icon icon--close"></span>'+
+                              '</div>'+ 
+                              '<div class="popup__content">'+
+                                '<div class="mfp-img"></div>'+
+                              '</div>'+
+                            '</div>'
+                  },
+                });
+            })
+        })
+    };
+})($);
+

@@ -51,14 +51,43 @@
                                     </div>
                                 </div>
                             </div>
-                           <!--  <ul class="reviews__nav slick-dots">
-                                <li><a href="" class='active'></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                            </ul> -->
+                          
                         </div>
-                        <img src="../images/baner10.jpg" alt="">
+                        
+                        <div class="news-more">
+                            <div class="news-more__items">
+                                <div class="news-more__item">
+                                    <a href="#!">
+                                        <div class="news-more__img">
+                                            <img src="../images/newsitem1.jpg" alt="">
+                                        </div>
+                                        <div class="news-more__title">
+                                            Is a2 Milk natural?
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="news-more__item">
+                                    <a href="#!">
+                                        <div class="news-more__img">
+                                            <img src="../images/newsitem2.jpg" alt="">
+                                        </div>
+                                        <div class="news-more__title">
+                                            Will the a2 Milk Company <br> reduce payments to farmers?
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="news-more__item">
+                                    <a href="#!">
+                                        <div class="news-more__img">
+                                            <img src="../images/newsitem3.jpg" alt="">
+                                        </div>
+                                        <div class="news-more__title">
+                                            Will a2 Milk improve my <br>digestive wellbeing?
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="text-block3">
                             <div class="text-block3__text">

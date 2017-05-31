@@ -638,74 +638,79 @@
             margin: 0 0 18px
 
 
-.mfp-bg
-    opacity: 1
-    background: rgba(0,0,0,0.7)
+.news-more
+    height: 374px
+    overflow: hidden
+    position: relative
+    background: url(../images/baner10.jpg) no-repeat 0 0
+    background-size: contain
 
-.popup
-    &__mailing
-        position: relative
-        width: 610px
-        padding: 25px
-        margin: 0 auto
-        background: #fdfdfd
-        .mfp-close
-            color: transparent
+    a
+        text-decoration: none
 
-        .mailingimg
-            display: block
-            margin: 0 auto 28px
+    &__item
+        width: 240px
+        height: 198px
+        background: #fff
+        display: inline-block
+        margin: 0 7px
+        padding: 12px
+        overflow: hidden
 
-        .p
-            font: bold 18px $fBenguiat
-            color: #676767
+    &__img
+        height: 131px
 
-        input
-            border: 2px solid #939393
-            border-radius: 20px
-            padding: 4px 11px
-            font: bold 18px $fBenguiat
-            &::placeholder
-                font: bold 18px $fBenguiat 
-                color: #bfbcbc
+    &__title
+        margin: 0
+        font: bold 15px $fBenguiat
+        color: #0a5a98
+
+    &__items
+        text-align: center
+        margin-top: 118px
 
 
-    &__close
+.slider-popup
+    position: relative
+    &__arrows
+        width: 100%
+        height: 100%
         position: absolute
-        top: 11px
-        right: 11px
 
 
-    
-/* overlay at start */
-.mfp-fade.mfp-bg 
-    opacity: 0
+    &__arrow-l
+        position: absolute
+        top: 50%
+        left: -45px
+        margin-top: -20px
+        cursor: pointer
+    &__arrow-r
+        position: absolute
+        top: 50%
+        right: -45px
+        margin-top: -20px
+        cursor: pointer
 
-    -webkit-transition: all 0.15s ease-out
-    -moz-transition: all 0.15s ease-out
-    transition: all 0.15s ease-out
+    &__date
+        margin: 15px 0 0 0
+        font: normal 14px $fBenguiat
+        color: #000
+        text-align: right
 
-/* overlay animate in */
-.mfp-fade.mfp-bg.mfp-ready 
-    opacity: 0.8
+    &__slide
+        outline: none
+        img
+            width: 100%
 
-/* overlay animate out */
-.mfp-fade.mfp-bg.mfp-removing
-    opacity: 0
+    &__slide-title
+        position: relative
+        font: normal 18px $fBenguiat
+        margin: 18px 0
+        padding: 0 20px
 
+    &__magnific
+        position: absolute
+        top: 0
+        right: 20px
+        cursor: pointer
 
-/* content at start */
-.mfp-fade.mfp-wrap .mfp-content 
-    opacity: 0
-
-    -webkit-transition: all 0.15s ease-out
-    -moz-transition: all 0.15s ease-out
-    transition: all 0.15s ease-out
-
-/* content animate it */
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
-    opacity: 1
-
-/* content animate out */
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
-    opacity: 0
