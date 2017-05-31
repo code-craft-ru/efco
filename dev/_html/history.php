@@ -10,7 +10,9 @@
                 <div class="page-body page-body--white">
                         <div class="contain">
                             <img src="../images/baner-history.jpg" alt="" class="baner">
-                            <img src="../images/sticker2.png" alt="" class="sticker2 sticker2--bottom">
+                            <a href="belok-itog.php">
+                                <img src="../images/sticker2.png" alt="" class="sticker2 sticker2--bottom">
+                            </a>
                         </div>
                         
                         <div class="text-block">
@@ -18,7 +20,7 @@
                             <p class='par'>Жители Австралии, Новой Зеландии, США и других стран уже открыли для себя молоко А2. Большинство из них отметило, что с молоком А2 они перестали испытывать дискомфорт в животе. И теперь их выбор – А2. Многочисленные положительные отзывы людей из других стран свидетельствуют о том, что молоко А2 их любимый продукт для всей семьи. И теперь молоко А2 появилось и в России. А это значит, что что счастливых людей, которые смогут наслаждаться вкусным, питательным и полностью натуральным коровьим молоком А2, станет еще больше.</p>
                         </div>
 
-                        <div class="title--fill h-mrg-b-10">
+                        <div class="title--fill h-mrg-b-10 h-mrg-t-50">
                             Истории молока А2
                         </div>
 
@@ -111,7 +113,7 @@
                         </div>
 
                         <div class="maps">
-                            <div id="map" style="width: 100%; height: 340px"></div>
+                            <div id="map" style="width: 100%; height: 310px"></div>
                                 
                                 <script>
                                     ymaps.ready(init);

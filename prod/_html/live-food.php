@@ -20,23 +20,23 @@
                         <div class="tiles2__wr">
                             <div class="tiles2">
                             <div class="tiles2__row">
-                                <div class="tiles2__col1 tiles2--pad tiles2--bg-lpink tiles2--pad tiles2--border-shadow tiles2--h-265">
+                                <div class="tiles2__col1 tiles2--pad tiles2--bg-lpink tiles2--pad tiles2--border-shadow tiles2--h-240">
                                     <p class="tiles2__title">1. Читайте состав!</p>
                                     <p class="tiles2__text tiles2--par">Согласно законодательству, производители обязаны указывать все ингредиенты продукта, включая искусственные добавки, и располагать их в порядке содержания.</p>
                                     <p class="tiles2__title">2. Проверяйте отсутствие вредных Е-добавок!</p>
                                     <p class="tiles2__text">Отдавайте предпочтение продуктам из натуральных ингредиентов, они менее аллергичны и более полезны для вашего здоровья,  чем   искусственные. Уточняйте, нет ли в составе продукта вредных Е-добавок.</p>
                                 </div>
-                                <div class="tiles2__col2 tiles2--pad tiles2--border-shadow tiles2--bg-skyblue tiles2--h-265">
+                                <div class="tiles2__col2 tiles2--pad tiles2--border-shadow tiles2--bg-skyblue tiles2--h-240">
                                     <p class="tiles2__title">3. Внимательно читайте срок годности</p>
                                     <p class="tiles2__text">«Живая» еда даже в современной герметичной упаковке и при соблюдении всех температурных требований не может храниться 3-4 месяца.</p>
                                 </div>
                             </div>
                             <div class="tiles2__row">
-                                <div class="tiles2__col3 tiles2--pad tiles2--border-shadow tiles2--bg-skyblue tiles2--h-200">
+                                <div class="tiles2__col3 tiles2--pad tiles2--border-shadow tiles2--bg-skyblue tiles2--h-185">
                                     <p class="tiles2__title">4. Обращайте внимание на упаковку!</p>
                                     <p class="tiles2__text">Натуральные продукты, как правило, очень чувствительны к окружающим условиям, потому упаковка для них должна быть особенно надежной.</p>
                                 </div>
-                                <div class="tiles2__col4 tiles2--pad tiles2--border-shadow tiles2--bg-blue tiles2--h-200 tiles2--c-white">
+                                <div class="tiles2__col4 tiles2--pad tiles2--border-shadow tiles2--bg-blue tiles2--h-185 tiles2--c-white">
                                     <p class="tiles2__title">5. Соблюдайте условия хранения!</p>
                                     <p class="tiles2__text">Посмотрите на упаковке, в каких условиях, согласно требованиям, должен храниться продукт, и проверьте, насколько они соблюдаются в торговой точке.</p>
                                 </div>

@@ -1,7 +1,7 @@
 .header
 	overflow: hidden
 	&__top
-		height: 21px
+		height: 22px
 		background: $c333
 		border-bottom: 1px solid #828282
 		position: relative
@@ -16,12 +16,12 @@
 		width: 1000px
 		margin: 0 auto
 		position: relative
-		height: 152px
+		height: 151px
 		padding-top: 16px
 
 	&__logo
 		border-bottom: 1px solid #b0b0b0
-		padding: 5px 0
+		padding: 5px 0 6px
 		img
 			width: 254px
 			height: 55px
@@ -31,7 +31,9 @@
 		float: left
 		width: 50%
 		li
-			padding: 0 3px
+			&:first-child
+				padding-left: 3px
+			padding: 0 
 			display: inline-block
 			a
 				font: bold 10px $fGotic
@@ -44,17 +46,19 @@
 		justify-content: space-around
 		position: relative
 		background: #fff
+		padding: 0 45px
 		&._fixed
 			position: fixed
 			top: 0
 			z-index: 999
 			width: 1000px
 		li
+			// display: inline-block
 			a
 				font: bold 19px $fAcademy
 				color: #676761
 				text-decoration: none
-				padding: 7px 0
+				padding: 4px 0 9px
 				display: inline-block
 	
 		&--theme-shadow-bottom

@@ -17,81 +17,163 @@
                         <div class="contain txt1">
                             <h2>МОЛОКО СЛОБОДА А2 СОДЕРЖИТ БЕЛОК АНАЛОГИЧНЫЙ БЕЛКУ МАТЕРИ.</h2>
                         </div> 
-                        <div class="news__nav news__nav--color2">
-                            <li><a href="#!">ПАСТЕРИЗОВАННОЕ 2,5%</a></li>
-                            <li><a href="#!">ЦЕЛЬНОЕ 3,5-4,5%</a></li>
-                        </div>
-
-                        <div class="prod-info">
-                            <div class="prod-info__img">
-                                <img src="../images/milk.jpg" alt="">
+                        <div class="js-tabs">
+                            
+                            <div class="news__nav news__nav--color2">
+                                <li class='js-tabs-btn _active'><a href="#!" class=''>ПАСТЕРИЗОВАННОЕ 2,5%</a></li>
+                                <li class='js-tabs-btn'><a href="#!" class=''>ЦЕЛЬНОЕ 3,5-4,5%</a></li>
                             </div>
-                            <div class="prod-info__info">
-                                <div class="prod-info__wr1">
-                                    <p class="prod-info__sub">МОЛОКО ПИТЬЕВОЕ ПАСТЕРИЗОВАННОЕ</p>
-                                    <p class="prod-info__title">2,5% м.д.жира</p>
-                                    <p class="prod-info__sub2">О молоке «Слобода А2»</p>
-                                </div>
-                                <div class="prod-info__wr2">
-                                    <ul class="prod-info__ul">
-                                        <li><span class="icon icon--ok"></span>Менее аллергенно</li>
-                                        <li><span class="icon icon--ok"></span>Белковый состав аналогичный <br>материнскому молоку</li>
-                                        <li><span class="icon icon--ok"></span>Усваивается лучше,чем обычное молоко</li>
-                                    </ul>
-                                </div>
-                                <div class="prod-info__wr1">
-                                    <div class="prod-info-list">
-                                        <p><b>Порция</b> 160г</p>
-                                        <p><b>Порций в упаковке</b> 5</p>
-                                        <div class="h-mrg-t-15">
-                                            <div class="cols">
-                                                <div class="col--50">
-                                                    <p><b>В одной порции</b></p>
+
+                            <div class="tabs">
+                                <div class="prod-info js-tabs-tab _active">
+                                    <div class="prod-info__img">
+                                        <img src="../images/milk.jpg" alt="">
+                                    </div>
+                                    <div class="prod-info__info">
+                                        <div class="prod-info__wr1">
+                                            <p class="prod-info__sub">МОЛОКО ПИТЬЕВОЕ ПАСТЕРИЗОВАННОЕ</p>
+                                            <p class="prod-info__title">2,5% м.д.жира</p>
+                                            <p class="prod-info__sub2">О молоке «Слобода А2»</p>
+                                        </div>
+                                        <div class="prod-info__wr2">
+                                            <ul class="prod-info__ul">
+                                                <li><span class="icon icon--ok"></span>Менее аллергенно</li>
+                                                <li><span class="icon icon--ok"></span>Белковый состав аналогичный <br>материнскому молоку</li>
+                                                <li><span class="icon icon--ok"></span>Усваивается лучше,чем обычное молоко</li>
+                                            </ul>
+                                        </div>
+                                        <div class="prod-info__wr1">
+                                            <div class="prod-info-list">
+                                                <p><b>Порция</b> 160г</p>
+                                                <p><b>Порций в упаковке</b> 5</p>
+                                                <div class="h-mrg-t-15">
+                                                    <div class="cols">
+                                                        <div class="col--50">
+                                                            <p><b>В одной порции</b></p>
+                                                        </div>
+                                                        <div class="col--50 h-alg-r">
+                                                            <p>в % от</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cols">
+                                                        <div class="col--40">
+                                                            <p><b>содержится:</b></p>
+                                                        </div>
+                                                        <div class="col--60 h-alg-r">
+                                                            <p>рекомендуемой нормы</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col--50 h-alg-r">
-                                                    <p>в % от</p>
-                                                </div>
-                                            </div>
-                                            <div class="cols">
-                                                <div class="col--40">
-                                                    <p><b>содержится:</b></p>
-                                                </div>
-                                                <div class="col--60 h-alg-r">
-                                                    <p>рекомендуемой нормы</p>
+                                                <div class="h-mrg-t-10">
+                                                    <div class="cols prod-info-list__row">
+                                                        <div class="col--50">
+                                                            <p><b>Калорий</b> 99-114</p>
+                                                        </div>
+                                                        <div class="col--50 h-alg-r">
+                                                            <p>4,0-4,6%</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cols prod-info-list__row">
+                                                        <div class="col--50">
+                                                            <p><b>Жиры</b> 5,6-7,2г</p>
+                                                        </div>
+                                                        <div class="col--50 h-alg-r">
+                                                            <p>6,7-8,7%</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cols prod-info-list__row">
+                                                        <div class="col--50">
+                                                            <p><b>Углеводы</b> 7,5г</p>
+                                                        </div>
+                                                        <div class="col--50 h-alg-r">
+                                                            <p>2,1%</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cols prod-info-list__row">
+                                                        <div class="col--50">
+                                                            <p><b>Белки</b> 4,8г</p>
+                                                        </div>
+                                                        <div class="col--50 h-alg-r">
+                                                            <p>6,4%</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="h-mrg-t-10">
-                                            <div class="cols prod-info-list__row">
-                                                <div class="col--50">
-                                                    <p><b>Калорий</b> 99-114</p>
+                                    </div>
+                                </div>
+                                <div class="prod-info js-tabs-tab">
+                                    <div class="prod-info__img">
+                                        <img src="../images/milk.jpg" alt="">
+                                    </div>
+                                    <div class="prod-info__info">
+                                        <div class="prod-info__wr1">
+                                            <p class="prod-info__sub">МОЛОКО ПИТЬЕВОЕ ПАСТЕРИЗОВАННОЕ2</p>
+                                            <p class="prod-info__title">2,5% м.д.жира</p>
+                                            <p class="prod-info__sub2">О молоке «Слобода А2»</p>
+                                        </div>
+                                        <div class="prod-info__wr2">
+                                            <ul class="prod-info__ul">
+                                                <li><span class="icon icon--ok"></span>Менее аллергенно</li>
+                                                <li><span class="icon icon--ok"></span>Белковый состав аналогичный <br>материнскому молоку</li>
+                                                <li><span class="icon icon--ok"></span>Усваивается лучше,чем обычное молоко</li>
+                                            </ul>
+                                        </div>
+                                        <div class="prod-info__wr1">
+                                            <div class="prod-info-list">
+                                                <p><b>Порция</b> 160г</p>
+                                                <p><b>Порций в упаковке</b> 5</p>
+                                                <div class="h-mrg-t-15">
+                                                    <div class="cols">
+                                                        <div class="col--50">
+                                                            <p><b>В одной порции</b></p>
+                                                        </div>
+                                                        <div class="col--50 h-alg-r">
+                                                            <p>в % от</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cols">
+                                                        <div class="col--40">
+                                                            <p><b>содержится:</b></p>
+                                                        </div>
+                                                        <div class="col--60 h-alg-r">
+                                                            <p>рекомендуемой нормы</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col--50 h-alg-r">
-                                                    <p>4,0-4,6%</p>
-                                                </div>
-                                            </div>
-                                            <div class="cols prod-info-list__row">
-                                                <div class="col--50">
-                                                    <p><b>Жиры</b> 5,6-7,2г</p>
-                                                </div>
-                                                <div class="col--50 h-alg-r">
-                                                    <p>6,7-8,7%</p>
-                                                </div>
-                                            </div>
-                                            <div class="cols prod-info-list__row">
-                                                <div class="col--50">
-                                                    <p><b>Углеводы</b> 7,5г</p>
-                                                </div>
-                                                <div class="col--50 h-alg-r">
-                                                    <p>2,1%</p>
-                                                </div>
-                                            </div>
-                                            <div class="cols prod-info-list__row">
-                                                <div class="col--50">
-                                                    <p><b>Белки</b> 4,8г</p>
-                                                </div>
-                                                <div class="col--50 h-alg-r">
-                                                    <p>6,4%</p>
+                                                <div class="h-mrg-t-10">
+                                                    <div class="cols prod-info-list__row">
+                                                        <div class="col--50">
+                                                            <p><b>Калорий</b> 99-114</p>
+                                                        </div>
+                                                        <div class="col--50 h-alg-r">
+                                                            <p>4,0-4,6%</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cols prod-info-list__row">
+                                                        <div class="col--50">
+                                                            <p><b>Жиры</b> 5,6-7,2г</p>
+                                                        </div>
+                                                        <div class="col--50 h-alg-r">
+                                                            <p>6,7-8,7%</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cols prod-info-list__row">
+                                                        <div class="col--50">
+                                                            <p><b>Углеводы</b> 7,5г</p>
+                                                        </div>
+                                                        <div class="col--50 h-alg-r">
+                                                            <p>2,1%</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cols prod-info-list__row">
+                                                        <div class="col--50">
+                                                            <p><b>Белки</b> 4,8г</p>
+                                                        </div>
+                                                        <div class="col--50 h-alg-r">
+                                                            <p>6,4%</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -100,7 +182,7 @@
                             </div>
                         </div>
 
-                        <div class="text-block2 text-block2--color-gray">
+                        <div class="text-block2 text-block2--color-gray text-block2--font-avanty">
                             <h2 class='h-f-s18'>МЫ ЗНАЕМ, КАК СЕРЬЕЗНО ВЫ ОТНОСИТЕСЬ К ВЫБОРУ ПРОДУКТОВ ДЛЯ СЕБЯ И СВОЕЙ СЕМЬИ.</h2>
                             <p class='h-mrg-t-10'>ПОЭТОМУ ХОТИМ РАССКАЗАТЬ О МОЛОКЕ СЛОБОДА А2 БОЛЬШЕ, ЧТОБЫ У ВАС<br>НЕ ОСТАЛОСЬ СОМНЕНИЙ В ЕГО КАЧЕСТВЕ И ПОЛЬЗЕ.</p>
                         </div>
@@ -189,12 +271,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="wrapper--900">
+                        <div class="wrapper--835">
                             <div class="cols h-mrg-b-65">
                                 <div class="col--50">
                                     <img src="../images/beloknatural.jpg" alt="">
-                                    <div class="h-mrg-t-30 h-mrg-l-15">
-                                        <p class='h-bold h-c-gray'>УЗНАЙТЕ БОЛЬШЕ О ПОЛЬЗЕ БЕТА-КАЗЕИНА А2 <a href="#!" class='link link--accordion'>ЗДЕСЬ</a></p> 
+                                    <div class="h-mrg-t-25 h-mrg-l-15">
+                                        <p class='h-bold h-f-s14 h-c-gray'>УЗНАЙТЕ БОЛЬШЕ О ПОЛЬЗЕ БЕТА-КАЗЕИНА А2 <a href="#!" class='link link--accordion'>ЗДЕСЬ</a></p> 
                                     </div>
                                 </div>
                                 <div class="col--50">

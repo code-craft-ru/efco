@@ -110,3 +110,12 @@
       </div>
   </div>
 </div>
+
+<div id="popup-webcamera" class="popup__webcamera mfp-hide">
+  <div class="popup__close">
+    <span class="icon icon--close"></span>
+  </div>
+  <div class="popup__content js-sсroller">
+     <iframe width="100%" height="340" src="https://www.youtube.com/embed/JDtnNt0_j30" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>

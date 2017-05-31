@@ -100,7 +100,9 @@ $(function(){
     el.slick({
         fade: true,
         dots: true,
-        arrows: false
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 7000
     });
 });
 
@@ -151,25 +153,7 @@ $(function(){
     });
 });
 
-$(function(){
-    var scroller = $('.js-sсroller');
-    if(!scroller.length) return;
-    // scroller.perfectScrollbar();
-    // require('jquery');
-    
-    // scroller.tinyscrollbar();
 
-
-});
-
-$(document).ready(function(){
-    var scroller = $('.js-sсroller');
-    if(!scroller.length) return;
-
-
-    // scroller.tinyscrollbar();
-    
-});
 
 (function($){
     $.fn.sliderPopup = function(){
@@ -232,4 +216,40 @@ $(document).ready(function(){
         })
     };
 })($);
+
+// tabs Plugin
+;(function ($) {
+    $.fn.tabs = function () {
+
+        $(this).each(function () {
+            var $this = $(this),
+                $btns = $this.find('.js-tabs-btn'),
+                $tabs = $this.find('.js-tabs-tab');
+
+            function tabSwitch(numb) {
+                $tabs.removeClass('_active')
+                    .eq(numb).addClass('_active');
+
+                $btns.removeClass('_active')
+                    .eq(numb).addClass('_active');
+            }
+
+            $btns.bind('click', function () {
+                var index = $(this).index();
+                tabSwitch(index);
+                console.log(index)
+            });
+
+        })
+
+    };
+})(jQuery);
+
+$(function(){
+    var el = $('.js-tabs');
+    if(!el.length) return;
+
+    el.tabs();
+
+})
 
