@@ -272,7 +272,7 @@
                             </div>
                         </div>
                         <div class="wrapper--835">
-                            <div class="cols h-mrg-b-65">
+                            <div class="cols h-mrg-b-77">
                                 <div class="col--50">
                                     <img src="../images/beloknatural.jpg" alt="">
                                     <div class="h-mrg-t-25 h-mrg-l-15">

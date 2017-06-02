@@ -11,7 +11,7 @@
 
             <div class="wrapper">
                 <div class="page-body page-body--white">
-                        <div class="title--fill h-mrg-t-65">
+                        <div class="title--fill title--fill--min h-mrg-t-62">
                             ОБРАТНАЯ СВЯЗЬ
                         </div>
 
@@ -35,7 +35,7 @@
                                 <input type="text" name='feedback[subject]' class="input" placeholder="Тема письма" >
                             </div>
                             <div class="form-feedback__row">
-                                <textarea name="feedback[message]" id="" cols="30" rows="5" class="textarea" placeholder="Соообщение"></textarea>
+                                <textarea name="feedback[message]" id="" cols="30" rows="4" class="textarea" placeholder="Соообщение"></textarea>
                             </div>
                             <div class="form-feedback__row h-alg-r">
                                 <button type='submit' class='btn btn--feedback-submit'>Отправить</button>
@@ -45,7 +45,7 @@
                             </div>
                         </form>
 
-                        <div class="box-shadow h-mrg-t-15 h-mrg-b-60">
+                        <div class="box-shadow box-shadow--pad3 h-mrg-t-15 h-mrg-b-48">
                             <div class="form-feedback__row form-feedback__row--no-m">
                                 <div class="box-shadow__line h-mrg-b-5"></div>
                                 <div class="cols">

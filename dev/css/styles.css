@@ -692,11 +692,11 @@ IMG {
   .btn--feedback-submit {
     color: #fff;
     font-size: 16px;
-    padding: 8px 42px;
+    padding: 8px 36px;
     border-radius: 15px;
     background: #4c8ccc; }
     .btn--feedback-submit--min {
-      padding: 8px 20px; }
+      padding: 8px 15px; }
 
 .link {
   color: inherit;
@@ -785,6 +785,9 @@ IMG {
   background: #0a5a98;
   padding: 0 0 0 42px;
   text-transform: uppercase; }
+  .title--fill--min {
+    font-size: 28px;
+    padding: 3px 0 0 42px; }
 
 .input {
   border-bottom: 1px solid #989798;
@@ -813,15 +816,15 @@ IMG {
     border-bottom: 1px solid red; }
 
 .form-feedback {
-  width: 824px;
+  width: 760px;
   margin: 0 auto;
   box-shadow: 0 0 12px 12px #f1f1f1;
   background: #fff;
   overflow: hidden;
-  padding: 26px 0; }
+  padding: 30px 0 33px; }
   .form-feedback__row {
     padding: 0 26px 0 9px;
-    margin-bottom: 15px; }
+    margin-bottom: 12px; }
     .form-feedback__row--no-m {
       margin-bottom: 0; }
 
@@ -1053,9 +1056,9 @@ IMG {
       text-align: center;
       background: #373737; }
   .news__nav--color2.news__nav li:first-child a {
-    background: #4c8bca; }
+    background: #4c8bca !important; }
   .news__nav--color2.news__nav li:last-child a {
-    background: #e85d45; }
+    background: #e85d45 !important; }
   .news__nav--color2.news__nav a {
     font-weight: normal; }
   .news__items {
@@ -1122,11 +1125,11 @@ IMG {
   text-align: center;
   padding: 0 30px;
   color: #525351;
-  margin: 35px 0 40px 0; }
+  margin: 29px 0 33px 0; }
   .text-block2 h2 {
-    font: bold 16px "Century Gothic", sans-serif;
+    font: bold 15.6px "Century Gothic", sans-serif;
     text-transform: uppercase;
-    margin: 0 0 5px 0; }
+    margin: 0 0 9px 0; }
   .text-block2 p {
     font: bold 14px "Century Gothic", sans-serif;
     text-transform: uppercase; }
@@ -1145,10 +1148,10 @@ IMG {
     text-align: center; }
     .text-block3__text h2 {
       text-transform: uppercase;
-      font: normal 15px "BenguiatGothicC";
+      font: normal 16px "BenguiatGothicC";
       margin: 25px 0 0; }
     .text-block3__text p {
-      font: normal 15px "BenguiatGothicC";
+      font: normal 16px "BenguiatGothicC";
       margin: 0; }
   .text-block3__items {
     width: 32%;
@@ -1160,7 +1163,7 @@ IMG {
     height: 95px;
     text-align: center; }
     .text-block3__item img {
-      width: 70px;
+      width: 61px;
       margin: 0 auto 7px;
       display: block; }
     .text-block3__item p {
@@ -1208,7 +1211,7 @@ IMG {
   .tiles__title {
     font: bold 20px "BenguiatGothicC";
     color: #0a5a98;
-    margin: 0 0 8px 0; }
+    margin: 0 0 6px 0; }
   .tiles__text {
     font: bold 16px "BenguiatGothicC";
     line-height: 21px; }
@@ -1394,30 +1397,33 @@ IMG {
   text-align: center;
   overflow: hidden; }
   .text-block5 p {
-    font: normal 15px "BenguiatGothicC";
+    font: normal 13px "BenguiatGothicC";
     color: #000;
     margin: 0 0 17px; }
 
 .text-block6 {
   text-align: center;
   overflow: hidden;
-  padding: 0 0 49px; }
+  padding: 0 0 44px; }
   .text-block6 p {
-    font: bold 35px "Avanti", sans-serif;
-    color: #27821b; }
+    font: bold 33px "Avanti", sans-serif;
+    color: #27821b;
+    line-height: 41px;
+    letter-spacing: -1px; }
 
 .text-block7 {
   text-align: justify; }
   .text-block7__wr {
     padding: 59px 62px 27px; }
   .text-block7__wr2 {
-    padding: 29px 62px 48px; }
+    padding: 32px 62px 40px; }
   .text-block7 h2 {
     font: bold 27px "BenguiatGothicC";
     margin: 0 0 11px;
-    color: #0a5a98; }
+    color: #0a5a98;
+    letter-spacing: -0.4px; }
   .text-block7__p {
-    font: normal 20px "BenguiatGothicC";
+    font: normal 19px "BenguiatGothicC";
     line-height: 25px; }
   .text-block7__style-title {
     font: bold 20px "BenguiatGothicC";
@@ -1427,7 +1433,9 @@ IMG {
   .text-block7__img {
     margin: 0 auto;
     display: block;
-    height: 206px; }
+    height: 232px;
+    position: relative;
+    left: 22px; }
 
 .thumb {
   padding: 50px 0 0;
@@ -1462,13 +1470,27 @@ IMG {
   .text-block8 p {
     font: normal 20px "BenguiatGothicC"; }
 
+.text-block13 {
+  text-align: justify;
+  overflow: hidden; }
+  .text-block13 h2 {
+    font: bold 27px "BenguiatGothicC";
+    color: #0a5a98;
+    margin: 0 0 9px;
+    letter-spacing: -0.4px; }
+  .text-block13 p {
+    font: normal 20px "BenguiatGothicC";
+    line-height: 24px; }
+
 .box-shadow {
-  width: 824px;
+  width: 760px;
   margin: 0 auto;
   box-shadow: 0 0 12px 12px #f1f1f1;
   background: #fff;
   overflow: hidden;
   padding: 26px 0; }
+  .box-shadow--pad3 {
+    padding: 15px 0 18px; }
   .box-shadow--pad2 {
     padding: 30px 35px 35px 40px; }
   .box-shadow__line {
@@ -1499,15 +1521,17 @@ IMG {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
   .accordion__title {
-    cursor: pointer; }
+    cursor: pointer;
+    position: relative; }
     .accordion__title p {
       font: bold 20px "BenguiatGothicC";
       color: #0e5a98;
-      padding: 4px 0; }
+      padding: 5px 0 6px; }
   .accordion__arr {
     position: absolute;
-    top: 20px;
-    right: 5px;
+    top: 50%;
+    margin-top: -2px;
+    right: 3px;
     transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s; }
@@ -1517,7 +1541,7 @@ IMG {
     margin: 0 0 18px; }
 
 .news-more {
-  height: 374px;
+  height: 382px;
   overflow: hidden;
   position: relative;
   background: url(../images/baner10.jpg) no-repeat 0 0;
@@ -1603,7 +1627,7 @@ IMG {
 .txt1 {
   overflow: hidden; }
   .txt1 h2 {
-    font: bold 20px "Avanti", sans-serif;
+    font: bold 19px "Avanti", sans-serif;
     color: #888b8b;
     margin: 45px 0 24px 50px; }
 
@@ -1615,9 +1639,12 @@ IMG {
   .prod-info__img {
     width: 50%; }
     .prod-info__img img {
-      height: 622px;
+      height: 632px;
       display: block;
-      margin: 0 auto; }
+      margin: 0 auto;
+      position: relative;
+      left: 21px;
+      top: -9px; }
   .prod-info__info {
     width: 50%; }
   .prod-info__sub {
@@ -1625,7 +1652,7 @@ IMG {
     color: #888b8b;
     margin: 10px 0 11px; }
   .prod-info__title {
-    font: bold 38px "Avanti", sans-serif;
+    font: bold 36px "Avanti", sans-serif;
     margin: 0 0 45px;
     color: #37850d; }
   .prod-info__sub2 {
@@ -1642,8 +1669,9 @@ IMG {
       position: relative;
       font: bold 17px "Segoe Print";
       color: #23336d;
-      margin: 0 0 6px;
-      line-height: 19px; }
+      letter-spacing: -1px;
+      margin: 0 0 8px;
+      line-height: 18px; }
       .prod-info__ul li .icon {
         position: absolute;
         top: 1px;
@@ -1713,6 +1741,8 @@ IMG {
   margin-bottom: 35px !important; }
 .h-mrg-b-40 {
   margin-bottom: 40px !important; }
+.h-mrg-b-48 {
+  margin-bottom: 48px !important; }
 .h-mrg-b-45 {
   margin-bottom: 45px !important; }
 .h-mrg-b-50 {
@@ -1721,6 +1751,8 @@ IMG {
   margin-bottom: 60px !important; }
 .h-mrg-b-65 {
   margin-bottom: 65px !important; }
+.h-mrg-b-77 {
+  margin-bottom: 77px !important; }
 .h-mrg-t-5 {
   margin-top: 5px !important; }
 .h-mrg-t-10 {
@@ -1739,6 +1771,8 @@ IMG {
   margin-top: 40px !important; }
 .h-mrg-t-50 {
   margin-top: 50px !important; }
+.h-mrg-t-62 {
+  margin-top: 62px !important; }
 .h-mrg-t-65 {
   margin-top: 65px !important; }
 .h-mrg-l-5 {

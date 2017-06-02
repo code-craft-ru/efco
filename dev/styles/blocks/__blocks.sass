@@ -116,13 +116,14 @@
                 li 
                     &:first-child
                         a
-                            background: #4c8bca
+                            background: #4c8bca !important
 
                     &:last-child
                         a
-                            background: #e85d45
+                            background: #e85d45 !important
                 a
                     font-weight: normal
+
 
 
     &__items
@@ -193,11 +194,11 @@
     text-align: center
     padding: 0 30px
     color: #525351
-    margin: 35px 0 40px 0
+    margin: 29px 0 33px 0
     h2
-        font: bold 16px $fGotic
+        font: bold 15.6px $fGotic
         text-transform: uppercase
-        margin: 0 0 5px 0
+        margin: 0 0 9px 0
 
     p 
         font: bold 14px $fGotic
@@ -219,10 +220,10 @@
         text-align: center
         h2
             text-transform: uppercase
-            font: normal 15px $fBenguiat
+            font: normal 16px $fBenguiat
             margin: 25px 0 0
         p
-            font: normal 15px $fBenguiat
+            font: normal 16px $fBenguiat
             margin: 0
 
     &__items
@@ -235,7 +236,7 @@
         text-align: center
 
         img
-            width: 70px
+            width: 61px
             margin: 0 auto 7px
             display: block
 
@@ -293,7 +294,7 @@
     &__title
         font: bold 20px $fBenguiat
         color: #0a5a98
-        margin: 0 0 8px 0
+        margin: 0 0 6px 0
 
     &__text
         font: bold 16px $fBenguiat
@@ -526,17 +527,19 @@
     text-align: center
     overflow: hidden
     p
-        font: normal 15px $fBenguiat
+        font: normal 13px $fBenguiat
         color: #000
         margin: 0 0 17px
 
 .text-block6
     text-align: center
     overflow: hidden
-    padding: 0 0 49px
+    padding: 0 0 44px
     p
-        font: bold 35px $baseFont
+        font: bold 33px $baseFont
         color: #27821b
+        line-height: 41px
+        letter-spacing: -1px
 
 .text-block7
     text-align: justify
@@ -545,16 +548,17 @@
         padding: 59px 62px 27px
 
     &__wr2
-        padding: 29px 62px 48px
+        padding: 32px 62px 40px
 
 
     h2
         font: bold 27px $fBenguiat
         margin: 0 0 11px
         color: #0a5a98
+        letter-spacing: -0.4px
 
     &__p
-        font: normal 20px $fBenguiat
+        font: normal 19px $fBenguiat
         line-height: 25px
 
     &__style-title
@@ -566,7 +570,9 @@
     &__img
         margin: 0 auto
         display: block
-        height: 206px
+        height: 232px
+        position: relative
+        left: 22px
 
 
 .thumb
@@ -607,14 +613,30 @@
     p
         font: normal 20px $fBenguiat 
 
+.text-block13
+    text-align: justify
+    overflow: hidden
+    h2
+        font: bold 27px $fBenguiat 
+        color: #0a5a98
+        margin: 0 0 9px
+        letter-spacing: -0.4px
+
+    p
+        font: normal 20px $fBenguiat 
+        line-height: 24px
+
 
 .box-shadow
-    width: 824px
+    width: 760px
     margin: 0 auto
     box-shadow: 0 0 12px 12px rgba(241,241,241,1)
     background: #fff
     overflow: hidden
     padding: 26px 0
+
+    &--pad3
+        padding: 15px 0 18px 
 
     &--pad2
         padding: 30px 35px 35px 40px
@@ -655,15 +677,17 @@
 
     &__title
         cursor: pointer
+        position: relative
         p
             font: bold 20px $fBenguiat
             color: #0e5a98
-            padding: 4px 0
+            padding: 5px 0 6px
 
     &__arr
         position: absolute
-        top: 20px
-        right: 5px
+        top: 50%
+        margin-top: -2px
+        right: 3px
         transition: transform 0.3s
 
     &__content
@@ -674,7 +698,7 @@
 
 
 .news-more
-    height: 374px
+    height: 382px
     overflow: hidden
     position: relative
     background: url(../images/baner10.jpg) no-repeat 0 0

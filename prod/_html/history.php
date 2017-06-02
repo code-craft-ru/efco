@@ -121,17 +121,60 @@
 
                                     function init(){   
                                         myMap = new ymaps.Map("map", {
-                                            center: [55.68337656905879,37.57411199999998],
-                                            zoom: 16,
+                                            center: [55.82340833062003,37.806082532798754],
+                                            zoom: 9,
                                             controls:[]
                                         });
 
                                         myMap.behaviors.disable(['scrollZoom', 'rightMouseButtonMagnifier']);
 
-                                        placemark = new ymaps.Placemark([55.68337656905879,37.57411199999998] , {
-                                            hintContent: 'Platron'
+
+                                        var clusterer = new ymaps.Clusterer({
+                                            /**
+                                             * Через кластеризатор можно указать только стили кластеров,
+                                             * стили для меток нужно назначать каждой метке отдельно.
+                                             * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/option.presetStorage.xml
+                                             */
+                                            preset: 'islands#invertedNightClusterIcons',
+                                            /**
+                                             * Ставим true, если хотим кластеризовать только точки с одинаковыми координатами.
+                                             */
+                                            groupByCoordinates: false,
+                                            /**
+                                             * Опции кластеров указываем в кластеризаторе с префиксом "cluster".
+                                             * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/ClusterPlacemark.xml
+                                             */
+                                            clusterDisableClickZoom: true,
+                                            clusterHideIconOnBalloonOpen: false,
+                                            geoObjectHideIconOnBalloonOpen: false
                                         });
-                                        myMap.geoObjects.add(placemark);
+
+                                        var points = [
+                                            [55.75399399999374,37.62209300000001],
+                                            [55.729777762083266,37.479239271080004],
+                                            [55.64599324555758,37.66875343123625],
+                                            [55.70261993275194,37.663260267173754],
+                                            [55.761512502702885,37.806082532798754],
+                                            [55.82340833062003,37.806082532798754],
+                                            [55.89600976900491,37.71819190779874],
+                                            [55.945362606739586,37.40508155623625],
+                                            [55.89909617026925,37.20732764998624],
+                                            [55.54255527820888,36.970706801237405],
+                                            [55.51136844592372,37.215200876387726]
+                                        ];
+
+                                        var geoOpjects = [];
+
+                                        for( var i=0; i<points.length ;i++){
+                                            geoOpjects[i] = new ymaps.Placemark(points[i] , {
+                                                hintContent: 'Sloboda'
+                                            },{
+                                                preset: 'islands#nightIcon'
+                                            });                                            
+                                        }
+
+                                        clusterer.add(geoOpjects);
+                                        myMap.geoObjects.add(clusterer);
                                     }
                                 </script>
 
