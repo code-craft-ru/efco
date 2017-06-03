@@ -1045,8 +1045,6 @@ IMG {
     float: left;
     width: 50%;
     list-style: none; }
-    .news__nav li._active a {
-      background: #4c8bca !important; }
     .news__nav li a {
       display: block;
       text-decoration: none;
@@ -1055,12 +1053,13 @@ IMG {
       padding: 7px;
       text-align: center;
       background: #373737; }
-  .news__nav--color2.news__nav li:first-child a {
-    background: #4c8bca !important; }
-  .news__nav--color2.news__nav li:last-child a {
-    background: #e85d45 !important; }
-  .news__nav--color2.news__nav a {
-    font-weight: normal; }
+    .news__nav li._active a {
+      background: #4c8bca; }
+  .news__nav--color2.news__nav li a {
+    font-weight: normal;
+    background: #e85d45; }
+  .news__nav--color2.news__nav li._active a {
+    background: #4c8bca; }
   .news__items {
     margin: 16px 0 10px;
     display: -webkit-box;

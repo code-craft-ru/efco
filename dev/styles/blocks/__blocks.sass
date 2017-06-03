@@ -92,9 +92,6 @@
             float: left
             width: 50%
             list-style: none
-            &._active
-                a
-                    background: #4c8bca !important
             a
                 display: block
                 text-decoration: none
@@ -103,6 +100,9 @@
                 padding: 7px
                 text-align: center
                 background: #373737
+            &._active
+                a
+                    background: #4c8bca 
 
             // &:first-child
             //     a
@@ -114,15 +114,13 @@
         &--color2
             &.news__nav
                 li 
-                    &:first-child
+                   
+                    a
+                        font-weight: normal
+                        background: #e85d45 
+                    &._active
                         a
-                            background: #4c8bca !important
-
-                    &:last-child
-                        a
-                            background: #e85d45 !important
-                a
-                    font-weight: normal
+                            background: #4c8bca
 
 
 

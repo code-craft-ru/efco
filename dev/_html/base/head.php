@@ -7,6 +7,7 @@ $links_url = str_replace('_html','',$links_url);
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Новый проект</title>
     <meta name="description" content="">
+    
     <meta name="viewport" content="width=1200, height=device-height, initial-scale=1">
 
     <!-- build:css ../css/styles.css -->
