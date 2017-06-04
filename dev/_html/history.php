@@ -123,10 +123,11 @@
                                         myMap = new ymaps.Map("map", {
                                             center: [55.82340833062003,37.806082532798754],
                                             zoom: 9,
-                                            controls:[]
+                                            controls:['fullscreenControl' ,'zoomControl']
                                         });
 
                                         myMap.behaviors.disable(['scrollZoom', 'rightMouseButtonMagnifier']);
+                                        var iconContentLayout = ymaps.templateLayoutFactory.createClass('<em style="color: #FFFFFF; font-weight: bold;">$[properties.geoObjects.length]</em>');
 
 
                                         var clusterer = new ymaps.Clusterer({
@@ -135,7 +136,19 @@
                                              * стили для меток нужно назначать каждой метке отдельно.
                                              * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/option.presetStorage.xml
                                              */
-                                            preset: 'islands#invertedNightClusterIcons',
+                                            // preset: 'islands#invertedNightClusterIcons',
+                                            clusterIcons:[{
+                                                href: '../images/pin.png',
+                                                size: [50,50],
+                                                offset: [-25,-25],
+                                            },{
+                                                href: '../images/pin-big.png',
+                                                size: [104,104],
+                                                offset: [-52,-52],
+                                            }],
+                                            hasBalloon: false,
+                                            clusterIconContentLayout: ymaps.templateLayoutFactory.createClass('<p style="color: #ffffff;">$[properties.geoObjects.length]</p>'),
+                                            
                                             /**
                                              * Ставим true, если хотим кластеризовать только точки с одинаковыми координатами.
                                              */
