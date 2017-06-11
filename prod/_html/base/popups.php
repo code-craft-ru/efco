@@ -115,7 +115,14 @@
   <div class="popup__close">
     <span class="icon icon--close"></span>
   </div>
-  <div class="popup__content js-sсroller">
-     <iframe width="100%" height="340" src="https://www.youtube.com/embed/JDtnNt0_j30" frameborder="0" allowfullscreen></iframe>
+  <div class="popup__content">
+     <div class="js-webcamera-slider webcamera-sl">
+       <div class="webcamera-sl__slide">
+         <iframe width="100%" height="340" src="https://www.youtube.com/embed/JDtnNt0_j30" frameborder="0" allowfullscreen></iframe>
+       </div>
+       <div class="webcamera-sl__slide">
+         <iframe width="100%" height="340" src="https://www.youtube.com/embed/JDtnNt0_j30" frameborder="0" allowfullscreen></iframe>
+       </div>
+     </div>
   </div>
 </div>

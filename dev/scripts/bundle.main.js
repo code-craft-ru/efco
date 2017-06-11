@@ -118,6 +118,8 @@ webpackJsonp([0,1],[
 	    if (!link.length) return;
 	
 	    __webpack_require__(9);
+	    __webpack_require__(7);
+	
 	    $('.js-link-popup').magnificPopup({
 	        type: 'inline',
 	        midClick: true
@@ -139,6 +141,13 @@ webpackJsonp([0,1],[
 	        var inst = $.magnificPopup.instance;
 	        if (inst.currItem.src === "#popup-about-milk") {
 	            initPopupSlider();
+	        }
+	
+	        if (inst.currItem.src === "#popup-webcamera") {
+	            $('.js-webcamera-slider').slick({
+	                arrows: false,
+	                dots: true
+	            });
 	        }
 	    });
 	});

@@ -1623,6 +1623,25 @@ IMG {
     display: -ms-flexbox !important;
     display: flex !important; }
 
+.webcamera-sl .slick-dots {
+  text-align: center;
+  position: relative;
+  top: 3px; }
+  .webcamera-sl .slick-dots li {
+    display: inline-block; }
+    .webcamera-sl .slick-dots li.slick-active button {
+      background: #373737; }
+  .webcamera-sl .slick-dots button {
+    width: 12px;
+    height: 12px;
+    background: #4c8bca;
+    margin: 0 2px;
+    display: inline-block;
+    border-radius: 100%;
+    color: #4c8bca;
+    font-size: 0;
+    cursor: pointer; }
+
 .txt1 {
   overflow: hidden; }
   .txt1 h2 {

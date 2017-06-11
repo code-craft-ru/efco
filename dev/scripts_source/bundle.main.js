@@ -112,6 +112,8 @@ $(function(){
     if(!link.length) return; 
     
     require('magnific-popup');
+    require('slick-carousel');
+
     $('.js-link-popup').magnificPopup({
         type: 'inline',
         midClick: true,
@@ -134,6 +136,13 @@ $(function(){
         var inst = $.magnificPopup.instance;
         if(inst.currItem.src === "#popup-about-milk"){
             initPopupSlider();            
+        }
+
+        if(inst.currItem.src === "#popup-webcamera"){
+            $('.js-webcamera-slider').slick({
+                arrows: false,
+                dots: true
+            });
         }
     });
    
