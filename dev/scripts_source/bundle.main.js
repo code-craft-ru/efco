@@ -87,7 +87,13 @@ $(function(){
     if(!el.length) return;
 
     el.find('.js-accordion__item').on('click', function(){
-        $(this).toggleClass('_open');
+        // $(this).toggleClass('_open');
+        if($(this).hasClass('_open')){
+            $(this).removeClass('_open');
+        }else{
+            el.find('.js-accordion__item').removeClass('_open');
+            $(this).addClass('_open');
+        }
     });
 });
 
