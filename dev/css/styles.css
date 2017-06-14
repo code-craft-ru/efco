@@ -1065,8 +1065,9 @@ IMG {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
   .news__more-btn {
@@ -1075,7 +1076,7 @@ IMG {
 .news-item {
   width: 304px;
   border: 1px solid #f6f6f6;
-  margin: 0;
+  margin: 14px;
   transition: all 0.3s; }
   .news-item:hover {
     border: 1px solid #4c8bca; }

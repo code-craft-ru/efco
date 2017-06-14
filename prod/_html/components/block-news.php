@@ -40,6 +40,18 @@
                 </a>
             </div>
 
+            <div class="news-item">
+                <a href="#popup-about-milk" class='js-link-popup' data-postid=''>
+                    <div class="news-item__content">
+                        <div class="news-item__title">Lorem ipsum dolor.</div>
+                        <div class="news-item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aut iste ducimus quae, blanditiis, perspiciatis optio maiores odio culpa sit!</div>
+                    </div>
+                    <div class="news-item__img">
+                        <img src="../images/userfiles/news3.jpg" alt="">
+                    </div>
+                </a>
+            </div>
+
         </div>
         <div class="news__items js-tabs-tab">
             <div class="news-item">

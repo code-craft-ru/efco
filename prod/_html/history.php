@@ -148,7 +148,7 @@
                                             }],
                                             hasBalloon: false,
                                             clusterIconContentLayout: ymaps.templateLayoutFactory.createClass('<p style="color: #ffffff;">$[properties.geoObjects.length]</p>'),
-                                            
+                                            // clusterIconContentLayout: false,
                                             /**
                                              * Ставим true, если хотим кластеризовать только точки с одинаковыми координатами.
                                              */

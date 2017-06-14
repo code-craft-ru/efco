@@ -10,6 +10,7 @@ $links_url = str_replace('_html','',$links_url);
     
     <meta name="viewport" content="width=1200, height=device-height, initial-scale=1">
 
+ 
 
     <link rel="stylesheet" href="../css/styles.css">
 
