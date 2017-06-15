@@ -6,8 +6,6 @@ window.$B = $('body');
 require('./formValidate.js');
 
 
-  
-
 /* -- Общие плагины и функции -- */
 
 // "Scroll to" function
@@ -139,6 +137,10 @@ $(function(){
         
     }
     $('.js-link-popup').on('mfpOpen' , function(){
+        window.initExtraFuncPopups()
+    });
+
+    window.initExtraFuncPopups = function (){
         var inst = $.magnificPopup.instance;
         if(inst.currItem.src === "#popup-about-milk"){
             initPopupSlider();            
@@ -150,7 +152,7 @@ $(function(){
                 dots: true
             });
         }
-    });
+    }
    
 });
 
@@ -252,7 +254,6 @@ $(function(){
             $btns.bind('click', function () {
                 var index = $(this).index();
                 tabSwitch(index);
-                console.log(index)
             });
 
         })
@@ -268,3 +269,11 @@ $(function(){
 
 })
 
+
+
+window.popupsManager = {
+    open(id){
+        $.magnificPopup.open({ items: { src: id}});
+        window.initExtraFuncPopups();
+    }
+};
