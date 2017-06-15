@@ -1076,7 +1076,8 @@ IMG {
   width: 304px;
   border: 1px solid #f6f6f6;
   margin: 14px;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  cursor: pointer; }
   .news-item:hover {
     border: 1px solid #4c8bca; }
   .news-item a {
@@ -1548,11 +1549,12 @@ IMG {
   .news-more a {
     text-decoration: none; }
   .news-more__item {
-    width: 240px;
-    height: 198px;
+    width: 243px;
+    min-height: 198px;
+    vertical-align: top;
     background: #fff;
     display: inline-block;
-    margin: 0 7px;
+    margin: 0 5px;
     padding: 12px;
     overflow: hidden; }
   .news-more__img {

@@ -74,7 +74,7 @@
                                             <img src="../images/newsitem2.jpg" alt="">
                                         </div>
                                         <div class="news-more__title">
-                                            Will the a2 Milk Company <br> reduce payments to farmers?
+                                            Will the a2 Milk Company <br> reduce payments to farmers? lorem impsum bla
                                         </div>
                                     </a>
                                 </div>

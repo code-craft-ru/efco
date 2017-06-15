@@ -156,6 +156,85 @@ $(function(){
    
 });
 
+$(function(){
+    var link = $('.js-load-post');
+
+    if(!link.length) return;
+
+    require('magnific-popup');
+
+    var container = $('.js-load-post__content'),
+        idPopup = '#popup-about-milk';
+
+    link.on('click', function(){
+        var url = $(this).data().url,
+            content = '';
+
+        $.magnificPopup.open({ items: { src: idPopup}});
+        container.html('');
+        $.ajax({
+            url: url,
+            method: 'POST',
+            success: function(data){
+                container.html(data);
+                initPopupSlider();
+            },
+            error: function(err){
+                if(err) container.html('error');
+            }
+        })
+    });
+
+    function initPopupSlider(){
+        var slider = $('.js-slider-popup');
+        if(!slider) return;
+        
+        slider.sliderPopup();
+    }
+});
+
+$(function(){
+    var moreBtn = $('.js-load-post__more');
+    if(!moreBtn.length) return;
+
+    var tab = $('.js-load-post__tab');
+        
+    function init(){
+        tab.data('show', 2);
+        tab.each(function(){
+           var tabCurr = $(this);
+           $(this).children().each(function(i ,el){
+
+                 if(i>tabCurr.data().show){
+                    $(this).hide();
+                 }    
+           })
+        })
+    }
+       
+
+
+    moreBtn.on('click' , function(){
+        var activeTab = tab.filter('._active'),
+            show = activeTab.data().show,
+            nextShow = show+=3;
+
+            activeTab.data('show', nextShow);
+
+            activeTab.children().each(function(i ,el){
+                
+                  if(i>nextShow){
+                     $(this).hide();
+                  }else{
+                    $(this).show();
+                  }
+            })
+
+    });
+
+
+    init();
+});
 
 $(function(){
     // логика для попапа подпики отписки
