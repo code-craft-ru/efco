@@ -10,11 +10,7 @@ $links_url = str_replace('_html','',$links_url);
     
     <meta name="viewport" content="width=1200, height=device-height, initial-scale=1">
 
-  
-
-
     <link rel="stylesheet" href="../css/styles.css">
-
 
     
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>

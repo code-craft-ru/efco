@@ -209,13 +209,28 @@ webpackJsonp([0,1],[
 	        tab.data('show', 2);
 	        tab.each(function () {
 	            var tabCurr = $(this);
+	
 	            $(this).children().each(function (i, el) {
 	
 	                if (i > tabCurr.data().show) {
 	                    $(this).hide();
 	                }
 	            });
+	
+	            if (checkAllShowItem(tabCurr)) {
+	                moreBtn.hide();
+	            } else {
+	                moreBtn.show();
+	            }
 	        });
+	    }
+	
+	    function checkAllShowItem(activeTab) {
+	        var count = 0;
+	        activeTab.children().map(function (i, el) {
+	            if ($(this).css('display') === 'none') count++;
+	        });
+	        return count > 0 ? false : true;
 	    }
 	
 	    moreBtn.on('click', function () {
@@ -233,6 +248,25 @@ webpackJsonp([0,1],[
 	                $(this).show();
 	            }
 	        });
+	
+	        if (checkAllShowItem(activeTab)) {
+	            moreBtn.hide();
+	        } else {
+	            moreBtn.show();
+	        }
+	    });
+	
+	    $('.js-tabs-btn').on('click', function () {
+	
+	        setTimeout(function () {
+	            var curr = $('.js-load-post__tab').filter('._active');
+	
+	            if (checkAllShowItem(curr)) {
+	                moreBtn.hide();
+	            } else {
+	                moreBtn.show();
+	            }
+	        }, 60);
 	    });
 	
 	    init();
