@@ -713,6 +713,8 @@ IMG {
     color: #306ba1; }
   .link--dotted {
     border-bottom-style: dotted; }
+  .link--bottom-line {
+    border-bottom-color: #000; }
 
 .typography {
   border: 1px solid transparent; }
@@ -1711,6 +1713,23 @@ IMG {
     color: #4c8bca;
     font-size: 0;
     cursor: pointer; }
+
+.notfound {
+  margin: 150px 0 230px;
+  text-align: center;
+  overflow: hidden; }
+  .notfound h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #0a5a98;
+    font-weight: bold;
+    font-weight: "Avanti", sans-serif;
+    margin: 0 0 180px; }
+  .notfound p {
+    color: #000;
+    font-size: 23px;
+    font-weight: "BenguiatGothicC";
+    margin: 0; }
 
 .txt1 {
   overflow: hidden; }
