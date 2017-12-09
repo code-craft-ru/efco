@@ -91,7 +91,7 @@
                             </div>
                         </div>
 
-                        <div class="text-block3">
+                        <!-- <div class="text-block3">
                             <div class="text-block3__text">
                                 <h2>Если вы регулярно пьете  обычное молоко и чувствуете нежелательное раздражение,</h2>
                                 <p>то попробуйте молоко А2 и Вы почувствуете разницу, как и тысячи других людей.</p>
@@ -110,8 +110,43 @@
                                     <p>Белок как в грудном молоке</p>
                                 </div>
                             </div>
+                        </div> -->
+                        <div class="research-items">
+                            <div class="title-throughline"><span>Научные исследования</span></div>
+                            <div class="research-items-wr">
+                                <div class="item">
+                                    <div class="content">
+                                        <div class="icon"><img src="../images/research-items/1.png" alt=""></div>
+                                        Сравнение бета-казеина A1 и бета-казеина A2 с точки зрения их воздействия на желудочно-кишечный тракт
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <div class="icon"><img src="../images/research-items/2.png" alt=""></div>
+                                        Сравнительная оценка двух типов молочного бета-казеина (A1 и A2)
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <div class="icon"><img src="../images/research-items/3.png" alt=""></div>
+                                        Пищевой бета-казеин A1 влияет на длительность желудочно-кишечного транзита
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <div class="icon"><img src="../images/research-items/4.png" alt=""></div>
+                                        Молочная непереносимость, бета-казеин и лактоза
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <div class="icon"><img src="../images/research-items/5.png" alt=""></div>
+                                        Воздействие на желудочно-кишечную физиологию молока с содержанием бета-казеина только типа A2 в сравнении с молоком, содержащим как бета-казеин A1, так и
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
+    
                         <div class="maps">
                             <div id="map" style="width: 100%; height: 310px"></div>
                                 

@@ -10851,11 +10851,11 @@ webpackJsonp([0,1],[
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	 * jQuery Validation Plugin v1.16.0
+	 * jQuery Validation Plugin v1.17.0
 	 *
-	 * http://jqueryvalidation.org/
+	 * https://jqueryvalidation.org/
 	 *
-	 * Copyright (c) 2016 Jörn Zaefferer
+	 * Copyright (c) 2017 Jörn Zaefferer
 	 * Released under the MIT license
 	 */
 	(function( factory ) {
@@ -10870,7 +10870,7 @@ webpackJsonp([0,1],[
 	
 	$.extend( $.fn, {
 	
-		// http://jqueryvalidation.org/validate/
+		// https://jqueryvalidation.org/validate/
 		validate: function( options ) {
 	
 			// If nothing is selected, return nothing; can't chain anyway
@@ -10896,9 +10896,10 @@ webpackJsonp([0,1],[
 			if ( validator.settings.onsubmit ) {
 	
 				this.on( "click.validate", ":submit", function( event ) {
-					if ( validator.settings.submitHandler ) {
-						validator.submitButton = event.target;
-					}
+	
+					// Track the used submit button to properly handle scripted
+					// submits later.
+					validator.submitButton = event.currentTarget;
 	
 					// Allow suppressing validation by adding a cancel class to the submit button
 					if ( $( this ).hasClass( "cancel" ) ) {
@@ -10920,17 +10921,22 @@ webpackJsonp([0,1],[
 					}
 					function handle() {
 						var hidden, result;
-						if ( validator.settings.submitHandler ) {
-							if ( validator.submitButton ) {
 	
-								// Insert a hidden input as a replacement for the missing submit button
-								hidden = $( "<input type='hidden'/>" )
-									.attr( "name", validator.submitButton.name )
-									.val( $( validator.submitButton ).val() )
-									.appendTo( validator.currentForm );
-							}
+						// Insert a hidden input as a replacement for the missing submit button
+						// The hidden input is inserted in two cases:
+						//   - A user defined a `submitHandler`
+						//   - There was a pending request due to `remote` method and `stopRequest()`
+						//     was called to submit the form in case it's valid
+						if ( validator.submitButton && ( validator.settings.submitHandler || validator.formSubmitted ) ) {
+							hidden = $( "<input type='hidden'/>" )
+								.attr( "name", validator.submitButton.name )
+								.val( $( validator.submitButton ).val() )
+								.appendTo( validator.currentForm );
+						}
+	
+						if ( validator.settings.submitHandler ) {
 							result = validator.settings.submitHandler.call( validator, validator.currentForm, event );
-							if ( validator.submitButton ) {
+							if ( hidden ) {
 	
 								// And clean up afterwards; thanks to no-block-scope, hidden can be referenced
 								hidden.remove();
@@ -10964,7 +10970,7 @@ webpackJsonp([0,1],[
 			return validator;
 		},
 	
-		// http://jqueryvalidation.org/valid/
+		// https://jqueryvalidation.org/valid/
 		valid: function() {
 			var valid, validator, errorList;
 	
@@ -10985,13 +10991,22 @@ webpackJsonp([0,1],[
 			return valid;
 		},
 	
-		// http://jqueryvalidation.org/rules/
+		// https://jqueryvalidation.org/rules/
 		rules: function( command, argument ) {
 			var element = this[ 0 ],
 				settings, staticRules, existingRules, data, param, filtered;
 	
 			// If nothing is selected, return empty object; can't chain anyway
-			if ( element == null || element.form == null ) {
+			if ( element == null ) {
+				return;
+			}
+	
+			if ( !element.form && element.hasAttribute( "contenteditable" ) ) {
+				element.form = this.closest( "form" )[ 0 ];
+				element.name = this.attr( "name" );
+			}
+	
+			if ( element.form == null ) {
 				return;
 			}
 	
@@ -11019,9 +11034,6 @@ webpackJsonp([0,1],[
 					$.each( argument.split( /\s/ ), function( index, method ) {
 						filtered[ method ] = existingRules[ method ];
 						delete existingRules[ method ];
-						if ( method === "required" ) {
-							$( element ).removeAttr( "aria-required" );
-						}
 					} );
 					return filtered;
 				}
@@ -11041,7 +11053,6 @@ webpackJsonp([0,1],[
 				param = data.required;
 				delete data.required;
 				data = $.extend( { required: param }, data );
-				$( element ).attr( "aria-required", "true" );
 			}
 	
 			// Make sure remote is at back
@@ -11058,18 +11069,18 @@ webpackJsonp([0,1],[
 	// Custom selectors
 	$.extend( $.expr.pseudos || $.expr[ ":" ], {		// '|| $.expr[ ":" ]' here enables backwards compatibility to jQuery 1.7. Can be removed when dropping jQ 1.7.x support
 	
-		// http://jqueryvalidation.org/blank-selector/
+		// https://jqueryvalidation.org/blank-selector/
 		blank: function( a ) {
 			return !$.trim( "" + $( a ).val() );
 		},
 	
-		// http://jqueryvalidation.org/filled-selector/
+		// https://jqueryvalidation.org/filled-selector/
 		filled: function( a ) {
 			var val = $( a ).val();
 			return val !== null && !!$.trim( "" + val );
 		},
 	
-		// http://jqueryvalidation.org/unchecked-selector/
+		// https://jqueryvalidation.org/unchecked-selector/
 		unchecked: function( a ) {
 			return !$( a ).prop( "checked" );
 		}
@@ -11082,7 +11093,7 @@ webpackJsonp([0,1],[
 		this.init();
 	};
 	
-	// http://jqueryvalidation.org/jQuery.validator.format/
+	// https://jqueryvalidation.org/jQuery.validator.format/
 	$.validator.format = function( source, params ) {
 		if ( arguments.length === 1 ) {
 			return function() {
@@ -11195,7 +11206,7 @@ webpackJsonp([0,1],[
 			}
 		},
 	
-		// http://jqueryvalidation.org/jQuery.validator.setDefaults/
+		// https://jqueryvalidation.org/jQuery.validator.setDefaults/
 		setDefaults: function( settings ) {
 			$.extend( $.validator.defaults, settings );
 		},
@@ -11254,6 +11265,7 @@ webpackJsonp([0,1],[
 					// Set form expando on contenteditable
 					if ( !this.form && this.hasAttribute( "contenteditable" ) ) {
 						this.form = $( this ).closest( "form" )[ 0 ];
+						this.name = $( this ).attr( "name" );
 					}
 	
 					var validator = $.data( this.form, "validator" ),
@@ -11278,13 +11290,9 @@ webpackJsonp([0,1],[
 				if ( this.settings.invalidHandler ) {
 					$( this.currentForm ).on( "invalid-form.validate", this.settings.invalidHandler );
 				}
-	
-				// Add aria-required to any Static/Data/Class required fields before first validation
-				// Screen readers require this attribute to be present before the initial submission http://www.w3.org/TR/WCAG-TECHS/ARIA2.html
-				$( this.currentForm ).find( "[required], [data-rule-required], .required" ).attr( "aria-required", "true" );
 			},
 	
-			// http://jqueryvalidation.org/Validator.form/
+			// https://jqueryvalidation.org/Validator.form/
 			form: function() {
 				this.checkForm();
 				$.extend( this.submitted, this.errorMap );
@@ -11304,7 +11312,7 @@ webpackJsonp([0,1],[
 				return this.valid();
 			},
 	
-			// http://jqueryvalidation.org/Validator.element/
+			// https://jqueryvalidation.org/Validator.element/
 			element: function( element ) {
 				var cleanElement = this.clean( element ),
 					checkElement = this.validationTargetFor( cleanElement ),
@@ -11355,7 +11363,7 @@ webpackJsonp([0,1],[
 				return result;
 			},
 	
-			// http://jqueryvalidation.org/Validator.showErrors/
+			// https://jqueryvalidation.org/Validator.showErrors/
 			showErrors: function( errors ) {
 				if ( errors ) {
 					var validator = this;
@@ -11381,7 +11389,7 @@ webpackJsonp([0,1],[
 				}
 			},
 	
-			// http://jqueryvalidation.org/Validator.resetForm/
+			// https://jqueryvalidation.org/Validator.resetForm/
 			resetForm: function() {
 				if ( $.fn.resetForm ) {
 					$( this.currentForm ).resetForm();
@@ -11422,7 +11430,10 @@ webpackJsonp([0,1],[
 				var count = 0,
 					i;
 				for ( i in obj ) {
-					if ( obj[ i ] ) {
+	
+					// This check allows counting elements with empty error
+					// message as invalid elements
+					if ( obj[ i ] !== undefined && obj[ i ] !== null && obj[ i ] !== false ) {
 						count++;
 					}
 				}
@@ -11487,6 +11498,7 @@ webpackJsonp([0,1],[
 					// Set form expando on contenteditable
 					if ( this.hasAttribute( "contenteditable" ) ) {
 						this.form = $( this ).closest( "form" )[ 0 ];
+						this.name = name;
 					}
 	
 					// Select only the first element for each name, and only those with rules specified
@@ -11587,21 +11599,27 @@ webpackJsonp([0,1],[
 					} ).length,
 					dependencyMismatch = false,
 					val = this.elementValue( element ),
-					result, method, rule;
+					result, method, rule, normalizer;
 	
-				// If a normalizer is defined for this element, then
-				// call it to retreive the changed value instead
+				// Prioritize the local normalizer defined for this element over the global one
+				// if the former exists, otherwise user the global one in case it exists.
+				if ( typeof rules.normalizer === "function" ) {
+					normalizer = rules.normalizer;
+				} else if (	typeof this.settings.normalizer === "function" ) {
+					normalizer = this.settings.normalizer;
+				}
+	
+				// If normalizer is defined, then call it to retreive the changed value instead
 				// of using the real one.
 				// Note that `this` in the normalizer is `element`.
-				if ( typeof rules.normalizer === "function" ) {
-					val = rules.normalizer.call( element, val );
+				if ( normalizer ) {
+					val = normalizer.call( element, val );
 	
 					if ( typeof val !== "string" ) {
 						throw new TypeError( "The normalizer should return a string value." );
 					}
 	
-					// Delete the normalizer from rules to avoid treating
-					// it as a pre-defined method.
+					// Delete the normalizer from rules to avoid treating it as a pre-defined method.
 					delete rules.normalizer;
 				}
 	
@@ -11941,6 +11959,15 @@ webpackJsonp([0,1],[
 				$( element ).removeClass( this.settings.pendingClass );
 				if ( valid && this.pendingRequest === 0 && this.formSubmitted && this.form() ) {
 					$( this.currentForm ).submit();
+	
+					// Remove the hidden input that was used as a replacement for the
+					// missing submit button. The hidden input is added by `handle()`
+					// to ensure that the value of the used submit button is passed on
+					// for scripted submits triggered by this method
+					if ( this.submitButton ) {
+						$( "input:hidden[name='" + this.submitButton.name + "']", this.currentForm ).remove();
+					}
+	
 					this.formSubmitted = false;
 				} else if ( !valid && this.pendingRequest === 0 && this.formSubmitted ) {
 					$( this.currentForm ).triggerHandler( "invalid-form", [ this ] );
@@ -12168,7 +12195,7 @@ webpackJsonp([0,1],[
 			return data;
 		},
 	
-		// http://jqueryvalidation.org/jQuery.validator.addMethod/
+		// https://jqueryvalidation.org/jQuery.validator.addMethod/
 		addMethod: function( name, method, message ) {
 			$.validator.methods[ name ] = method;
 			$.validator.messages[ name ] = message !== undefined ? message : $.validator.messages[ name ];
@@ -12177,10 +12204,10 @@ webpackJsonp([0,1],[
 			}
 		},
 	
-		// http://jqueryvalidation.org/jQuery.validator.methods/
+		// https://jqueryvalidation.org/jQuery.validator.methods/
 		methods: {
 	
-			// http://jqueryvalidation.org/required-method/
+			// https://jqueryvalidation.org/required-method/
 			required: function( value, element, param ) {
 	
 				// Check if dependency is met
@@ -12199,7 +12226,7 @@ webpackJsonp([0,1],[
 				return value.length > 0;
 			},
 	
-			// http://jqueryvalidation.org/email-method/
+			// https://jqueryvalidation.org/email-method/
 			email: function( value, element ) {
 	
 				// From https://html.spec.whatwg.org/multipage/forms.html#valid-e-mail-address
@@ -12209,7 +12236,7 @@ webpackJsonp([0,1],[
 				return this.optional( element ) || /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test( value );
 			},
 	
-			// http://jqueryvalidation.org/url-method/
+			// https://jqueryvalidation.org/url-method/
 			url: function( value, element ) {
 	
 				// Copyright (c) 2010-2013 Diego Perini, MIT licensed
@@ -12219,60 +12246,60 @@ webpackJsonp([0,1],[
 				return this.optional( element ) || /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})).?)(?::\d{2,5})?(?:[/?#]\S*)?$/i.test( value );
 			},
 	
-			// http://jqueryvalidation.org/date-method/
+			// https://jqueryvalidation.org/date-method/
 			date: function( value, element ) {
 				return this.optional( element ) || !/Invalid|NaN/.test( new Date( value ).toString() );
 			},
 	
-			// http://jqueryvalidation.org/dateISO-method/
+			// https://jqueryvalidation.org/dateISO-method/
 			dateISO: function( value, element ) {
 				return this.optional( element ) || /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/.test( value );
 			},
 	
-			// http://jqueryvalidation.org/number-method/
+			// https://jqueryvalidation.org/number-method/
 			number: function( value, element ) {
 				return this.optional( element ) || /^(?:-?\d+|-?\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/.test( value );
 			},
 	
-			// http://jqueryvalidation.org/digits-method/
+			// https://jqueryvalidation.org/digits-method/
 			digits: function( value, element ) {
 				return this.optional( element ) || /^\d+$/.test( value );
 			},
 	
-			// http://jqueryvalidation.org/minlength-method/
+			// https://jqueryvalidation.org/minlength-method/
 			minlength: function( value, element, param ) {
 				var length = $.isArray( value ) ? value.length : this.getLength( value, element );
 				return this.optional( element ) || length >= param;
 			},
 	
-			// http://jqueryvalidation.org/maxlength-method/
+			// https://jqueryvalidation.org/maxlength-method/
 			maxlength: function( value, element, param ) {
 				var length = $.isArray( value ) ? value.length : this.getLength( value, element );
 				return this.optional( element ) || length <= param;
 			},
 	
-			// http://jqueryvalidation.org/rangelength-method/
+			// https://jqueryvalidation.org/rangelength-method/
 			rangelength: function( value, element, param ) {
 				var length = $.isArray( value ) ? value.length : this.getLength( value, element );
 				return this.optional( element ) || ( length >= param[ 0 ] && length <= param[ 1 ] );
 			},
 	
-			// http://jqueryvalidation.org/min-method/
+			// https://jqueryvalidation.org/min-method/
 			min: function( value, element, param ) {
 				return this.optional( element ) || value >= param;
 			},
 	
-			// http://jqueryvalidation.org/max-method/
+			// https://jqueryvalidation.org/max-method/
 			max: function( value, element, param ) {
 				return this.optional( element ) || value <= param;
 			},
 	
-			// http://jqueryvalidation.org/range-method/
+			// https://jqueryvalidation.org/range-method/
 			range: function( value, element, param ) {
 				return this.optional( element ) || ( value >= param[ 0 ] && value <= param[ 1 ] );
 			},
 	
-			// http://jqueryvalidation.org/step-method/
+			// https://jqueryvalidation.org/step-method/
 			step: function( value, element, param ) {
 				var type = $( element ).attr( "type" ),
 					errorMessage = "Step attribute on input type " + type + " is not supported.",
@@ -12310,7 +12337,7 @@ webpackJsonp([0,1],[
 				return this.optional( element ) || valid;
 			},
 	
-			// http://jqueryvalidation.org/equalTo-method/
+			// https://jqueryvalidation.org/equalTo-method/
 			equalTo: function( value, element, param ) {
 	
 				// Bind to the blur event of the target in order to revalidate whenever the target field is updated
@@ -12323,7 +12350,7 @@ webpackJsonp([0,1],[
 				return value === target.val();
 			},
 	
-			// http://jqueryvalidation.org/remote-method/
+			// https://jqueryvalidation.org/remote-method/
 			remote: function( value, element, param, method ) {
 				if ( this.optional( element ) ) {
 					return "dependency-mismatch";
@@ -12443,7 +12470,7 @@ webpackJsonp([0,1],[
 	|___/_|_|\___|_|\_(_)/ |___/
 	                   |__/
 	
-	 Version: 1.6.0
+	 Version: 1.8.0
 	  Author: Ken Wheeler
 	 Website: http://kenwheeler.github.io
 	    Docs: http://kenwheeler.github.io/slick
@@ -12452,7 +12479,7 @@ webpackJsonp([0,1],[
 	
 	 */
 	/* global window, document, define, jQuery, setInterval, clearInterval */
-	(function(factory) {
+	;(function(factory) {
 	    'use strict';
 	    if (true) {
 	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(2)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -12481,15 +12508,15 @@ webpackJsonp([0,1],[
 	                appendDots: $(element),
 	                arrows: true,
 	                asNavFor: null,
-	                prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous</button>',
-	                nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next</button>',
+	                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>',
+	                nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>',
 	                autoplay: false,
 	                autoplaySpeed: 3000,
 	                centerMode: false,
 	                centerPadding: '50px',
 	                cssEase: 'ease',
 	                customPaging: function(slider, i) {
-	                    return $('<button type="button" data-role="none" role="button" tabindex="0" />').text(i + 1);
+	                    return $('<button type="button" />').text(i + 1);
 	                },
 	                dots: false,
 	                dotsClass: 'slick-dots',
@@ -12498,6 +12525,7 @@ webpackJsonp([0,1],[
 	                edgeFriction: 0.35,
 	                fade: false,
 	                focusOnSelect: false,
+	                focusOnChange: false,
 	                infinite: true,
 	                initialSlide: 0,
 	                lazyLoad: 'ondemand',
@@ -12541,6 +12569,7 @@ webpackJsonp([0,1],[
 	                loadIndex: 0,
 	                $nextArrow: null,
 	                $prevArrow: null,
+	                scrolling: false,
 	                slideCount: null,
 	                slideWidth: null,
 	                $slideTrack: null,
@@ -12548,6 +12577,7 @@ webpackJsonp([0,1],[
 	                sliding: false,
 	                slideOffset: 0,
 	                swipeLeft: null,
+	                swiping: false,
 	                $list: null,
 	                touchObject: {},
 	                transformsEnabled: false,
@@ -12930,7 +12960,7 @@ webpackJsonp([0,1],[
 	
 	            _.$dots = dot.appendTo(_.options.appendDots);
 	
-	            _.$dots.find('li').first().addClass('slick-active').attr('aria-hidden', 'false');
+	            _.$dots.find('li').first().addClass('slick-active');
 	
 	        }
 	
@@ -12960,7 +12990,7 @@ webpackJsonp([0,1],[
 	            _.$slides.wrapAll('<div class="slick-track"/>').parent();
 	
 	        _.$list = _.$slideTrack.wrap(
-	            '<div aria-live="polite" class="slick-list"/>').parent();
+	            '<div class="slick-list"/>').parent();
 	        _.$slideTrack.css('opacity', 0);
 	
 	        if (_.options.centerMode === true || _.options.swipeToSlide === true) {
@@ -12993,7 +13023,7 @@ webpackJsonp([0,1],[
 	        newSlides = document.createDocumentFragment();
 	        originalSlides = _.$slider.children();
 	
-	        if(_.options.rows > 1) {
+	        if(_.options.rows > 0) {
 	
 	            slidesPerSection = _.options.slidesPerRow * _.options.rows;
 	            numOfSlides = Math.ceil(
@@ -13196,6 +13226,9 @@ webpackJsonp([0,1],[
 	                .off('mouseenter.slick', $.proxy(_.interrupt, _, true))
 	                .off('mouseleave.slick', $.proxy(_.interrupt, _, false));
 	
+	            if (_.options.accessibility === true) {
+	                _.$dots.off('keydown.slick', _.keyHandler);
+	            }
 	        }
 	
 	        _.$slider.off('focus.slick blur.slick');
@@ -13203,6 +13236,11 @@ webpackJsonp([0,1],[
 	        if (_.options.arrows === true && _.slideCount > _.options.slidesToShow) {
 	            _.$prevArrow && _.$prevArrow.off('click.slick', _.changeSlide);
 	            _.$nextArrow && _.$nextArrow.off('click.slick', _.changeSlide);
+	
+	            if (_.options.accessibility === true) {
+	                _.$prevArrow && _.$prevArrow.off('keydown.slick', _.keyHandler);
+	                _.$nextArrow && _.$nextArrow.off('keydown.slick', _.keyHandler);
+	            }
 	        }
 	
 	        _.$list.off('touchstart.slick mousedown.slick', _.swipeHandler);
@@ -13231,7 +13269,6 @@ webpackJsonp([0,1],[
 	        $('[draggable!=true]', _.$slideTrack).off('dragstart', _.preventDefault);
 	
 	        $(window).off('load.slick.slick-' + _.instanceUid, _.setPosition);
-	        $(document).off('ready.slick.slick-' + _.instanceUid, _.setPosition);
 	
 	    };
 	
@@ -13248,7 +13285,7 @@ webpackJsonp([0,1],[
 	
 	        var _ = this, originalSlides;
 	
-	        if(_.options.rows > 1) {
+	        if(_.options.rows > 0) {
 	            originalSlides = _.$slides.children().children();
 	            originalSlides.removeAttr('style');
 	            _.$slider.empty().append(originalSlides);
@@ -13284,7 +13321,6 @@ webpackJsonp([0,1],[
 	            _.$dots.remove();
 	        }
 	
-	
 	        if ( _.$prevArrow && _.$prevArrow.length ) {
 	
 	            _.$prevArrow
@@ -13307,7 +13343,6 @@ webpackJsonp([0,1],[
 	            if ( _.htmlExpr.test( _.options.nextArrow )) {
 	                _.$nextArrow.remove();
 	            }
-	
 	        }
 	
 	
@@ -13445,8 +13480,7 @@ webpackJsonp([0,1],[
 	
 	        _.$slider
 	            .off('focus.slick blur.slick')
-	            .on('focus.slick blur.slick',
-	                '*:not(.slick-arrow)', function(event) {
+	            .on('focus.slick blur.slick', '*', function(event) {
 	
 	            event.stopImmediatePropagation();
 	            var $sf = $(this);
@@ -13479,10 +13513,14 @@ webpackJsonp([0,1],[
 	        var pagerQty = 0;
 	
 	        if (_.options.infinite === true) {
-	            while (breakPoint < _.slideCount) {
-	                ++pagerQty;
-	                breakPoint = counter + _.options.slidesToScroll;
-	                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
+	            if (_.slideCount <= _.options.slidesToShow) {
+	                 ++pagerQty;
+	            } else {
+	                while (breakPoint < _.slideCount) {
+	                    ++pagerQty;
+	                    breakPoint = counter + _.options.slidesToScroll;
+	                    counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
+	                }
 	            }
 	        } else if (_.options.centerMode === true) {
 	            pagerQty = _.slideCount;
@@ -13506,7 +13544,8 @@ webpackJsonp([0,1],[
 	            targetLeft,
 	            verticalHeight,
 	            verticalOffset = 0,
-	            targetSlide;
+	            targetSlide,
+	            coef;
 	
 	        _.slideOffset = 0;
 	        verticalHeight = _.$slides.first().outerHeight(true);
@@ -13514,7 +13553,16 @@ webpackJsonp([0,1],[
 	        if (_.options.infinite === true) {
 	            if (_.slideCount > _.options.slidesToShow) {
 	                _.slideOffset = (_.slideWidth * _.options.slidesToShow) * -1;
-	                verticalOffset = (verticalHeight * _.options.slidesToShow) * -1;
+	                coef = -1
+	
+	                if (_.options.vertical === true && _.options.centerMode === true) {
+	                    if (_.options.slidesToShow === 2) {
+	                        coef = -1.5;
+	                    } else if (_.options.slidesToShow === 1) {
+	                        coef = -2
+	                    }
+	                }
+	                verticalOffset = (verticalHeight * _.options.slidesToShow) * coef;
 	            }
 	            if (_.slideCount % _.options.slidesToScroll !== 0) {
 	                if (slideIndex + _.options.slidesToScroll > _.slideCount && _.slideCount > _.options.slidesToShow) {
@@ -13539,7 +13587,9 @@ webpackJsonp([0,1],[
 	            verticalOffset = 0;
 	        }
 	
-	        if (_.options.centerMode === true && _.options.infinite === true) {
+	        if (_.options.centerMode === true && _.slideCount <= _.options.slidesToShow) {
+	            _.slideOffset = ((_.slideWidth * Math.floor(_.options.slidesToShow)) / 2) - ((_.slideWidth * _.slideCount) / 2);
+	        } else if (_.options.centerMode === true && _.options.infinite === true) {
 	            _.slideOffset += _.slideWidth * Math.floor(_.options.slidesToShow / 2) - _.slideWidth;
 	        } else if (_.options.centerMode === true) {
 	            _.slideOffset = 0;
@@ -13712,7 +13762,12 @@ webpackJsonp([0,1],[
 	    };
 	
 	    Slick.prototype.initADA = function() {
-	        var _ = this;
+	        var _ = this,
+	                numDotGroups = Math.ceil(_.slideCount / _.options.slidesToShow),
+	                tabControlIndexes = _.getNavigableIndexes().filter(function(val) {
+	                    return (val >= 0) && (val < _.slideCount);
+	                });
+	
 	        _.$slides.add(_.$slideTrack.find('.slick-cloned')).attr({
 	            'aria-hidden': 'true',
 	            'tabindex': '-1'
@@ -13720,28 +13775,56 @@ webpackJsonp([0,1],[
 	            'tabindex': '-1'
 	        });
 	
-	        _.$slideTrack.attr('role', 'listbox');
-	
-	        _.$slides.not(_.$slideTrack.find('.slick-cloned')).each(function(i) {
-	            $(this).attr({
-	                'role': 'option',
-	                'aria-describedby': 'slick-slide' + _.instanceUid + i + ''
-	            });
-	        });
-	
 	        if (_.$dots !== null) {
-	            _.$dots.attr('role', 'tablist').find('li').each(function(i) {
+	            _.$slides.not(_.$slideTrack.find('.slick-cloned')).each(function(i) {
+	                var slideControlIndex = tabControlIndexes.indexOf(i);
+	
 	                $(this).attr({
-	                    'role': 'presentation',
-	                    'aria-selected': 'false',
-	                    'aria-controls': 'navigation' + _.instanceUid + i + '',
-	                    'id': 'slick-slide' + _.instanceUid + i + ''
+	                    'role': 'tabpanel',
+	                    'id': 'slick-slide' + _.instanceUid + i,
+	                    'tabindex': -1
 	                });
-	            })
-	                .first().attr('aria-selected', 'true').end()
-	                .find('button').attr('role', 'button').end()
-	                .closest('div').attr('role', 'toolbar');
+	
+	                if (slideControlIndex !== -1) {
+	                   var ariaButtonControl = 'slick-slide-control' + _.instanceUid + slideControlIndex
+	                   if ($('#' + ariaButtonControl).length) {
+	                     $(this).attr({
+	                         'aria-describedby': ariaButtonControl
+	                     });
+	                   }
+	                }
+	            });
+	
+	            _.$dots.attr('role', 'tablist').find('li').each(function(i) {
+	                var mappedSlideIndex = tabControlIndexes[i];
+	
+	                $(this).attr({
+	                    'role': 'presentation'
+	                });
+	
+	                $(this).find('button').first().attr({
+	                    'role': 'tab',
+	                    'id': 'slick-slide-control' + _.instanceUid + i,
+	                    'aria-controls': 'slick-slide' + _.instanceUid + mappedSlideIndex,
+	                    'aria-label': (i + 1) + ' of ' + numDotGroups,
+	                    'aria-selected': null,
+	                    'tabindex': '-1'
+	                });
+	
+	            }).eq(_.currentSlide).find('button').attr({
+	                'aria-selected': 'true',
+	                'tabindex': '0'
+	            }).end();
 	        }
+	
+	        for (var i=_.currentSlide, max=i+_.options.slidesToShow; i < max; i++) {
+	          if (_.options.focusOnChange) {
+	            _.$slides.eq(i).attr({'tabindex': '0'});
+	          } else {
+	            _.$slides.eq(i).removeAttr('tabindex');
+	          }
+	        }
+	
 	        _.activateADA();
 	
 	    };
@@ -13761,6 +13844,11 @@ webpackJsonp([0,1],[
 	               .on('click.slick', {
 	                    message: 'next'
 	               }, _.changeSlide);
+	
+	            if (_.options.accessibility === true) {
+	                _.$prevArrow.on('keydown.slick', _.keyHandler);
+	                _.$nextArrow.on('keydown.slick', _.keyHandler);
+	            }
 	        }
 	
 	    };
@@ -13773,9 +13861,13 @@ webpackJsonp([0,1],[
 	            $('li', _.$dots).on('click.slick', {
 	                message: 'index'
 	            }, _.changeSlide);
+	
+	            if (_.options.accessibility === true) {
+	                _.$dots.on('keydown.slick', _.keyHandler);
+	            }
 	        }
 	
-	        if ( _.options.dots === true && _.options.pauseOnDotsHover === true ) {
+	        if (_.options.dots === true && _.options.pauseOnDotsHover === true && _.slideCount > _.options.slidesToShow) {
 	
 	            $('li', _.$dots)
 	                .on('mouseenter.slick', $.proxy(_.interrupt, _, true))
@@ -13839,7 +13931,7 @@ webpackJsonp([0,1],[
 	        $('[draggable!=true]', _.$slideTrack).on('dragstart', _.preventDefault);
 	
 	        $(window).on('load.slick.slick-' + _.instanceUid, _.setPosition);
-	        $(document).on('ready.slick.slick-' + _.instanceUid, _.setPosition);
+	        $(_.setPosition);
 	
 	    };
 	
@@ -13895,17 +13987,30 @@ webpackJsonp([0,1],[
 	
 	                var image = $(this),
 	                    imageSource = $(this).attr('data-lazy'),
+	                    imageSrcSet = $(this).attr('data-srcset'),
+	                    imageSizes  = $(this).attr('data-sizes') || _.$slider.attr('data-sizes'),
 	                    imageToLoad = document.createElement('img');
 	
 	                imageToLoad.onload = function() {
 	
 	                    image
 	                        .animate({ opacity: 0 }, 100, function() {
+	
+	                            if (imageSrcSet) {
+	                                image
+	                                    .attr('srcset', imageSrcSet );
+	
+	                                if (imageSizes) {
+	                                    image
+	                                        .attr('sizes', imageSizes );
+	                                }
+	                            }
+	
 	                            image
 	                                .attr('src', imageSource)
 	                                .animate({ opacity: 1 }, 200, function() {
 	                                    image
-	                                        .removeAttr('data-lazy')
+	                                        .removeAttr('data-lazy data-srcset data-sizes')
 	                                        .removeClass('slick-loading');
 	                                });
 	                            _.$slider.trigger('lazyLoaded', [_, image, imageSource]);
@@ -13948,6 +14053,21 @@ webpackJsonp([0,1],[
 	        }
 	
 	        loadRange = _.$slider.find('.slick-slide').slice(rangeStart, rangeEnd);
+	
+	        if (_.options.lazyLoad === 'anticipated') {
+	            var prevSlide = rangeStart - 1,
+	                nextSlide = rangeEnd,
+	                $slides = _.$slider.find('.slick-slide');
+	
+	            for (var i = 0; i < _.options.slidesToScroll; i++) {
+	                if (prevSlide < 0) prevSlide = _.slideCount - 1;
+	                loadRange = loadRange.add($slides.eq(prevSlide));
+	                loadRange = loadRange.add($slides.eq(nextSlide));
+	                prevSlide--;
+	                nextSlide++;
+	            }
+	        }
+	
 	        loadImages(loadRange);
 	
 	        if (_.slideCount <= _.options.slidesToShow) {
@@ -14036,7 +14156,9 @@ webpackJsonp([0,1],[
 	
 	            _.animating = false;
 	
-	            _.setPosition();
+	            if (_.slideCount > _.options.slidesToShow) {
+	                _.setPosition();
+	            }
 	
 	            _.swipeLeft = null;
 	
@@ -14046,6 +14168,11 @@ webpackJsonp([0,1],[
 	
 	            if (_.options.accessibility === true) {
 	                _.initADA();
+	
+	                if (_.options.focusOnChange) {
+	                    var $currentSlide = $(_.$slides.get(_.currentSlide));
+	                    $currentSlide.attr('tabindex', 0).focus();
+	                }
 	            }
 	
 	        }
@@ -14078,19 +14205,33 @@ webpackJsonp([0,1],[
 	            $imgsToLoad = $( 'img[data-lazy]', _.$slider ),
 	            image,
 	            imageSource,
+	            imageSrcSet,
+	            imageSizes,
 	            imageToLoad;
 	
 	        if ( $imgsToLoad.length ) {
 	
 	            image = $imgsToLoad.first();
 	            imageSource = image.attr('data-lazy');
+	            imageSrcSet = image.attr('data-srcset');
+	            imageSizes  = image.attr('data-sizes') || _.$slider.attr('data-sizes');
 	            imageToLoad = document.createElement('img');
 	
 	            imageToLoad.onload = function() {
 	
+	                if (imageSrcSet) {
+	                    image
+	                        .attr('srcset', imageSrcSet );
+	
+	                    if (imageSizes) {
+	                        image
+	                            .attr('sizes', imageSizes );
+	                    }
+	                }
+	
 	                image
 	                    .attr( 'src', imageSource )
-	                    .removeAttr('data-lazy')
+	                    .removeAttr('data-lazy data-srcset data-sizes')
 	                    .removeClass('slick-loading');
 	
 	                if ( _.options.adaptiveHeight === true ) {
@@ -14191,9 +14332,9 @@ webpackJsonp([0,1],[
 	            for ( breakpoint in responsiveSettings ) {
 	
 	                l = _.breakpoints.length-1;
-	                currentBreakpoint = responsiveSettings[breakpoint].breakpoint;
 	
 	                if (responsiveSettings.hasOwnProperty(breakpoint)) {
+	                    currentBreakpoint = responsiveSettings[breakpoint].breakpoint;
 	
 	                    // loop through the breakpoints and cut out any existing
 	                    // ones with the same breakpoint number, we don't want dupes.
@@ -14626,14 +14767,15 @@ webpackJsonp([0,1],[
 	
 	        if (_.options.centerMode === true) {
 	
+	            var evenCoef = _.options.slidesToShow % 2 === 0 ? 1 : 0;
+	
 	            centerOffset = Math.floor(_.options.slidesToShow / 2);
 	
 	            if (_.options.infinite === true) {
 	
 	                if (index >= centerOffset && index <= (_.slideCount - 1) - centerOffset) {
-	
 	                    _.$slides
-	                        .slice(index - centerOffset, index + centerOffset + 1)
+	                        .slice(index - centerOffset + evenCoef, index + centerOffset + 1)
 	                        .addClass('slick-active')
 	                        .attr('aria-hidden', 'false');
 	
@@ -14641,7 +14783,7 @@ webpackJsonp([0,1],[
 	
 	                    indexOffset = _.options.slidesToShow + index;
 	                    allSlides
-	                        .slice(indexOffset - centerOffset + 1, indexOffset + centerOffset + 2)
+	                        .slice(indexOffset - centerOffset + 1 + evenCoef, indexOffset + centerOffset + 2)
 	                        .addClass('slick-active')
 	                        .attr('aria-hidden', 'false');
 	
@@ -14707,10 +14849,9 @@ webpackJsonp([0,1],[
 	
 	        }
 	
-	        if (_.options.lazyLoad === 'ondemand') {
+	        if (_.options.lazyLoad === 'ondemand' || _.options.lazyLoad === 'anticipated') {
 	            _.lazyLoad();
 	        }
-	
 	    };
 	
 	    Slick.prototype.setupInfinite = function() {
@@ -14741,7 +14882,7 @@ webpackJsonp([0,1],[
 	                        .attr('data-slick-index', slideIndex - _.slideCount)
 	                        .prependTo(_.$slideTrack).addClass('slick-cloned');
 	                }
-	                for (i = 0; i < infiniteCount; i += 1) {
+	                for (i = 0; i < infiniteCount  + _.slideCount; i += 1) {
 	                    slideIndex = i;
 	                    $(_.$slides[slideIndex]).clone(true).attr('id', '')
 	                        .attr('data-slick-index', slideIndex + _.slideCount)
@@ -14783,8 +14924,7 @@ webpackJsonp([0,1],[
 	
 	        if (_.slideCount <= _.options.slidesToShow) {
 	
-	            _.setSlideClasses(index);
-	            _.asNavFor(index);
+	            _.slideHandler(index, false, true);
 	            return;
 	
 	        }
@@ -14808,10 +14948,6 @@ webpackJsonp([0,1],[
 	            return;
 	        }
 	
-	        if (_.slideCount <= _.options.slidesToShow) {
-	            return;
-	        }
-	
 	        if (sync === false) {
 	            _.asNavFor(index);
 	        }
@@ -14825,7 +14961,7 @@ webpackJsonp([0,1],[
 	        if (_.options.infinite === false && _.options.centerMode === false && (index < 0 || index > _.getDotCount() * _.options.slidesToScroll)) {
 	            if (_.options.fade === false) {
 	                targetSlide = _.currentSlide;
-	                if (dontAnimate !== true) {
+	                if (dontAnimate !== true && _.slideCount > _.options.slidesToShow) {
 	                    _.animateSlide(slideLeft, function() {
 	                        _.postSlide(targetSlide);
 	                    });
@@ -14837,7 +14973,7 @@ webpackJsonp([0,1],[
 	        } else if (_.options.infinite === false && _.options.centerMode === true && (index < 0 || index > (_.slideCount - _.options.slidesToScroll))) {
 	            if (_.options.fade === false) {
 	                targetSlide = _.currentSlide;
-	                if (dontAnimate !== true) {
+	                if (dontAnimate !== true && _.slideCount > _.options.slidesToShow) {
 	                    _.animateSlide(slideLeft, function() {
 	                        _.postSlide(targetSlide);
 	                    });
@@ -14907,7 +15043,7 @@ webpackJsonp([0,1],[
 	            return;
 	        }
 	
-	        if (dontAnimate !== true) {
+	        if (dontAnimate !== true && _.slideCount > _.options.slidesToShow) {
 	            _.animateSlide(targetLeft, function() {
 	                _.postSlide(animSlide);
 	            });
@@ -14979,6 +15115,13 @@ webpackJsonp([0,1],[
 	            direction;
 	
 	        _.dragging = false;
+	        _.swiping = false;
+	
+	        if (_.scrolling) {
+	            _.scrolling = false;
+	            return false;
+	        }
+	
 	        _.interrupted = false;
 	        _.shouldClick = ( _.touchObject.swipeLength > 10 ) ? false : true;
 	
@@ -15089,11 +15232,11 @@ webpackJsonp([0,1],[
 	
 	        var _ = this,
 	            edgeWasHit = false,
-	            curLeft, swipeDirection, swipeLength, positionOffset, touches;
+	            curLeft, swipeDirection, swipeLength, positionOffset, touches, verticalSwipeLength;
 	
 	        touches = event.originalEvent !== undefined ? event.originalEvent.touches : null;
 	
-	        if (!_.dragging || touches && touches.length !== 1) {
+	        if (!_.dragging || _.scrolling || touches && touches.length !== 1) {
 	            return false;
 	        }
 	
@@ -15105,18 +15248,22 @@ webpackJsonp([0,1],[
 	        _.touchObject.swipeLength = Math.round(Math.sqrt(
 	            Math.pow(_.touchObject.curX - _.touchObject.startX, 2)));
 	
+	        verticalSwipeLength = Math.round(Math.sqrt(
+	            Math.pow(_.touchObject.curY - _.touchObject.startY, 2)));
+	
+	        if (!_.options.verticalSwiping && !_.swiping && verticalSwipeLength > 4) {
+	            _.scrolling = true;
+	            return false;
+	        }
+	
 	        if (_.options.verticalSwiping === true) {
-	            _.touchObject.swipeLength = Math.round(Math.sqrt(
-	                Math.pow(_.touchObject.curY - _.touchObject.startY, 2)));
+	            _.touchObject.swipeLength = verticalSwipeLength;
 	        }
 	
 	        swipeDirection = _.swipeDirection();
 	
-	        if (swipeDirection === 'vertical') {
-	            return;
-	        }
-	
 	        if (event.originalEvent !== undefined && _.touchObject.swipeLength > 4) {
+	            _.swiping = true;
 	            event.preventDefault();
 	        }
 	
@@ -15276,14 +15423,13 @@ webpackJsonp([0,1],[
 	
 	            _.$dots
 	                .find('li')
-	                .removeClass('slick-active')
-	                .attr('aria-hidden', 'true');
+	                    .removeClass('slick-active')
+	                    .end();
 	
 	            _.$dots
 	                .find('li')
 	                .eq(Math.floor(_.currentSlide / _.options.slidesToScroll))
-	                .addClass('slick-active')
-	                .attr('aria-hidden', 'false');
+	                .addClass('slick-active');
 	
 	        }
 	
