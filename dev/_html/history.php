@@ -115,33 +115,33 @@
                             <div class="title-throughline"><span>Научные исследования</span></div>
                             <div class="research-items-wr">
                                 <div class="item">
+                                    <div class="icon"><img src="../images/research-items/1.png" alt=""></div>
                                     <div class="content">
-                                        <div class="icon"><img src="../images/research-items/1.png" alt=""></div>
                                         Сравнение бета-казеина A1 и бета-казеина A2 с точки зрения их воздействия на желудочно-кишечный тракт
                                     </div>
                                 </div>
                                 <div class="item">
+                                    <div class="icon"><img src="../images/research-items/2.png" alt=""></div>
                                     <div class="content">
-                                        <div class="icon"><img src="../images/research-items/2.png" alt=""></div>
                                         Сравнительная оценка двух типов молочного бета-казеина (A1 и A2)
                                     </div>
                                 </div>
                                 <div class="item">
+                                    <div class="icon"><img src="../images/research-items/3.png" alt=""></div>
                                     <div class="content">
-                                        <div class="icon"><img src="../images/research-items/3.png" alt=""></div>
                                         Пищевой бета-казеин A1 влияет на длительность желудочно-кишечного транзита
                                     </div>
                                 </div>
                                 <div class="item">
+                                    <div class="icon"><img src="../images/research-items/4.png" alt=""></div>
                                     <div class="content">
-                                        <div class="icon"><img src="../images/research-items/4.png" alt=""></div>
                                         Молочная непереносимость, бета-казеин и лактоза
                                     </div>
                                 </div>
                                 <div class="item">
-                                    <div class="content">
-                                        <div class="icon"><img src="../images/research-items/5.png" alt=""></div>
-                                        Воздействие на желудочно-кишечную физиологию молока с содержанием бета-казеина только типа A2 в сравнении с молоком, содержащим как бета-казеин A1, так и
+                                    <div class="icon"><img src="../images/research-items/5.png" alt=""></div>
+                                    <div class="content" title="Воздействие на желудочно-кишечную физиологию молока с содержанием бета-казеина только типа A2 в сравнении с молоком, содержащим как бета-казеин A1, так и бета-казеин A2">
+                                        Воздействие на желудочно-кишечную физиологию молока с содержанием бета-казеина только типа A2 в сравнении с молоком, содержащим как бета-казеин A1, так и бета-казеин A2
                                     </div>
                                 </div>
                             </div>
