@@ -10,7 +10,18 @@ $links_url = str_replace('_html','',$links_url);
     
     <meta name="viewport" content="width=1200, height=device-height, initial-scale=1">
 
+    <!-- build:css ../css/styles.css -->
+
+    <!-- bower:css-->
+    <link rel="stylesheet" href="../../bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="../../bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="../../bower_components/magnific-popup/dist/magnific-popup.css" />
+    <!-- endbower-->
+
+
     <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- endbuild -->
 
     
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
