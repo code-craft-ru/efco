@@ -1,0 +1,65 @@
+{
+	"regions": {
+		"#saintpb": {
+			"title": "В Санкт-Петербурге молоко можнокупить в торговых сетях", 
+			"wherebuylist": ["#pyaterochka", "#line", "#lenta", "#ashan"],
+			"city": "Санкт-Петербург"
+		},
+		"#briansk": {
+			"title": "В Брянске молоко можнокупить в торговых сетях", 
+			"wherebuylist": ["#pyaterochka", "#line"],
+			"city": "Брянск"
+		},
+		"#moscow": {
+			"title": "В Москве молоко можнокупить в торговых сетях", 
+			"wherebuylist": ["#pyaterochka", "#line", "#lenta", "#ashan"],
+			"city": "Москва"
+		},
+		"#tula": {
+			"title": "В Туле молоко можнокупить в торговых сетях", 
+			"wherebuylist": ["#lenta", "#ashan"],
+			"city": "Тула"
+		},
+		"#orel": {
+			"title": "В Орле молоко можнокупить в торговых сетях", 
+			"wherebuylist": ["#lenta", "#ashan"],
+			"city": "Орел"
+		},
+		"#cursk": {
+			"title": "В Курске молоко можнокупить в торговых сетях", 
+			"wherebuylist": ["#lenta", "#ashan"],
+			"city": "Курск"
+		},
+		"#riazan": {
+			"title": "В Рязани молоко можнокупить в торговых сетях", 
+			"wherebuylist": ["#lenta", "#ashan"],
+			"city": "Рязань"
+		},
+		"#lipetck": {
+			"title": "В Липецке молоко можнокупить в торговых сетях", 
+			"wherebuylist": ["#lenta", "#ashan"],
+			"city": "Липецк"
+		},
+		"#tambov": {
+			"title": "В Тамбове молоко можнокупить в торговых сетях", 
+			"wherebuylist": ["#lenta", "#ashan"],
+			"city": "Тамбов"
+		},
+		"#voronezh": {
+			"title": "В Воронеже молоко можнокупить в торговых сетях", 
+			"wherebuylist": ["#lenta", "#ashan"],
+			"city": "Воронеж"
+		},
+		"#belgorod": {
+			"title": "В Белгороде молоко можнокупить в торговых сетях", 
+			"wherebuylist": ["#lenta", "#ashan"],
+			"city": "Белгород"
+		},
+		"#rostovnadony": {
+			"title": "В Ростове-на-Дону молоко можнокупить в торговых сетях", 
+			"wherebuylist": ["#lenta", "#ashan"],
+			"city": "Ростов-на-Дону"
+		}
+	},
+	"markets": ["#pyaterochka", "#line", "#lenta", "#ashan"]
+}

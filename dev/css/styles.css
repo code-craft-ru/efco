@@ -569,6 +569,91 @@ IMG {
       font-weight: bold;
       letter-spacing: 0.3px; }
 
+.wherebuy-map {
+  overflow: hidden;
+  height: 812px;
+  width: 1000px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 80px; }
+  .wherebuy-map-wr {
+    position: relative; }
+    .wherebuy-map-wr::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      box-shadow: 0 10px 16px 2px #d3dedd; }
+  .wherebuy-map .map {
+    overflow: hidden;
+    height: 720px;
+    position: absolute;
+    top: 0;
+    left: 950px;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5); }
+    .wherebuy-map .map .js-wherebuy-map__map-item {
+      transition: all 0.3s;
+      fill: #B2C1D3;
+      cursor: pointer; }
+      .wherebuy-map .map .js-wherebuy-map__map-item:hover {
+        fill: #5C99D2; }
+    .wherebuy-map .map-svg {
+      height: 840px; }
+  .wherebuy-map .textblock {
+    position: relative;
+    z-index: 9;
+    padding: 60px 0 0 85px; }
+    .wherebuy-map .textblock-wr {
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .wherebuy-map .textblock .title-blue {
+      font-size: 24px;
+      margin-bottom: 23px; }
+    .wherebuy-map .textblock p {
+      font-size: 16px; }
+    .wherebuy-map .textblock b {
+      font-family: "BenguiatGothicC"; }
+  .wherebuy-map-modal {
+    width: 600px;
+    background-color: #fff;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    margin-left: -300px;
+    visibility: hidden;
+    z-index: 999;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 0 25px 5px rgba(211, 222, 221, 0.6);
+    padding: 30px; }
+    .wherebuy-map-modal h3 {
+      font-weight: 700;
+      font-size: 16px;
+      margin: 0;
+      font-family: "BenguiatGothicC"; }
+    .wherebuy-map-modal._open {
+      opacity: 1;
+      visibility: visible;
+      top: 0; }
+    .wherebuy-map-modal .js-wherebuy-map__modal-markets {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      margin-top: 40px; }
+      .wherebuy-map-modal .js-wherebuy-map__modal-markets img {
+        margin: 0 15px 15px; }
+
 .icon {
   position: relative;
   margin: 0 auto;
@@ -813,6 +898,12 @@ IMG {
     height: 3px;
     background-color: #ccc;
     bottom: 8px; }
+
+.title-blue {
+  font: bold 27px "BenguiatGothicC";
+  color: #0a5a98;
+  margin: 0 0 9px;
+  letter-spacing: -0.4px; }
 
 .input {
   border-bottom: 1px solid #989798;

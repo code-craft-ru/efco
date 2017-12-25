@@ -4,7 +4,7 @@ window.$H = $('html');
 window.$B = $('body');
 
 require('./formValidate.js');
-
+require('./whereBuyMapComponent.js');
 
 /* -- Общие плагины и функции -- */
 
