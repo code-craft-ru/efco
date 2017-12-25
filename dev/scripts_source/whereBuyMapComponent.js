@@ -8,11 +8,11 @@ $(function(){
 	const modalContent = modal.find('.js-wherebuy-map__modal-content');
 	const modalMarkets = modal.find('.js-wherebuy-map__modal-markets');
 
-	$.ajax({url: '/dev/data/wherebuylist.json', dataType: 'json'})
-		.done(init)
-		.fail(function(err){ new Error(err)});
+	if (datawhereBuyList) {
+		init(datawhereBuyList);
+	}
 
-	function init(data, er){
+	function init(data){
 
 		mapItem.on('mousemove', function(e){
 			const id = $(this).attr('id');
