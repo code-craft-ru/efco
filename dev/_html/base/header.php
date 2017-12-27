@@ -28,7 +28,14 @@
 	</div>
 	<ul class="header__menu js-header-fix <?php if(isset($menuTheme)){echo $menuTheme;}?>">
 		<li><a href="#!">Молоко</a></li>
-		<li><a href="#!">Правильный белок</a></li>
+		<li>
+			<a href="#!">Правильный белок</a>
+			<ul>
+				<li><a href="#!">пункт меню</a></li>
+				<li><a href="#!">пункт меню</a></li>
+				<li><a href="#!">пункт меню</a></li>
+			</ul>
+		</li>
 		<li><a href="#!">А2 в мире</a></li>
 		<li><a href="#!">Живая еда</a></li>
 		<li><a href="#!">Наша ферма</a></li>
