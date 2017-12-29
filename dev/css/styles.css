@@ -647,7 +647,8 @@ IMG {
       .wherebuy-map .map .js-wherebuy-map__map-item-notice text {
         fill: #0a5a98;
         font-size: 3px;
-        font-weight: 600; }
+        font-weight: 600;
+        font-family: "BenguiatGothicC"; }
     .wherebuy-map .map-svg {
       height: 840px; }
   .wherebuy-map .textblock {
