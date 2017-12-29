@@ -641,7 +641,9 @@ IMG {
       transition: all 0.3s;
       pointer-events: none; }
       .wherebuy-map .map .js-wherebuy-map__map-item-notice circle {
-        fill: #0a5a98; }
+        fill: #0a5a98;
+        stroke: #fff;
+        stroke-width: 0.3; }
       .wherebuy-map .map .js-wherebuy-map__map-item-notice text {
         fill: #0a5a98;
         font-size: 3px;

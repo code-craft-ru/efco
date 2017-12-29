@@ -36,8 +36,8 @@ $(function(){
 				})
 			});
 
-			modalContent.html(html)
-			modal.css({top: `${e.clientY - (modal.height() + 160)}px`})
+			modalContent.html(html);
+			modal.css({top: `${e.clientY - (modal.height() + 110)}px`});
 		});
 
 		mapItem.on('mouseenter', function(){
