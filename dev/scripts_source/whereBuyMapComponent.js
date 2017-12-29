@@ -4,6 +4,7 @@ $(function(){
 	const whereMapBuyContain = $('.js-wherebuy-map');
 	const map = whereMapBuyContain.find('.js-wherebuy-map__map');
 	const mapItem = whereMapBuyContain.find('.js-wherebuy-map__map-item');
+	const mapItemGroup = whereMapBuyContain.find('.js-wherebuy-map__map-item-group');
 	const modal = $('.js-wherebuy-map__modal');
 	const modalContent = modal.find('.js-wherebuy-map__modal-content');
 	const modalMarkets = modal.find('.js-wherebuy-map__modal-markets');
@@ -11,6 +12,11 @@ $(function(){
 	if (datawhereBuyList) {
 		init(datawhereBuyList);
 	}
+
+	// $('.js-wherebuy-map__map-item').each(function(){
+	// 	const position = $(this).get(0).getBBox();
+	// 		console.log({city:$(this).attr('id') ,x: position.x + (position.width/2), y: position.y + (position.height/2) })
+	// })	
 
 	function init(data){
 
@@ -36,10 +42,12 @@ $(function(){
 
 		mapItem.on('mouseenter', function(){
 			modal.addClass('_open');
+			mapItemGroup.addClass('_disable');
 		});
 
 		mapItem.on('mouseout', function(){
 			modal.removeClass('_open');
+			mapItemGroup.removeClass('_disable');
 		});
 	}
 });

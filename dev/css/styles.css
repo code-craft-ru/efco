@@ -620,12 +620,32 @@ IMG {
     left: 950px;
     -webkit-transform: scale(2.5);
             transform: scale(2.5); }
+    .wherebuy-map .map .js-wherebuy-map__map-item-group:hover .js-wherebuy-map__map-item {
+      fill: #5C99D2 !important; }
+    .wherebuy-map .map .js-wherebuy-map__map-item-group:hover .js-wherebuy-map__map-item-notice {
+      opacity: 1 !important; }
+      .wherebuy-map .map .js-wherebuy-map__map-item-group:hover .js-wherebuy-map__map-item-notice text {
+        opacity: 0; }
+      .wherebuy-map .map .js-wherebuy-map__map-item-group:hover .js-wherebuy-map__map-item-notice circle {
+        stroke: #fff;
+        stroke-width: 0.3; }
+    .wherebuy-map .map .js-wherebuy-map__map-item-group._disable .js-wherebuy-map__map-item {
+      fill: #B2C1D3; }
+    .wherebuy-map .map .js-wherebuy-map__map-item-group._disable .js-wherebuy-map__map-item-notice {
+      opacity: 0; }
     .wherebuy-map .map .js-wherebuy-map__map-item {
-      transition: all 0.3s;
-      fill: #B2C1D3;
+      transition: all 0.4s;
+      fill: #80bdf5;
       cursor: pointer; }
-      .wherebuy-map .map .js-wherebuy-map__map-item:hover {
-        fill: #5C99D2; }
+    .wherebuy-map .map .js-wherebuy-map__map-item-notice {
+      transition: all 0.3s;
+      pointer-events: none; }
+      .wherebuy-map .map .js-wherebuy-map__map-item-notice circle {
+        fill: #0a5a98; }
+      .wherebuy-map .map .js-wherebuy-map__map-item-notice text {
+        fill: #0a5a98;
+        font-size: 3px;
+        font-weight: 600; }
     .wherebuy-map .map-svg {
       height: 840px; }
   .wherebuy-map .textblock {
