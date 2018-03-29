@@ -46,9 +46,5 @@
     </div><!-- /page -->
 
     <?php include 'base/scripts.php'; ?>
-            <script>
-                popupsManager.open('#popup-action-supermama');
-                // console.log(popupsManager)
-            </script>
 </body>
 </html>

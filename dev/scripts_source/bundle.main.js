@@ -395,5 +395,11 @@ window.popupsManager = {
         if (window.hasOwnProperty('initExtraFuncPopups')) {
             window.initExtraFuncPopups();
         }
+
+        if($(id).find('.js-close-action').length) {
+            $(id).find('.js-close-action').on('click', function(){
+                $.magnificPopup.close({ items: { src: id}});
+            });
+        }
     }
 };
