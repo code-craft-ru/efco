@@ -9,7 +9,7 @@ $(function(){
 	const modalContent = modal.find('.js-wherebuy-map__modal-content');
 	const modalMarkets = modal.find('.js-wherebuy-map__modal-markets');
 
-	if (datawhereBuyList) {
+	if (window.hasOwnProperty('datawhereBuyList')) {
 		init(datawhereBuyList);
 	}
 

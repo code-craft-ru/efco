@@ -5,6 +5,8 @@ window.$B = $('body');
 
 require('./formValidate.js');
 require('./whereBuyMapComponent.js');
+require('magnific-popup');
+
 
 /* -- Общие плагины и функции -- */
 
@@ -390,6 +392,8 @@ $(function(){
 window.popupsManager = {
     open(id){
         $.magnificPopup.open({ items: { src: id}});
-        window.initExtraFuncPopups();
+        if (window.hasOwnProperty('initExtraFuncPopups')) {
+            window.initExtraFuncPopups();
+        }
     }
 };
