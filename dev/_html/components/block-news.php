@@ -164,4 +164,41 @@
     <div class="news__more-btn">
         <a href="#!" class="btn btn--more js-load-post__more">СМОТРЕТЬ БОЛЬШЕ</a>
     </div>
+
+    <div class="news__mobile">
+        <div class="news__mobile-container">
+            <h2>СТАТЬИ</h2>
+            <div class="news__mobile-items">
+                <div class="news-item js-load-post__item">
+                    <a  class='js-load-post' data-url='components/post.php'>
+                        <div class="news-item__content">
+                            <div class="news-item__title">Lorem ipsum dolor.</div>
+                            <div class="news-item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aut iste ducimus quae, blanditiis, perspiciatis optio maiores odio culpa sit!</div>
+                        </div>
+                        <div class="news-item__img">
+                            <img src="../images/userfiles/news1.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="news__mobile-btn-more">СМОТРЕТЬ БОЛЬШЕ</div>
+        </div>
+        <div class="news__mobile-container">
+            <h2>ВИДЕО</h2>
+            <div class="news__mobile-items">
+                <div class="news-item js-load-post__item">
+                    <a  class='js-load-post' data-url='components/post.php'>
+                        <div class="news-item__content">
+                            <div class="news-item__title">Lorem ipsum dolor.</div>
+                            <div class="news-item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aut iste ducimus quae, blanditiis, perspiciatis optio maiores odio culpa sit!</div>
+                        </div>
+                        <div class="news-item__img">
+                            <img src="../images/userfiles/news2.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="news__mobile-btn-more">СМОТРЕТЬ БОЛЬШЕ</div>
+        </div>
+    </div>
 </div>

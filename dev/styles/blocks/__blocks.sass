@@ -140,6 +140,45 @@
         width: 100%
         z-index: 9
 
+    &__mobile
+        display: none
+
+    &__mobile-container
+        h2
+            background-color: #4c8bca
+            padding: 5px
+            color: #fff
+            font-size: 11px
+            font-weight: 700
+            margin: 0
+
+    &__mobile-items
+        margin: 12px 16px 0
+
+        .news-item
+            width: auto
+
+    &__mobile-btn-more
+        color: #6a6a6a
+        text-transform: uppercase
+        font-size: 8px
+        font-weight: 700
+        padding: 7px 11px
+        border: 1px solid #6a6a6a
+        border-radius: 4px
+        display: inline-block
+        margin: 21px 0
+        cursor: pointer
+
+    +max-screen($screenSM_xs)
+        .tabs,
+        &__nav,
+        &__more-btn
+            display: none
+
+        &__mobile
+            display: block
+
 
 .news-item
     width: 304px
@@ -1042,3 +1081,56 @@
                 right: 32px
                 margin-top: -23px
                 width: 208px
+
+.baner-container1
+    .baner2
+        width: 100%
+        display: none
+    +max-screen($screenSM_xs)
+        .baner2
+            display: block
+
+        .baner
+            display: none
+
+        .stick
+            right: 6px
+            width: 55px
+            height: 83px
+            background: url(../images/sticker.png) no-repeat center 0
+            background-size: contain
+
+            p
+                font-size: 9px
+                margin: 12px 0 3px
+
+            img
+                width: 29px
+
+.baner-container2
+    .baner2
+        display: none
+    +max-screen($screenSM_xs)
+        .sticker2
+            width: 110px
+            top: -47px
+            right: 12px
+
+        .milkimg
+            display: none
+
+        .baner
+            display: none
+
+        .baner2
+            display: block
+
+.baner-container3
+    .baner2
+        display: none
+    +max-screen($screenSM_xs)
+        .baner
+            display: none
+
+        .baner2
+            display: block
