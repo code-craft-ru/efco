@@ -16,14 +16,14 @@
 			</div>
 			<div class="footer__right">
 				<a href="#!" class="link">Оставить отклик</a>
+				<span class="icon icon--mail"></span>
 				<a href="#!" class="link">
-					<span class="icon icon--mail"></span>
-					«ГОРЯЧАЯ» ЛИНИЯ
+					«Горячая линия»
 				</a>
 			</div>
 		</div>
 		<div class="footer__bottom">
-			<p>Зарегистрированная торговая марка «Слобода» 2016| Все права защищены</p>
+			<p>®1997-2018 Слобода. Все права защищены</p>
 		</div>
 	</div>
 </div>

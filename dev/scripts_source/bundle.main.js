@@ -72,8 +72,13 @@ $(function(){
 
     $(window).on('scroll' , function(){
         var offset = Math.floor($(window).scrollTop()),
-            hTop = 129;
+            hTop = 131;
 
+        if (window.innerWidth <= _GLOB.breakpoints['sm_xs']) {
+            el.removeClass('_fixed');
+            return;
+        }
+        
         if(offset > hTop){
             el.addClass('_fixed');
         }else{
@@ -385,7 +390,14 @@ $(function(){
 
     el.tabs();
 
-})
+});
+
+$(function() {
+    $('.js-burger-link').on('click', function() {
+        $(this).toggleClass('_active');
+        $('.js-header').toggleClass('_m-open');
+    });
+});
 
 
 

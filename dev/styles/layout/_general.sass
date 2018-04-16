@@ -16,6 +16,9 @@
     position: relative
     z-index: 1
 
+    +max-screen($screenSM_xs)
+        padding-top: 50px
+
 
 .page-body
     @extend .cf
@@ -49,16 +52,14 @@
     position: relative
     margin: 0 auto
     // max-width: $maxW
-    // min-width: $minW
-    width: $fixWidth
+    min-width: $minW
+    max-width: $fixWidth
     &--900
         width: 900px
         margin: 0 auto
     &--835
         width: 835px
         margin: 0 auto
-
-    +wrapper-padd
 
 .wrapper-inner
     display: block
@@ -68,6 +69,9 @@
 
 .contain
     position: relative
+
+    .baner
+        width: 100%
 
 
 ::-webkit-scrollbar 

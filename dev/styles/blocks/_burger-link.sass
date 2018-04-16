@@ -1,0 +1,40 @@
+$cBurger: #676861
+
+.burger-link
+	cursor: pointer
+	padding: 1px 0
+	div
+		width: 22px
+		height: 3px 
+		background: $cBurger
+		margin: 8px 0
+		position: relative
+		transition: all 0.4s
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			width: 100%
+			height: 3px
+			top: -8px
+			background: $cBurger
+			transition: all 0.4s
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			width: 100%
+			height: 3px
+			top: 8px
+			background: $cBurger
+			transition: all 0.4s
+
+	&._active
+		div
+			background: transparent
+			&:after
+				top: 0
+				transform: rotate(45deg)
+			&:before
+				top: 0
+				transform: rotate(-45deg)

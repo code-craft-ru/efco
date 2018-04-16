@@ -3,11 +3,13 @@
 
 	&__top
 		@extend .cf
-		border-bottom: 2px solid #000
+		border-bottom: 2px solid #1a171b
+
+		+max-screen($screenSM_xs)
+			border-bottom: none
 
 	&__left
 		padding: 5px 0 5px 27px
-		width: 50%
 		float: left
 		p
 			font-size: 12px
@@ -15,28 +17,47 @@
 			display: inline-block
 			text-transform: uppercase
 			letter-spacing: 0.5px
+			color: #555555
 
 		.social
 			display: inline-block
 			margin-left: 15px
 
+		+max-screen($screenSM_xs)
+			padding: 10px
+			float: none
+			text-align: center
+			border-bottom: 2px solid #1a171b
+
+			.social
+				display: block
+				margin-left: 0
+				li
+					margin: 0 4px
+
 	&__right
 		text-align: right
 		padding: 5px 21px 5px 0
 		float: right
-		width: 50%
 		.link
 			font-size: 13px 
 			font-weight: bold
 			margin: 0 8px
 			letter-spacing: 1px
+			color: #404041
+
+		+max-screen($screenSM_xs)
+			padding: 5px 10px 0 0
 
 	&__bottom
 		text-align: right
-		padding-bottom: 66px
+		padding: 0 30px 2px
 		p
 			color: #888987
 			padding: 9px 0
 			font-size: 13px
 			font-weight: bold
 			letter-spacing: 0.3px
+
+		+max-screen($screenSM_xs)
+			padding: 0 15px 0 0
