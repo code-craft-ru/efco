@@ -1,0 +1,32 @@
+.belok-container1
+	.baner2
+		width: 100%
+		display: none
+	+max-screen($screenSM)
+		.sticker2
+			width: 185px
+			right: 31px
+
+	+max-screen($screenSM_xs)
+		.baner2
+			display: block
+
+		.baner
+			display: none
+
+		.sticker2
+			width: 118px
+			right: 0
+
+
+.belok-container2
+	.baner2
+		width: 100%
+		display: none
+
+	+max-screen($screenSM_xs)
+		.baner
+			display: none
+
+		.baner2
+			display: block

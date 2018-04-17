@@ -230,6 +230,22 @@
     &--t2
         margin: 71px 0 10px 0
 
+    +max-screen($screenSM)
+        p
+            font-size: 12px
+
+        &--t2
+            margin: 55px 0 10px 0
+
+    +max-screen($screenSM_xs)
+        padding: 0 16px
+        margin-bottom: 0
+        p
+            font-size: 13px
+            font-weight: bold
+            line-height: 14.21px
+            opacity: 0.95
+
 .text-block2
     overflow: hidden
     text-align: center
@@ -253,6 +269,14 @@
     &--color-gray
         h2,p
             color: #888b8b
+
+    +max-screen($screenSM_xs)
+        margin: 0 0 10px
+        h2
+            font-size: 15px
+
+        p
+            font-size: 13px
 
 .text-block3
     display: flex
@@ -355,38 +379,47 @@
         margin: 35px 0 25px
 
 
+$screenTilesTablet: 1000px
 .tiles
     margin: 24px 0 0 0
     overflow: hidden
     position: relative
     &__row
-        @extend .cf
+        // @extend .cf
         height: 312px
         margin: 0 0 20px 0
+        display: flex
+        justify-content: space-between
+        align-items: stretch
         
     &__col1
         width: 658px
-        float: left
+        // float: left
+        margin-right: 24px
+        position: relative
+        img
+            height: 100%
 
     &__col2
         width: 324px
-        float: right
+        // float: right
         padding: 20px 25px 
         background: #e2eff0
         box-shadow: 0 2px 0px 1px rgba(0,0,0,0.1)
-        height: 311px
+        // height: 311px
 
     &__col3
         width: 487px
         padding: 22px 31px 
         background: #e2eff0
         box-shadow: 0 1px 1px 1px rgba(0,0,0,0.1)
-        float: left
+        // float: left
+        margin-right: 24px
         height: 317px
 
     &__col4
         width: 493px
-        float: right
+        // float: right
 
     &__title
         font: bold 20px $fBenguiat
@@ -396,6 +429,54 @@
     &__text
         font: bold 16px $fBenguiat
         line-height: 21px
+
+    +max-screen($screenTilesTablet)
+        margin: 24px 30px 0
+
+        &__row
+            height: 236px
+            justify-content: center
+
+        &__col1
+            width: 462px
+
+        &__col2
+            width: 219px
+            padding: 19px
+
+        &__col3
+            width: 345px
+            padding: 19px
+
+        &__col4
+            width: 342px
+
+        &__title
+            font-size: 15px
+
+        &__text
+            font-size: 12px
+            line-height: 15.95px
+
+    +max-screen($screenSM)
+        margin: 24px 16px 0
+        &__col1,
+        &__col2,
+        &__col3,
+        &__col4
+            width: auto
+            height: auto
+            margin-right: 0
+            margin-bottom: 20px
+
+            img
+                height: auto
+
+        &__row
+            display: block
+            height: auto
+            margin: 0
+
 
 .tiles2
     margin: 0
