@@ -2209,6 +2209,18 @@ IMG {
 .baner-container1 .baner2 {
   width: 100%;
   display: none; }
+@media screen and (max-width: 768px) {
+  .baner-container1 .stick {
+    right: 18px;
+    width: 68px;
+    height: 92px;
+    background: url(../images/sticker.png) no-repeat center 0;
+    background-size: contain; }
+    .baner-container1 .stick p {
+      font-size: 11px;
+      margin: 16px 0 3px; }
+    .baner-container1 .stick img {
+      width: 33px; } }
 @media screen and (max-width: 640px) {
   .baner-container1 .baner2 {
     display: block; }
@@ -2228,6 +2240,12 @@ IMG {
 
 .baner-container2 .baner2 {
   display: none; }
+@media screen and (max-width: 768px) {
+  .baner-container2 .sticker2 {
+    width: 185px;
+    right: 20px; }
+  .baner-container2 .milkimg {
+    width: 173px; } }
 @media screen and (max-width: 640px) {
   .baner-container2 .sticker2 {
     width: 110px;

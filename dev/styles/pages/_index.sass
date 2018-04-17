@@ -1,0 +1,75 @@
+.baner-container1
+    .baner2
+        width: 100%
+        display: none
+
+    +max-screen($screenSM)
+        .stick
+            right: 18px
+            width: 68px
+            height: 92px
+            background: url(../images/sticker.png) no-repeat center 0
+            background-size: contain
+
+            p
+                font-size: 11px
+                margin: 16px 0 3px
+
+            img
+                width: 33px
+    +max-screen($screenSM_xs)
+        .baner2
+            display: block
+
+        .baner
+            display: none
+
+        .stick
+            right: 6px
+            width: 55px
+            height: 83px
+            background: url(../images/sticker.png) no-repeat center 0
+            background-size: contain
+
+            p
+                font-size: 9px
+                margin: 12px 0 3px
+
+            img
+                width: 29px
+
+.baner-container2
+    .baner2
+        display: none
+
+    +max-screen($screenSM)
+        .sticker2
+            width: 185px
+            right: 20px
+
+        .milkimg
+            width: 173px
+    +max-screen($screenSM_xs)
+        .sticker2
+            width: 110px
+            top: -47px
+            right: 12px
+
+        .milkimg
+            display: none
+
+        .baner
+            display: none
+
+        .baner2
+            display: block
+
+.baner-container3
+    .baner2
+        display: none
+    +max-screen($screenSM_xs)
+        .baner
+            display: none
+
+        .baner2
+            display: block
