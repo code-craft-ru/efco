@@ -101,30 +101,26 @@
                 font: bold 14px $baseFont
                 color: #fff
                 padding: 7px
+                text-transform: uppercase
                 text-align: center
                 background: #373737
             &._active
                 a
                     background: #4c8bca 
 
-            // &:first-child
-            //     a
-            //         background: #4c8bca
-
-            // &:last-child
-            //     a
-            //         background: #373737
         &--color2
             &.news__nav
                 li 
                    
                     a
-                        font-weight: normal
                         background: #e85d45 
                     &._active
                         a
                             background: #4c8bca
-
+        
+        +max-screen($screenSM)
+            li a
+                font-size: 10px
 
 
     &__items
@@ -237,16 +233,17 @@
 .text-block2
     overflow: hidden
     text-align: center
-    padding: 0 30px
+    padding: 0 16px
     color: #525351
     margin: 29px 0 33px 0
     h2
-        font: bold 15.6px $fGotic
+        font: bold 16px $baseFont
         text-transform: uppercase
         margin: 0 0 9px 0
 
     p 
-        font: bold 14px $fGotic
+        font: bold 14px $baseFont
+        line-height: 18px
         text-transform: uppercase
 
     &--font-avanty
@@ -755,7 +752,7 @@
     overflow: hidden
 
     &__wr
-        width: 770px
+        max-width: 770px
         margin: 0 auto
     &__item
         border-bottom: 1px solid #b7b7b8
@@ -796,6 +793,21 @@
             color: #888b8b
             margin: 0 0 18px
 
+    +max-screen($screenSM)
+        &__title p
+            font-size: 15px
+            padding: 5px 17px 6px 0
+
+        &__content p
+            font-size: 10px
+
+    +max-screen($screenSM_xs)
+        &__title p
+            font-size: 12px
+            padding: 12px 17px 12px 0
+
+        &__content p
+            font-size: 12px
 
 .news-more
     height: 382px

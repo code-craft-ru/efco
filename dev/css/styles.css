@@ -171,10 +171,10 @@ IMG {
   min-width: 320px;
   max-width: 1030px; }
   .wrapper--900 {
-    width: 900px;
+    max-width: 900px;
     margin: 0 auto; }
   .wrapper--835 {
-    width: 835px;
+    max-width: 835px;
     margin: 0 auto; }
 
 .wrapper-inner {
@@ -368,7 +368,7 @@ IMG {
       width: 80%; }
     .col--md-90 {
       width: 90%; } }
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 768px) {
     .col--sm-10 {
       width: 10%; }
     .col--sm-20 {
@@ -515,6 +515,10 @@ IMG {
       font-size: 9px;
       font-weight: 700;
       padding: 9px 0 0 1px; }
+    @media screen and (max-width: 768px) {
+      .header__logo img {
+        width: 195px;
+        height: 41px; } }
     @media screen and (max-width: 640px) {
       .header__logo {
         padding: 10px 16px;
@@ -560,7 +564,7 @@ IMG {
         font: bold 19px "Academy", sans-serif;
         color: #676761;
         text-decoration: none;
-        padding: 4px 0 9px;
+        padding: 5px 0 7px;
         display: inline-block; }
       .header__menu li:hover > ul {
         opacity: 1;
@@ -575,7 +579,7 @@ IMG {
       width: 175px;
       background-color: #fff;
       box-shadow: 0 5px 3px 1px rgba(0, 0, 0, 0.1);
-      transition: opacity 0.4s ease-in;
+      transition: opacity 0.4s;
       border-radius: 0 0 3px 3px; }
       .header__menu ul li {
         text-align: left;
@@ -585,6 +589,11 @@ IMG {
           border-bottom: none; }
         .header__menu ul li a {
           display: block; }
+    @media screen and (max-width: 768px) {
+      .header__menu {
+        padding: 0 80px; }
+        .header__menu li a {
+          font-size: 15px; } }
     @media screen and (max-width: 640px) {
       .header__menu {
         padding: 20px 10px;
@@ -1353,15 +1362,18 @@ IMG {
       font: bold 14px "Avanti", sans-serif;
       color: #fff;
       padding: 7px;
+      text-transform: uppercase;
       text-align: center;
       background: #373737; }
     .news__nav li._active a {
       background: #4c8bca; }
   .news__nav--color2.news__nav li a {
-    font-weight: normal;
     background: #e85d45; }
   .news__nav--color2.news__nav li._active a {
     background: #4c8bca; }
+  @media screen and (max-width: 768px) {
+    .news__nav li a {
+      font-size: 10px; } }
   .news__items {
     margin: 16px 0 10px;
     display: -webkit-box;
@@ -1458,15 +1470,16 @@ IMG {
 .text-block2 {
   overflow: hidden;
   text-align: center;
-  padding: 0 30px;
+  padding: 0 16px;
   color: #525351;
   margin: 29px 0 33px 0; }
   .text-block2 h2 {
-    font: bold 15.6px "Century Gothic", sans-serif;
+    font: bold 16px "Avanti", sans-serif;
     text-transform: uppercase;
     margin: 0 0 9px 0; }
   .text-block2 p {
-    font: bold 14px "Century Gothic", sans-serif;
+    font: bold 14px "Avanti", sans-serif;
+    line-height: 18px;
     text-transform: uppercase; }
   .text-block2--font-avanty h2, .text-block2--font-avanty p {
     font-family: "Avanti", sans-serif; }
@@ -1896,7 +1909,7 @@ IMG {
 .accordion {
   overflow: hidden; }
   .accordion__wr {
-    width: 770px;
+    max-width: 770px;
     margin: 0 auto; }
   .accordion__item {
     border-bottom: 1px solid #b7b7b8;
@@ -1932,6 +1945,18 @@ IMG {
     font: bold 15px "BenguiatGothicC";
     color: #888b8b;
     margin: 0 0 18px; }
+  @media screen and (max-width: 768px) {
+    .accordion__title p {
+      font-size: 15px;
+      padding: 5px 17px 6px 0; }
+    .accordion__content p {
+      font-size: 10px; } }
+  @media screen and (max-width: 640px) {
+    .accordion__title p {
+      font-size: 12px;
+      padding: 12px 17px 12px 0; }
+    .accordion__content p {
+      font-size: 12px; } }
 
 .news-more {
   height: 382px;
@@ -2228,7 +2253,7 @@ IMG {
   .txt1 h2 {
     font: bold 19px "Avanti", sans-serif;
     color: #888b8b;
-    margin: 45px 0 24px 50px; }
+    margin: 18px 0 24px 50px; }
 
 .prod-info {
   display: -webkit-box;
@@ -2246,10 +2271,19 @@ IMG {
       top: -9px; }
   .prod-info__info {
     width: 50%; }
+  .prod-info__btn {
+    color: #4c8bca;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 9px 30px;
+    border: 1px solid #4c8bca;
+    display: inline-block;
+    cursor: pointer; }
   .prod-info__sub {
     font: bold 17px "Avanti", sans-serif;
     color: #888b8b;
-    margin: 10px 0 11px; }
+    margin: 0 0 11px; }
   .prod-info__title {
     font: bold 36px "Avanti", sans-serif;
     margin: 0 0 45px;
@@ -2263,31 +2297,171 @@ IMG {
   .prod-info__wr2 {
     padding: 0 0 0 10px; }
   .prod-info__ul {
-    padding-left: 25px; }
+    padding-left: 27px; }
     .prod-info__ul li {
       position: relative;
       font: bold 17px "Segoe Print";
       color: #23336d;
       letter-spacing: -1px;
-      margin: 0 0 8px;
       line-height: 18px; }
+      .prod-info__ul li:not(:last-child) {
+        margin: 0 0 8px; }
       .prod-info__ul li .icon {
         position: absolute;
         top: 1px;
         left: -22px; }
+  @media screen and (max-width: 768px) {
+    .prod-info__sub, .prod-info__sub2 {
+      font-size: 12px; }
+    .prod-info__title {
+      font-size: 27px;
+      margin: 0 0 19px; }
+    .prod-info__ul li {
+      font-size: 12px; }
+      .prod-info__ul li .icon--ok {
+        width: 15px;
+        height: 15px;
+        background-size: contain; }
+    .prod-info__img img {
+      height: auto;
+      left: 0; } }
+
+.m-prod-info__preview img {
+  width: 150px;
+  margin: 0 auto;
+  display: block; }
+.m-prod-info__preview .prod-info-list {
+  left: 0;
+  margin: 0 auto; }
+.m-prod-info__btn {
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: #4c8bca;
+  padding: 11px 19px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 15px; }
+.m-prod-info__info {
+  padding: 34px 16px; }
+.m-prod-info__sub {
+  font: bold 14px "Avanti", sans-serif;
+  color: #888b8b;
+  margin: 0 0 10px; }
+.m-prod-info__title {
+  font: bold 24px "Avanti", sans-serif;
+  margin: 0 0 8px;
+  color: #37850d; }
+.m-prod-info__sub2 {
+  font: bold 14px "Avanti", sans-serif;
+  color: #37850d;
+  margin: 0 0 14px; }
+.m-prod-info__ul {
+  padding-left: 27px; }
+  .m-prod-info__ul li {
+    position: relative;
+    font: bold 12px "Segoe Print";
+    color: #23336d;
+    letter-spacing: -1px;
+    line-height: 18px; }
+    .m-prod-info__ul li:not(:last-child) {
+      margin: 0 0 8px; }
+    .m-prod-info__ul li .icon {
+      position: absolute;
+      top: 1px;
+      left: -22px; }
 
 .prod-info-list {
   width: 296px;
   height: 353px;
   position: relative;
-  left: -15px;
+  left: -20px;
   background: url(../images/info.jpg) no-repeat 0 0;
   font-family: "Century Gothic", sans-serif;
   font-size: 11px;
   padding: 86px 20px 0 28px; }
   .prod-info-list__row {
-    padding: 7px 0;
-    border-bottom: 1px solid #404041; }
+    padding: 7px 0; }
+    .prod-info-list__row:not(:last-child) {
+      border-bottom: 1px solid #404041; }
+  @media screen and (max-width: 768px) {
+    .prod-info-list {
+      font-size: 10px;
+      background-size: contain;
+      width: 257px;
+      height: 305px;
+      padding: 75px 20px 0 28px; } }
+
+.baner-container-milk .baner2 {
+  display: none; }
+@media screen and (max-width: 768px) {
+  .baner-container-milk .sticker2 {
+    width: 185px; } }
+@media screen and (max-width: 640px) {
+  .baner-container-milk .baner2 {
+    display: block; }
+  .baner-container-milk .baner {
+    display: none; }
+  .baner-container-milk .sticker2 {
+    width: 132px;
+    right: 3px; } }
+
+.milk-container1 h2 {
+  margin: 18px 292px 24px 25px; }
+@media screen and (max-width: 768px) {
+  .milk-container1 h2 {
+    font-size: 15px; } }
+@media screen and (max-width: 640px) {
+  .milk-container1 h2 {
+    margin: 53px 0 24px 16px;
+    font-size: 16px; } }
+
+.milk-container2__items {
+  display: none; }
+.milk-container2__title {
+  background-color: #4c8bca;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  display: block;
+  padding: 5px;
+  margin: 0 0 10px;
+  text-align: center; }
+@media screen and (max-width: 640px) {
+  .milk-container2 .news__nav {
+    display: none; }
+  .milk-container2 .tabs {
+    display: none; }
+  .milk-container2__items {
+    display: block; } }
+
+@media screen and (max-width: 768px) {
+  .milk-container3 {
+    padding: 0 16px; } }
+
+.milk-container4 {
+  margin: 40px 0 77px; }
+  .milk-container4__link {
+    font-size: 14px;
+    color: #5c5c5d;
+    font-weight: bold; }
+  .milk-container4 .baner-m {
+    display: none; }
+  @media screen and (max-width: 768px) {
+    .milk-container4__link {
+      font-size: 10px; } }
+  @media screen and (max-width: 640px) {
+    .milk-container4 {
+      margin: 30px 16px 15px; }
+      .milk-container4 .cols {
+        display: none; }
+      .milk-container4 .baner-m {
+        display: block; }
+        .milk-container4 .baner-m p {
+          position: absolute;
+          bottom: 40px;
+          left: 21px; } }
 
 .cf:before, .page-body:before, .footer__top:before, .top-search:before, .news__nav:before, .research-items:before, .tiles__row:before, .tiles2__row:before, .reviews:before, .thumb:before,
 .cf:after,
@@ -2311,6 +2485,15 @@ IMG {
 
 .fr {
   float: right; }
+
+.alg-l {
+  text-align: left; }
+
+.alg-r {
+  text-align: right; }
+
+.alg-c {
+  text-align: center; }
 
 .h-inlb {
   display: inline-block;
