@@ -8,23 +8,24 @@
 
             <div class="wrapper">
                 <div class="page-body page-body--white">
-                        <div class="contain">
+                        <div class="contain history-contain1">
                             <img src="../images/baner-history.jpg" alt="" class="baner">
+                            <img src="../images/history-baner1-m.png" alt="" class="baner2">
                             <a href="belok-itog.php">
                                 <img src="../images/sticker2.png" alt="" class="sticker2 sticker2--bottom">
                             </a>
                         </div>
                         
-                        <div class="text-block">
+                        <div class="text-block history-contain2">
                             <p class='par'>Люди, которые стараются выбирать для себя и своих близких полезные продукты для правильного питания, не оставят без внимания молоко А2. Ведь благодаря содержанию в нем правильного белка А2, оно лучше усваивается в организме и позволяет насладиться вкусом и пользой настоящего молока  даже тем, кто раньше не ладил с этим продуктом.</p>
                             <p class='par'>Жители Австралии, Новой Зеландии, США и других стран уже открыли для себя молоко А2. Большинство из них отметило, что с молоком А2 они перестали испытывать дискомфорт в животе. И теперь их выбор – А2. Многочисленные положительные отзывы людей из других стран свидетельствуют о том, что молоко А2 их любимый продукт для всей семьи. И теперь молоко А2 появилось и в России. А это значит, что что счастливых людей, которые смогут наслаждаться вкусным, питательным и полностью натуральным коровьим молоком А2, станет еще больше.</p>
                         </div>
 
-                        <div class="title--fill h-mrg-b-10 h-mrg-t-50">
-                            Истории молока А2
-                        </div>
 
                         <div class="reviews">
+                            <div class="title--fill">
+                                Истории молока А2
+                            </div>
                             <div class="reviews__items js-slider-fade">
                                 <div class="reviews-item__slide-wr">
                                     <div class="reviews-item">
@@ -89,6 +90,12 @@
                                     </a>
                                 </div>
                             </div>
+                            <div class="news-more__mobile">
+                                <h2>Хотите узнать больше?</h2>
+                                <a href="#!" class="news-more__item-mobile">Что такое белок А2? </a>
+                                <a href="#!" class="news-more__item-mobile">Почему мы верим,  что «Слобода» А2лучше, чем  обычное молокок А2? </a>
+                                <a href="#!" class="news-more__item-mobile">Молоко А2 от коров с собственных ферм </a>
+                            </div>
                         </div>
 
                         <!-- <div class="text-block3">
@@ -112,7 +119,7 @@
                             </div>
                         </div> -->
                         <div class="research-items">
-                            <div class="title-throughline"><span>Научные исследования</span></div>
+                            <div class="title-main"><span>Научные исследования</span></div>
                             <div class="research-items-wr">
                                 <div class="item">
                                     <div class="icon"><img src="../images/research-items/1.png" alt=""></div>
@@ -140,8 +147,8 @@
                                 </div>
                                 <div class="item">
                                     <div class="icon"><img src="../images/research-items/5.png" alt=""></div>
-                                    <div class="content" title="Воздействие на желудочно-кишечную физиологию молока с содержанием бета-казеина только типа A2 в сравнении с молоком, содержащим как бета-казеин A1, так и бета-казеин A2">
-                                        Воздействие на желудочно-кишечную физиологию молока с содержанием бета-казеина только типа A2 в сравнении с молоком, содержащим как бета-казеин A1, так и бета-казеин A2
+                                    <div class="content">
+                                        Воздействие молока на желудочно-кишечную физиологию
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +224,17 @@
                                             geoOpjects[i] = new ymaps.Placemark(points[i] , {
                                                 hintContent: 'Sloboda'
                                             },{
-                                                preset: 'islands#nightIcon'
+                                                // preset: 'islands#nightIcon'
+                                                iconLayout: 'default#image',
+                                                // Custom image for the placemark icon.
+                                                iconImageHref: '../images/icons/pina2.png',
+                                                // The size of the placemark.
+                                                iconImageSize: [37, 37],
+                                                /**
+                                                 * The offset of the upper left corner of the icon relative
+                                                 * to its "tail" (the anchor point).
+                                                 */
+                                                iconImageOffset: [-18, -18]
                                             });                                            
                                         }
 

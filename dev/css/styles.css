@@ -1032,6 +1032,15 @@ IMG {
       top: 3%;
       background: #4385b5; }
 
+.title-main {
+  color: #054989;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .title-main {
+      font-size: 18px; } }
 .title--fill {
   font-size: 33px;
   font-weight: bold;
@@ -1559,64 +1568,6 @@ IMG {
     .text-block3__item p {
       font: normal 10px "BenguiatGothicC"; }
 
-.research-items {
-  overflow: hidden; }
-  .research-items .title-throughline {
-    padding-top: 33px; }
-  .research-items-wr {
-    padding: 42px 0 37px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around; }
-    .research-items-wr .item {
-      position: relative;
-      width: 183px;
-      background-color: #edf8fc;
-      border-radius: 5px;
-      padding: 4px;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-      -webkit-transform: scale(1) translate3d(0, 0, 0);
-              transform: scale(1) translate3d(0, 0, 0); }
-      .research-items-wr .item:hover {
-        -webkit-transform: scale(1.02) translate(0, -4px);
-                transform: scale(1.02) translate(0, -4px); }
-    .research-items-wr .content {
-      height: 172px;
-      text-align: center;
-      background-color: #dbf0fa;
-      font-size: 14px;
-      color: #4f596e;
-      padding: 45px 7px 0;
-      font-family: "BenguiatGothicC";
-      font-smooth: never;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-      -webkit-font-smoothing: never;
-      font-weight: bold;
-      overflow: hidden; }
-    .research-items-wr .icon {
-      position: absolute;
-      top: -25px;
-      left: 50%;
-      margin-left: -29px;
-      width: 58px;
-      height: 58px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      border-radius: 100%;
-      background-color: #fff;
-      z-index: 1; }
-
 .text-block4 {
   overflow: hidden;
   text-align: center;
@@ -1759,81 +1710,6 @@ IMG {
     color: #fff; }
     .tiles2--c-white p, .tiles2--c-white h2 {
       color: #fff; }
-
-.reviews {
-  background: linear-gradient(to top, #cdd5dc 0%, #f6f7f7 10%, #f6f7f7 90%, #cdd5dc 100%);
-  padding: 30px 0 23px;
-  overflow: hidden;
-  position: relative; }
-  .reviews__items {
-    width: 750px;
-    margin: 0 auto;
-    position: relative;
-    left: 30px; }
-  .reviews__nav {
-    text-align: center; }
-    .reviews__nav li {
-      margin: 0 5px;
-      display: inline-block; }
-      .reviews__nav li a {
-        width: 10px;
-        height: 10px;
-        display: block;
-        border-radius: 100%;
-        background: #acb8c3; }
-        .reviews__nav li a.active {
-          background: #5089b6; }
-  .reviews .slick-dots {
-    text-align: center; }
-    .reviews .slick-dots li {
-      margin: 0 5px;
-      display: inline-block; }
-      .reviews .slick-dots li.slick-active button {
-        background: #5089b6;
-        color: #5089b6; }
-      .reviews .slick-dots li button {
-        content: "";
-        width: 10px;
-        height: 10px;
-        cursor: pointer;
-        display: block;
-        border-radius: 100%;
-        background: #acb8c3;
-        color: #acb8c3;
-        overflow: hidden; }
-        .reviews .slick-dots li button.active {
-          background: #5089b6; }
-
-.reviews-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .reviews-item .slick-dots {
-    margin-top: 3px; }
-  .reviews-item__img {
-    width: 126px; }
-  .reviews-item__content {
-    width: 620px;
-    margin-left: 11px; }
-  .reviews-item__title {
-    font: bold 15px "BenguiatGothicC";
-    color: #000;
-    margin: 0 0 12px; }
-  .reviews-item__desc {
-    font: normal 15px "BenguiatGothicC";
-    color: #054989;
-    line-height: 18px;
-    margin-left: 33px;
-    position: relative; }
-    .reviews-item__desc:before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 1px;
-      height: 80%;
-      top: 10%;
-      left: -15px;
-      background: #7d9ebf; }
 
 .maps {
   padding-bottom: 11px;
@@ -2045,41 +1921,6 @@ IMG {
       padding: 12px 17px 12px 0; }
     .accordion__content p {
       font-size: 12px; } }
-
-.news-more {
-  height: 382px;
-  overflow: hidden;
-  position: relative;
-  background: url(../images/baner10.jpg) no-repeat 0 0;
-  background-size: contain; }
-  .news-more a {
-    text-decoration: none; }
-  .news-more__item {
-    width: 243px;
-    min-height: 198px;
-    vertical-align: top;
-    background: #fff;
-    display: inline-block;
-    margin: 0 5px;
-    padding: 12px;
-    overflow: hidden; }
-  .news-more__img {
-    height: 131px;
-    overflow: hidden; }
-    .news-more__img img {
-      transition: all 1s;
-      -webkit-transform: scale(1);
-              transform: scale(1); }
-    .news-more__img:hover img {
-      -webkit-transform: scale(1.1);
-              transform: scale(1.1); }
-  .news-more__title {
-    margin: 0;
-    font: bold 15px "BenguiatGothicC";
-    color: #0a5a98; }
-  .news-more__items {
-    text-align: center;
-    margin-top: 118px; }
 
 .slider-popup {
   position: relative; }
@@ -2594,20 +2435,286 @@ IMG {
   .belok-container2 .baner2 {
     display: block; } }
 
-.cf:before, .page-body:before, .footer__top:before, .top-search:before, .news__nav:before, .research-items:before, .tiles2__row:before, .reviews:before, .thumb:before,
+.history-contain1 .baner2 {
+  display: none; }
+@media screen and (max-width: 768px) {
+  .history-contain1 .sticker2 {
+    width: 185px;
+    right: 30px;
+    bottom: -65px; } }
+@media screen and (max-width: 640px) {
+  .history-contain1 .baner2 {
+    display: block; }
+  .history-contain1 .baner {
+    display: none; }
+  .history-contain1 .sticker2 {
+    width: 117px;
+    right: 10px;
+    bottom: -45px; } }
+
+.news-more {
+  height: 382px;
+  overflow: hidden;
+  position: relative;
+  background: url(../images/baner10.jpg) no-repeat 0 0;
+  background-size: cover; }
+  .news-more a {
+    text-decoration: none; }
+  .news-more__item {
+    width: 243px;
+    min-height: 198px;
+    vertical-align: top;
+    background: #fff;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 12px;
+    overflow: hidden; }
+  .news-more__img {
+    height: 131px;
+    overflow: hidden; }
+    .news-more__img img {
+      transition: all 1s;
+      -webkit-transform: scale(1);
+              transform: scale(1); }
+    .news-more__img:hover img {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+  .news-more__title {
+    margin: 0;
+    font: bold 15px "BenguiatGothicC";
+    color: #0a5a98; }
+  .news-more__items {
+    text-align: center;
+    margin-top: 118px; }
+  .news-more__mobile {
+    display: none;
+    text-align: center;
+    padding: 30px 16px 0; }
+    .news-more__mobile h2 {
+      font-family: "BenguiatGothicC";
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 28.3px;
+      color: #000;
+      margin: 0 0 29px; }
+  .news-more__item-mobile {
+    background-color: #054989;
+    display: block;
+    font-family: "BenguiatGothicC";
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    padding: 10px; }
+    .news-more__item-mobile:not(:last-child) {
+      margin-bottom: 24px; }
+  @media screen and (max-width: 1040px) {
+    .news-more {
+      height: auto;
+      background: #fff; }
+      .news-more__items {
+        display: none; } }
+  @media screen and (max-width: 640px) {
+    .news-more__mobile {
+      display: block; } }
+
+.reviews {
+  padding: 30px 0 23px;
+  overflow: hidden;
+  position: relative; }
+  .reviews__items {
+    max-width: 750px;
+    margin: 25px auto 0;
+    position: relative; }
+  .reviews__nav {
+    text-align: center; }
+    .reviews__nav li {
+      margin: 0 5px;
+      display: inline-block; }
+      .reviews__nav li a {
+        width: 10px;
+        height: 10px;
+        display: block;
+        border-radius: 100%;
+        background: #acb8c3; }
+        .reviews__nav li a.active {
+          background: #5089b6; }
+  .reviews .slick-dots {
+    text-align: center; }
+    .reviews .slick-dots li {
+      margin: 0 5px;
+      display: inline-block; }
+      .reviews .slick-dots li.slick-active button {
+        background: #5089b6;
+        color: #5089b6; }
+      .reviews .slick-dots li button {
+        content: "";
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+        display: block;
+        border-radius: 100%;
+        background: #acb8c3;
+        color: #acb8c3;
+        overflow: hidden; }
+        .reviews .slick-dots li button.active {
+          background: #5089b6; }
+  @media screen and (max-width: 640px) {
+    .reviews {
+      padding: 0; }
+      .reviews .title--fill {
+        margin: 0 16px; } }
+
+.reviews-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 16px; }
+  .reviews-item .slick-dots {
+    margin-top: 3px; }
+  .reviews-item__img {
+    width: 126px; }
+  .reviews-item__content {
+    width: 620px;
+    margin-left: 11px; }
+  .reviews-item__title {
+    font: bold 15px "BenguiatGothicC";
+    color: #000;
+    margin: 0 0 12px; }
+  .reviews-item__desc {
+    font: normal 15px "BenguiatGothicC";
+    color: #054989;
+    line-height: 18px;
+    margin-left: 33px;
+    position: relative; }
+    .reviews-item__desc:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 1px;
+      height: 80%;
+      top: 10%;
+      left: -15px;
+      background: #7d9ebf; }
+  @media screen and (max-width: 640px) {
+    .reviews-item__img {
+      min-width: 126px;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+    .reviews-item__desc {
+      margin-left: 19px; }
+      .reviews-item__desc:before {
+        height: 30%;
+        top: 0; } }
+
+.research-items {
+  overflow: hidden; }
+  .research-items .title-main {
+    padding-top: 33px; }
+  .research-items-wr {
+    padding: 42px 0 37px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .research-items-wr .item {
+      position: relative;
+      max-width: 183px;
+      background-color: #edf8fc;
+      border-radius: 5px;
+      padding: 4px;
+      margin: 0 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      -webkit-transform: scale(1) translate3d(0, 0, 0);
+              transform: scale(1) translate3d(0, 0, 0); }
+      .research-items-wr .item:hover {
+        -webkit-transform: scale(1.02) translate(0, -4px);
+                transform: scale(1.02) translate(0, -4px); }
+    .research-items-wr .content {
+      height: 172px;
+      text-align: center;
+      background-color: #dbf0fa;
+      font-size: 14px;
+      color: #4f596e;
+      padding: 45px 7px 0;
+      font-family: "BenguiatGothicC";
+      font-smooth: never;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      -webkit-font-smoothing: never;
+      font-weight: bold;
+      overflow: hidden; }
+    .research-items-wr .icon {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      margin-left: -29px;
+      width: 58px;
+      height: 58px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      border-radius: 100%;
+      background-color: #fff;
+      z-index: 1; }
+  @media screen and (max-width: 768px) {
+    .research-items .content {
+      font-size: 12px; } }
+  @media screen and (max-width: 640px) {
+    .research-items-wr {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 40px 16px 7px 25px; }
+    .research-items .item {
+      width: auto;
+      max-width: none;
+      margin-bottom: 20px;
+      padding: 2px; }
+      .research-items .item .content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        text-align: left;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        height: 81px;
+        padding: 10px 10px 10px 45px; }
+      .research-items .item .icon {
+        top: 50%;
+        margin-top: -22px;
+        left: 10px;
+        width: 45px;
+        height: 45px; } }
+
+.cf:before, .page-body:before, .footer__top:before, .top-search:before, .news__nav:before, .tiles2__row:before, .thumb:before, .reviews:before, .research-items:before,
 .cf:after,
 .page-body:after,
 .footer__top:after,
 .top-search:after,
 .news__nav:after,
-.research-items:after,
 .tiles2__row:after,
+.thumb:after,
 .reviews:after,
-.thumb:after {
+.research-items:after {
   content: " ";
   display: table; }
 
-.cf:after, .page-body:after, .footer__top:after, .top-search:after, .news__nav:after, .research-items:after, .tiles2__row:after, .reviews:after, .thumb:after {
+.cf:after, .page-body:after, .footer__top:after, .top-search:after, .news__nav:after, .tiles2__row:after, .thumb:after, .reviews:after, .research-items:after {
   clear: both; }
 
 .fl {

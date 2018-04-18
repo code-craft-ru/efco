@@ -309,61 +309,6 @@
         p
             font: normal 10px $fBenguiat
 
-.research-items
-    overflow: hidden
-    @extend .cf
-
-    .title-throughline
-        padding-top: 33px
-
-    &-wr
-        padding: 42px 0 37px
-        display: flex
-        justify-content: space-around
-
-        .item
-            position: relative
-            width: 183px
-            background-color: #edf8fc
-            border-radius: 5px
-            padding: 4px
-            cursor: pointer
-            transition: all 0.3s ease-in-out
-            transform: scale(1) translate3d( 0, 0, 0)
-
-            &:hover
-                transform: scale(1.02) translate(0, -4px)
-
-
-        .content
-            height: 172px
-            text-align: center
-            background-color: #dbf0fa
-            font-size: 14px
-            color: #4f596e
-            padding: 45px 7px 0
-            font-family: $fBenguiat
-            font-smooth: never
-            transform: translate3d( 0, 0, 0)
-            -webkit-font-smoothing: never
-            font-weight: bold
-            overflow: hidden
-
-        .icon
-            position: absolute
-            top: -25px
-            left: 50%
-            margin-left: -29px
-            width: 58px
-            height: 58px
-            display: flex
-            justify-content: center
-            align-items: center
-            border-radius: 100%
-            background-color: #fff
-            z-index: 1
-
-
 
 .text-block4
     overflow: hidden
@@ -553,91 +498,6 @@ $screenTilesTablet: 1000px
 
 
 
-
-.reviews
-    background: linear-gradient(to top , #cdd5dc 0% ,  #f6f7f7 10%, #f6f7f7 90% , #cdd5dc 100%)
-    padding: 30px 0 23px 
-    overflow: hidden
-    position: relative
-    @extend .cf
-
-    &__items
-        width: 750px
-        margin: 0 auto
-        position: relative
-        left: 30px
-
-    &__nav
-        text-align: center
-        li
-            margin: 0 5px
-            display: inline-block
-            a
-                width: 10px
-                height: 10px
-                display: block
-                border-radius: 100%
-                background: #acb8c3
-                &.active
-                    background: #5089b6
-
-    .slick-dots
-        text-align: center
-        li
-            margin: 0 5px
-            display: inline-block
-            &.slick-active
-                button
-                    background: #5089b6
-                    color: #5089b6
-            button
-                content: ''
-                width: 10px
-                height: 10px
-                cursor: pointer
-                display: block
-                border-radius: 100%
-                background: #acb8c3
-                color: #acb8c3
-                overflow: hidden
-                &.active
-                    background: #5089b6
-
-
-
-
-
-.reviews-item
-    display: flex
-    .slick-dots
-        margin-top: 3px
-    &__img
-        width: 126px
-    
-    &__content
-        width: 620px
-        margin-left: 11px
-
-    &__title
-        font: bold 15px $fBenguiat
-        color: #000
-        margin: 0 0 12px
-
-    &__desc
-        font: normal 15px $fBenguiat
-        color: #054989
-        line-height: 18px
-        margin-left: 33px
-        position: relative
-        &:before
-            content: ''
-            position: absolute
-            display: block
-            width: 1px
-            height: 80%
-            top: 10%
-            left: -15px
-            background: #7d9ebf
 
 
 
@@ -889,47 +749,6 @@ $screenTilesTablet: 1000px
 
         &__content p
             font-size: 12px
-
-.news-more
-    height: 382px
-    overflow: hidden
-    position: relative
-    background: url(../images/baner10.jpg) no-repeat 0 0
-    background-size: contain
-
-    a
-        text-decoration: none
-
-
-    &__item
-        width: 243px
-        min-height: 198px
-        vertical-align: top
-        background: #fff
-        display: inline-block
-        margin: 0 5px
-        padding: 12px
-        overflow: hidden
-
-    &__img
-        height: 131px
-        overflow: hidden
-        img
-            transition: all 1s
-            transform: scale(1)
-        &:hover
-            img
-                transform: scale(1.1)
-
-    &__title
-        margin: 0
-        font: bold 15px $fBenguiat
-        color: #0a5a98
-
-    &__items
-        text-align: center
-        margin-top: 118px
-
 
 .slider-popup
     position: relative
