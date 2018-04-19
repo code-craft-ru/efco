@@ -1,0 +1,64 @@
+.where-buy-contain1
+	.wherebuy-map .textblock
+		b
+			margin-top: 40px
+			display: inline-block
+			max-width: 440px
+
+	+max-screen(940px)
+		.textblock-wr
+			position: static
+
+			.textblock
+				padding: 30px 30px 0 50px
+
+		
+		.wherebuy-map
+			height: 850px
+			.map
+				top: 50px
+				// left: 125%
+				transform: scale(2.5) translateX(43%)
+
+	+max-screen($screenSM)
+		.wherebuy-map .textblock
+			h2
+				margin-bottom: 16px
+				font-size: 16px
+
+			p, b
+				font-size: 11px
+				line-height: 16px
+
+			b
+				margin-top: 30px
+
+		.wherebuy-map-modal
+			width: 320px
+			margin-left: -160px
+
+	+max-screen($screenSM_xs)
+		.wherebuy-map
+			margin-bottom: 30px
+			height: 1000px
+			.map
+				top: 180px
+				transform: scale(2.5) translateX(50%)
+
+		.wherebuy-map .textblock
+			padding: 16px
+			h2
+				margin-bottom: 16px
+				font-size: 22px
+
+			p, b
+				font-size: 15px
+				line-height: 22.65px
+
+			b
+				margin-top: 50px
+
+	+max-screen(400px)
+		.wherebuy-map
+			.map
+				transform: scale(2.5) translateX(52%)

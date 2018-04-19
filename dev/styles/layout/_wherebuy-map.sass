@@ -1,7 +1,6 @@
 .wherebuy-map
 	overflow: hidden
 	height: 812px
-	width: 1000px
 	position: relative
 	overflow: hidden
 	margin-bottom: 80px
@@ -24,8 +23,9 @@
 		height: 720px
 		position: absolute
 		top: 0
-		left: 950px
-		transform: scale(2.5)
+		right: 0
+		// left: 950px
+		transform: scale(2.5) translateX(39%)
 
 		.js-wherebuy-map__map-item-group
 			&:hover 
@@ -91,7 +91,7 @@
 			font-family: $fBenguiat
 
 	&-modal
-		width: 600px
+		max-width: 600px
 		background-color: #fff
 		position: fixed
 		top: 10px

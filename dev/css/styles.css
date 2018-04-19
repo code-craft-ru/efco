@@ -710,7 +710,6 @@ IMG {
 .wherebuy-map {
   overflow: hidden;
   height: 812px;
-  width: 1000px;
   position: relative;
   overflow: hidden;
   margin-bottom: 80px; }
@@ -730,9 +729,9 @@ IMG {
     height: 720px;
     position: absolute;
     top: 0;
-    left: 950px;
-    -webkit-transform: scale(2.5);
-            transform: scale(2.5); }
+    right: 0;
+    -webkit-transform: scale(2.5) translateX(39%);
+            transform: scale(2.5) translateX(39%); }
     .wherebuy-map .map .js-wherebuy-map__map-item-group:hover .js-wherebuy-map__map-item {
       fill: #5C99D2 !important; }
     .wherebuy-map .map .js-wherebuy-map__map-item-group:hover .js-wherebuy-map__map-item-notice {
@@ -780,7 +779,7 @@ IMG {
     .wherebuy-map .textblock b {
       font-family: "BenguiatGothicC"; }
   .wherebuy-map-modal {
-    width: 600px;
+    max-width: 600px;
     background-color: #fff;
     position: fixed;
     top: 10px;
@@ -3068,6 +3067,56 @@ IMG {
       padding-right: 10px; }
   .table tbody tr {
     border-bottom: 1px solid #c9c9ca; }
+
+.where-buy-contain1 .wherebuy-map .textblock b {
+  margin-top: 40px;
+  display: inline-block;
+  max-width: 440px; }
+@media screen and (max-width: 940px) {
+  .where-buy-contain1 .textblock-wr {
+    position: static; }
+    .where-buy-contain1 .textblock-wr .textblock {
+      padding: 30px 30px 0 50px; }
+  .where-buy-contain1 .wherebuy-map {
+    height: 850px; }
+    .where-buy-contain1 .wherebuy-map .map {
+      top: 50px;
+      -webkit-transform: scale(2.5) translateX(43%);
+              transform: scale(2.5) translateX(43%); } }
+@media screen and (max-width: 768px) {
+  .where-buy-contain1 .wherebuy-map .textblock h2 {
+    margin-bottom: 16px;
+    font-size: 16px; }
+  .where-buy-contain1 .wherebuy-map .textblock p, .where-buy-contain1 .wherebuy-map .textblock b {
+    font-size: 11px;
+    line-height: 16px; }
+  .where-buy-contain1 .wherebuy-map .textblock b {
+    margin-top: 30px; }
+  .where-buy-contain1 .wherebuy-map-modal {
+    width: 320px;
+    margin-left: -160px; } }
+@media screen and (max-width: 640px) {
+  .where-buy-contain1 .wherebuy-map {
+    margin-bottom: 30px;
+    height: 1000px; }
+    .where-buy-contain1 .wherebuy-map .map {
+      top: 180px;
+      -webkit-transform: scale(2.5) translateX(50%);
+              transform: scale(2.5) translateX(50%); }
+  .where-buy-contain1 .wherebuy-map .textblock {
+    padding: 16px; }
+    .where-buy-contain1 .wherebuy-map .textblock h2 {
+      margin-bottom: 16px;
+      font-size: 22px; }
+    .where-buy-contain1 .wherebuy-map .textblock p, .where-buy-contain1 .wherebuy-map .textblock b {
+      font-size: 15px;
+      line-height: 22.65px; }
+    .where-buy-contain1 .wherebuy-map .textblock b {
+      margin-top: 50px; } }
+@media screen and (max-width: 400px) {
+  .where-buy-contain1 .wherebuy-map .map {
+    -webkit-transform: scale(2.5) translateX(52%);
+            transform: scale(2.5) translateX(52%); } }
 
 .cf:before, .page-body:before, .footer__top:before, .top-search:before, .news__nav:before, .reviews:before, .research-items:before, .tiles2__row:before, .thumb:before,
 .cf:after,
