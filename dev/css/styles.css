@@ -1741,55 +1741,6 @@ IMG {
         font-size: 18px;
         line-height: 23.37px; } }
 
-.text-block7 {
-  text-align: justify; }
-  .text-block7__wr {
-    padding: 59px 62px 27px; }
-  .text-block7__wr2 {
-    padding: 32px 62px 40px; }
-  .text-block7 h2 {
-    font: bold 27px "BenguiatGothicC";
-    margin: 0 0 11px;
-    color: #0a5a98;
-    letter-spacing: -0.4px; }
-  .text-block7__p {
-    font: normal 19px "BenguiatGothicC";
-    line-height: 25px; }
-  .text-block7__style-title {
-    font: bold 20px "BenguiatGothicC";
-    line-height: 25px;
-    color: #0a5a98;
-    padding-right: 20px; }
-  .text-block7__img {
-    margin: 0 auto;
-    display: block;
-    height: 232px;
-    position: relative;
-    left: 22px; }
-
-.thumb {
-  padding: 50px 0 0;
-  text-align: center;
-  position: relative; }
-  .thumb:after {
-    content: "";
-    display: block;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 25px;
-    background: linear-gradient(to bottom, #d6e1e0, transparent); }
-  .thumb__title {
-    font-size: 25px;
-    font-weight: bold;
-    margin: 19px 0 0;
-    color: #777777; }
-  .thumb__sub {
-    font-size: 14px;
-    font-weight: bold;
-    color: #777777;
-    margin: 2px 0 20px; }
-
 .text-block8 {
   text-align: justify;
   overflow: hidden; }
@@ -2794,20 +2745,188 @@ IMG {
       .b-circle__top-txt-m, .b-circle__bottom-txt-m {
         display: block; } }
 
-.cf:before, .page-body:before, .footer__top:before, .top-search:before, .news__nav:before, .thumb:before, .reviews:before, .research-items:before, .tiles2__row:before,
+.about-ferma-contain1 .baner2 {
+  display: none; }
+@media screen and (max-width: 768px) {
+  .about-ferma-contain1 .stick {
+    right: 18px;
+    width: 68px;
+    height: 92px;
+    background: url(../images/sticker.png) no-repeat center 0;
+    background-size: contain; }
+    .about-ferma-contain1 .stick p {
+      font-size: 11px;
+      margin: 16px 0 3px; }
+    .about-ferma-contain1 .stick img {
+      width: 33px; } }
+@media screen and (max-width: 640px) {
+  .about-ferma-contain1 .baner2 {
+    display: block; }
+  .about-ferma-contain1 .baner {
+    display: none; }
+  .about-ferma-contain1 .stick {
+    right: 6px;
+    width: 55px;
+    height: 83px;
+    background: url(../images/sticker.png) no-repeat center 0;
+    background-size: contain; }
+    .about-ferma-contain1 .stick p {
+      font-size: 9px;
+      margin: 12px 0 3px; }
+    .about-ferma-contain1 .stick img {
+      width: 29px; } }
+
+.text-block7 {
+  text-align: justify; }
+  .text-block7__wr {
+    padding: 59px 62px 27px; }
+  .text-block7__wr2 {
+    padding: 32px 62px 40px; }
+  .text-block7 h2 {
+    font: bold 27px "BenguiatGothicC";
+    margin: 0 0 11px;
+    color: #0a5a98;
+    letter-spacing: -0.4px; }
+  .text-block7__p {
+    font: normal 19px "BenguiatGothicC";
+    line-height: 25px; }
+  .text-block7__style-title {
+    font: bold 20px "BenguiatGothicC";
+    line-height: 25px;
+    color: #0a5a98;
+    padding-right: 20px; }
+  .text-block7__img {
+    margin: 0 auto;
+    display: block;
+    height: 232px;
+    position: relative;
+    left: 22px; }
+  @media screen and (max-width: 768px) {
+    .text-block7 h2 {
+      font-size: 19px;
+      line-height: 28.94px; }
+    .text-block7__wr {
+      padding: 32px 32px 37px; }
+    .text-block7__p {
+      font-size: 14px;
+      line-height: 19.22px; }
+    .text-block7__style-title {
+      font-size: 15px;
+      line-height: 20.69px; }
+    .text-block7__img {
+      height: 158px; }
+    .text-block7 .cols {
+      height: auto !important; }
+    .text-block7__wr2 {
+      padding: 31px 31px 48px; } }
+  @media screen and (max-width: 640px) {
+    .text-block7 h2 {
+      font-size: 15px;
+      line-height: 14.58px;
+      letter-spacing: 0.38px; }
+    .text-block7__p {
+      font-size: 12px;
+      line-height: 13.74px;
+      margin-bottom: 14px; }
+    .text-block7__style-title {
+      font-size: 12px;
+      line-height: 13.74px;
+      margin-bottom: 14px; }
+    .text-block7__img {
+      display: none; }
+    .text-block7 .col--70 {
+      width: 100%; }
+    .text-block7__wr {
+      padding: 23px 16px 0; }
+    .text-block7__wr2 {
+      padding: 6px 16px 20px; } }
+
+.thumb {
+  padding: 50px 0 0;
+  text-align: center;
+  position: relative; }
+  .thumb:after {
+    content: "";
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to bottom, #d6e1e0, transparent); }
+  .thumb__title {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 19px 0 0;
+    color: #777777; }
+  .thumb__sub {
+    font-size: 14px;
+    font-weight: bold;
+    color: #777777;
+    margin: 2px 0 20px; }
+  .thumb img {
+    vertical-align: middle; }
+  .thumb .baner2 {
+    display: none; }
+  @media screen and (max-width: 768px) {
+    .thumb {
+      padding: 37px 0 0; }
+      .thumb__title {
+        font-size: 18px;
+        margin: 16px 0 0; }
+      .thumb__sub {
+        font-size: 10px;
+        line-height: 11.83px;
+        margin: 4px 0 14px; } }
+  @media screen and (max-width: 640px) {
+    .thumb {
+      padding: 14px 0 0; }
+      .thumb .baner {
+        display: none; }
+      .thumb .baner2 {
+        display: block; }
+      .thumb__title {
+        font-size: 15px;
+        line-height: 14.51px;
+        margin: 20px 0 0; }
+      .thumb__sub {
+        font-size: 9px;
+        line-height: 10.88px; } }
+
+@media screen and (max-width: 768px) {
+  .about-ferma-contain2 .text-block13 h2 {
+    font-size: 19px;
+    line-height: 28.94px; }
+  .about-ferma-contain2 .text-block13 p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.22px; }
+  .about-ferma-contain2 .btn--link {
+    font-size: 21px; } }
+@media screen and (max-width: 640px) {
+  .about-ferma-contain2 .text-block13 h2 {
+    font-size: 14px;
+    line-height: 21.81px; }
+  .about-ferma-contain2 .text-block13 p {
+    font-size: 12px;
+    line-height: 13.74px; }
+  .about-ferma-contain2 .btn--link {
+    font-size: 24px;
+    margin-bottom: 30px !important; } }
+
+.cf:before, .page-body:before, .footer__top:before, .top-search:before, .news__nav:before, .reviews:before, .research-items:before, .tiles2__row:before, .thumb:before,
 .cf:after,
 .page-body:after,
 .footer__top:after,
 .top-search:after,
 .news__nav:after,
-.thumb:after,
 .reviews:after,
 .research-items:after,
-.tiles2__row:after {
+.tiles2__row:after,
+.thumb:after {
   content: " ";
   display: table; }
 
-.cf:after, .page-body:after, .footer__top:after, .top-search:after, .news__nav:after, .thumb:after, .reviews:after, .research-items:after, .tiles2__row:after {
+.cf:after, .page-body:after, .footer__top:after, .top-search:after, .news__nav:after, .reviews:after, .research-items:after, .tiles2__row:after, .thumb:after {
   clear: both; }
 
 .fl {
