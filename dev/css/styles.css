@@ -1049,7 +1049,7 @@ IMG {
   font-weight: bold;
   color: #fff;
   background: #0a5a98;
-  padding: 0 0 0 42px;
+  padding: 0 0 0 32px;
   text-transform: uppercase; }
   .title--fill--min {
     font-size: 28px;
@@ -1117,37 +1117,6 @@ IMG {
     font: normal 16px "BenguiatGothicC"; }
   .textarea.error {
     border-bottom: 1px solid red; }
-
-.table {
-  width: 100%;
-  border-collapse: collapse; }
-  .table p {
-    font-size: 10px; }
-  .table thead {
-    background: #e5e5e5;
-    margin-bottom: 2px; }
-    .table thead tr {
-      border-bottom: 3px solid #fff; }
-    .table thead td {
-      padding: 7px 10px;
-      text-align: center; }
-    .table thead td:first-child {
-      border-radius: 5px 0 0 5px; }
-    .table thead td:last-child {
-      border-radius: 0 5px 5px 0; }
-  .table tbody tr {
-    border-bottom: 3px solid #fff; }
-  .table tbody td {
-    background: #f4f4f4;
-    text-align: left;
-    padding: 7px 10px;
-    height: 26px; }
-    .table tbody td:nth-child(2n) {
-      background: #dbdbdb; }
-  .table tbody td:first-child {
-    border-radius: 5px 0 0 5px; }
-  .table tbody td:last-child {
-    border-radius: 0 5px 5px 0; }
 
 .mfp-bg {
   opacity: 0.7;
@@ -1756,7 +1725,7 @@ IMG {
 .accordion {
   overflow: hidden; }
   .accordion__wr {
-    max-width: 770px;
+    padding: 0 32px;
     margin: 0 auto; }
   .accordion__item {
     border-bottom: 1px solid #b7b7b8;
@@ -2271,7 +2240,8 @@ IMG {
     padding: 0 16px; } }
 
 .milk-container4 {
-  margin: 40px 0 77px; }
+  margin: 40px 0 77px;
+  padding: 0 32px; }
   .milk-container4__link {
     font-size: 14px;
     color: #5c5c5d;
@@ -2283,7 +2253,8 @@ IMG {
       font-size: 10px; } }
   @media screen and (max-width: 640px) {
     .milk-container4 {
-      margin: 30px 16px 15px; }
+      margin: 30px 16px 15px;
+      padding: 0; }
       .milk-container4 .cols {
         display: none; }
       .milk-container4 .baner-m {
@@ -3025,6 +2996,78 @@ IMG {
       .feedback-contain2 .col--30 {
         width: auto;
         text-align: center; } }
+
+.contacts-contain1 {
+  margin-top: 65px; }
+  .contacts-contain1__contacts {
+    margin: 0 32px; }
+  .contacts-contain1__table-title {
+    font-weight: 300;
+    font-size: 18px;
+    margin: 19px 0 20px; }
+  .contacts-contain1__subscribe {
+    padding: 8px 0 22px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .contacts-contain1__table-mobile {
+    display: none; }
+  @media screen and (max-width: 640px) {
+    .contacts-contain1 {
+      margin-top: 0; }
+      .contacts-contain1 .title--fill {
+        margin-bottom: 5px; }
+      .contacts-contain1 .table, .contacts-contain1__table-title {
+        display: none; }
+      .contacts-contain1__table-mobile {
+        display: block; }
+        .contacts-contain1__table-mobile .accordion__title p {
+          font-size: 13px;
+          color: #4f596e; }
+        .contacts-contain1__table-mobile .accordion__content ul {
+          padding: 0 0 7px; }
+          .contacts-contain1__table-mobile .accordion__content ul li {
+            font-size: 11px;
+            line-height: 9px;
+            color: #4f596e;
+            font-family: "BenguiatGothicC";
+            margin-bottom: 7px; }
+      .contacts-contain1__contacts {
+        margin: 0 16px; }
+      .contacts-contain1__subscribe {
+        margin: 0;
+        padding: 16px 0 16px; }
+        .contacts-contain1__subscribe .cols {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column; }
+        .contacts-contain1__subscribe .col--70 {
+          width: auto;
+          margin-bottom: 10px; }
+        .contacts-contain1__subscribe .col--30 {
+          width: 100%;
+          text-align: center; } }
+
+.table {
+  width: 100%;
+  border-collapse: collapse; }
+  .table p {
+    font-size: 12px; }
+  .table thead {
+    margin-bottom: 2px; }
+    .table thead td {
+      padding: 10px 0;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: bold; }
+  .table tbody td {
+    padding: 15px 0;
+    text-align: left; }
+    .table tbody td:not(:last-child) {
+      padding-right: 10px; }
+  .table tbody tr {
+    border-bottom: 1px solid #c9c9ca; }
 
 .cf:before, .page-body:before, .footer__top:before, .top-search:before, .news__nav:before, .reviews:before, .research-items:before, .tiles2__row:before, .thumb:before,
 .cf:after,

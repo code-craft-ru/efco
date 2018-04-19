@@ -439,7 +439,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="wrapper--835 milk-container4">
+                        <div class="milk-container4">
                             <div class="baner-m">
                                 <img src="../images/baner321.png" alt="">
                                 <p class='milk-container4__link'>УЗНАЙТЕ БОЛЬШЕ О ПОЛЬЗЕ<br> БЕТА-КАЗЕИНА А2 <a href="#!" class='link link--accordion'>ЗДЕСЬ</a>
