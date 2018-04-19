@@ -7,7 +7,7 @@
             <?php include 'base/header.php';?>
 
             <div class="wrapper">
-                <div class="page-body page-body--white">
+                <div class="page-body page-body--white where-buy-contain1">
                     <div class="wherebuy-map-modal js-wherebuy-map__modal">
                         <div class="js-wherebuy-map__modal-content"></div>
                         <div class="js-wherebuy-map__modal-markets">
@@ -22,8 +22,8 @@
                             <div class="textblock-wr">
                                 <div class="textblock">
                                     <h2 class="title-blue">Где купить молоко A2?</h2>
-                                    <p>Наши современные молочные комплексы расположены в экологически чистых районах Белгородской области. <br/>Здесь мы применяем самые прогрессивные на сегодняшний день принципы содержание коров.</p> <br/><br/><br/>
-                                    <b>Выберите регион, чтобы узнать в каких магазинах<br/> и торговых сетях вы сможете найти наше молоко</b>
+                                    <p>Наши современные молочные комплексы расположены в экологически чистых районах Белгородской области. <br/>Здесь мы применяем самые прогрессивные на сегодняшний день принципы содержание коров.</p>
+                                    <b>Выберите регион, чтобы узнать в каких магазинах и торговых сетях вы сможете найти наше молоко</b>
                                 </div>
                             </div>
                             <div class="map">

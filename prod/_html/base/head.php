@@ -8,7 +8,7 @@ $links_url = str_replace('_html','',$links_url);
     <title>Новый проект</title>
     <meta name="description" content="">
     
-    <meta name="viewport" content="width=1200, height=device-height, initial-scale=1">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
     <!-- build:css ../css/styles.css -->
 

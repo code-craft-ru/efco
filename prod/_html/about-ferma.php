@@ -8,8 +8,9 @@
 
             <div class="wrapper">
                 <div class="page-body page-body--white">
-                        <div class="contain">
+                        <div class="contain about-ferma-contain1">
                             <img src="../images/baner-aboutferma.jpg" alt="" class="baner">
+                            <img src="../images/abouferma-baner1-m.png" alt="" class="baner2">
                             <div class="stick">
                                <a href="#popup-webcamera" class='js-link-popup'>
                                    <p>WEB <br>Камера</p>
@@ -42,21 +43,23 @@
 
 
                         <div class="thumb">
-                            <img src="../images/baner12.jpg" alt="">
+                            <img src="../images/baner12.jpg" class="baner" alt="">
+                            <img src="../images/aboutferma-baner2-m.png" class="baner2" alt="">
                             <p class="thumb__title">МЫ ОТБИРАЕМ СПЕЦИАЛЬНЫХ КОРОВ,</p>
                             <p class="thumb__sub">КОТОРЫЕ ПРОИЗВОДЯТ ТОЛЬКО ЕСТЕСТВЕННЫЙ БЕЛОК А2, <br>ЧТОБЫ ВЫ СМОГЛИ НАСЛАДИТЬСЯ ВКУСОМ И ПОЛЬЗОЙ НАСТОЯЩЕГО МОЛОКА</p>
                         </div>
 
+                        <div class="about-ferma-contain2">
+                            <div class="text-block7__wr2">
+                                <div class="text-block13">
+                                    <h2>Как мы получаем молоко Слобода А2?</h2>
+                                    <p>Процесс дойки коров полностью автоматизирован, каждая корова находится в индивидуальном отсеке, система считывает чип и определяет тип коровы - А1 или А2. После дойки молоко А2 по специальным герметичным отводам попадает в специальный отдельный танкер, поэтому оно никогда не смешивается с обычным молоком. За качество молока А2, которое поступает в переработку, отвечают специальные дегустационные комиссии.</p>
+                                </div>                        
+                            </div>
 
-                        <div class="text-block7__wr2">
-                            <div class="text-block13">
-                                <h2>Как мы получаем молоко Слобода А2?</h2>
-                                <p>Процесс дойки коров полностью автоматизирован, каждая корова находится в индивидуальном отсеке, система считывает чип и определяет тип коровы - А1 или А2. После дойки молоко А2 по специальным герметичным отводам попадает в специальный отдельный танкер, поэтому оно никогда не смешивается с обычным молоком. За качество молока А2, которое поступает в переработку, отвечают специальные дегустационные комиссии.</p>
-                            </div>                        
-                        </div>
-
-                        <div class="btn__wr h-alg-c">
-                            <a href='http://www.greendale31.ru' target='_blank' class="btn btn--link h-mrg-b-50 h-f-s25">www.greendale31.ru</a>
+                            <div class="btn__wr h-alg-c">
+                                <a href='http://www.greendale31.ru' target='_blank' class="btn btn--link h-mrg-b-50 h-f-s25">www.greendale31.ru</a>
+                            </div>
                         </div>
 
 

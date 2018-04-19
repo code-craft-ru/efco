@@ -1,4 +1,4 @@
-<div class="header ">
+<div class="header">
 	<div class="header__top">
 		<div class="wrapper">
 			<ul class="header__top-menu">
@@ -8,27 +8,34 @@
 			</ul>
 
 			<div class="header__top-search">
+				<p>Все просто... и натурально. «Слобода». Живая еда.</p>
 				<form action="" class='top-search'>
 					<input type="text">
 					<button>
 						<span class="iconic iconic--magnific"></span>
 					</button>
 				</form>
-				<p>Все просто... и натурально. «Слобода». Живая еда.</p>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="header__wr">
-	<div class="header__top2"></div>
+<div class="header__wr js-header">
 	<div class="header__logo">
 		<a href="/">
 			<img src="../images/logo.svg" alt="">
 		</a>
+		<div class="header__logo-txt">Все просто... и натурально. «Слобода». Живая еда.</div>
+		<div class="header__burger-btn">
+			<div class="burger-link js-burger-link"><div></div></div>
+		</div>
+	</div>
+	<div class="header__msearch">
+		<input type="text">
+		<div class="icon icon--search"></div>
 	</div>
 	<ul class="header__menu js-header-fix <?php if(isset($menuTheme)){echo $menuTheme;}?>">
 		<li><a href="#!">Молоко</a></li>
-		<li>
+		<li class="active">
 			<a href="#!">Правильный белок</a>
 			<ul>
 				<li><a href="#!">пункт меню</a></li>
