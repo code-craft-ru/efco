@@ -1573,12 +1573,34 @@ IMG {
   text-align: center;
   padding: 0 100px; }
   .text-block4 p {
-    font: normal 15px "BenguiatGothicC";
-    margin: 47px 0 0; }
+    font: bold 15px "BenguiatGothicC";
+    margin: 45px 0 0; }
   .text-block4 h2 {
     font: bold 27px "BenguiatGothicC";
     text-transform: uppercase;
     margin: 35px 0 25px; }
+  @media screen and (max-width: 768px) {
+    .text-block4 {
+      padding: 0 50px; }
+      .text-block4 p {
+        font-size: 14px;
+        margin: 30px 0 0; }
+      .text-block4 h2 {
+        font-size: 21px;
+        margin: 16px 0 18px; } }
+  @media screen and (max-width: 640px) {
+    .text-block4 {
+      padding: 0 20px; }
+      .text-block4 p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 13.74px;
+        color: #000028;
+        margin: 17px 0 0; }
+      .text-block4 h2 {
+        margin: 28px 0 11px;
+        font-size: 15px;
+        line-height: 12.49px; } }
 
 .tiles {
   margin: 24px 0 0 0;
@@ -1661,56 +1683,6 @@ IMG {
         height: auto;
         margin: 0; } }
 
-.tiles2 {
-  margin: 0;
-  position: relative; }
-  .tiles2__wr {
-    padding: 0 50px; }
-  .tiles2__row {
-    margin: 0 0 18px 0; }
-  .tiles2__col1 {
-    width: 66%;
-    float: left; }
-  .tiles2__col2 {
-    width: 32%;
-    float: right; }
-  .tiles2__col3 {
-    width: 49%;
-    float: left; }
-  .tiles2__col4 {
-    width: 49%;
-    float: right; }
-  .tiles2__title {
-    font: bold 20px "BenguiatGothicC";
-    color: #0a5a98;
-    margin: 0 0 10px 0; }
-  .tiles2__text {
-    font: bold 14px "BenguiatGothicC"; }
-  .tiles2--bg-lpink {
-    background: #fefced; }
-  .tiles2--bg-skyblue {
-    background: #e2eff0; }
-  .tiles2--bg-blue {
-    background: #285181; }
-  .tiles2--pad {
-    padding: 34px 26px; }
-  .tiles2--border-shadow {
-    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1); }
-  .tiles2--par {
-    padding-bottom: 17px; }
-  .tiles2--h-265 {
-    height: 265px; }
-  .tiles2--h-240 {
-    height: 240px; }
-  .tiles2--h-200 {
-    height: 200px; }
-  .tiles2--h-185 {
-    height: 185px; }
-  .tiles2--c-white {
-    color: #fff; }
-    .tiles2--c-white p, .tiles2--c-white h2 {
-      color: #fff; }
-
 .maps {
   padding-bottom: 11px;
   position: relative; }
@@ -1735,34 +1707,6 @@ IMG {
     left: 0;
     z-index: 9; }
 
-.b-circle {
-  position: relative;
-  overflow: hidden;
-  padding: 10px 0 24px; }
-  .b-circle__left-txt {
-    position: absolute;
-    top: 99px;
-    left: 0;
-    text-align: left; }
-  .b-circle__right-txt {
-    position: absolute;
-    top: 320px;
-    right: 0;
-    text-align: right; }
-  .b-circle__img img {
-    height: 610px;
-    margin: 0 auto;
-    display: block; }
-  .b-circle--txt-lg {
-    font: bold 31px "Myriad Pro", sans-serif;
-    color: #999999;
-    line-height: 25px; }
-  .b-circle--txt-sm {
-    font: normal 16px "Avanti", sans-serif;
-    color: #999999;
-    line-height: 14px;
-    margin-top: 0; }
-
 .text-block5 {
   text-align: center;
   overflow: hidden; }
@@ -1770,6 +1714,12 @@ IMG {
     font: normal 13px "BenguiatGothicC";
     color: #000;
     margin: 0 0 17px; }
+  @media screen and (max-width: 768px) {
+    .text-block5 {
+      padding: 0 16px; }
+      .text-block5 p {
+        font-size: 12px;
+        font-weight: bold; } }
 
 .text-block6 {
   text-align: center;
@@ -1780,6 +1730,16 @@ IMG {
     color: #27821b;
     line-height: 41px;
     letter-spacing: -1px; }
+  @media screen and (max-width: 768px) {
+    .text-block6 p {
+      font-size: 25px;
+      line-height: 32.23px; } }
+  @media screen and (max-width: 640px) {
+    .text-block6 {
+      padding: 0 0 20px; }
+      .text-block6 p {
+        font-size: 18px;
+        line-height: 23.37px; } }
 
 .text-block7 {
   text-align: justify; }
@@ -2701,20 +2661,153 @@ IMG {
         width: 45px;
         height: 45px; } }
 
-.cf:before, .page-body:before, .footer__top:before, .top-search:before, .news__nav:before, .tiles2__row:before, .thumb:before, .reviews:before, .research-items:before,
+.live-food-contain1 .baner2 {
+  display: none; }
+@media screen and (max-width: 640px) {
+  .live-food-contain1 .baner {
+    display: none; }
+  .live-food-contain1 .baner2 {
+    display: block; } }
+
+.tiles2 {
+  margin: 0;
+  position: relative; }
+  .tiles2__wr {
+    padding: 0 50px; }
+  .tiles2__row:not(:last-child) {
+    margin: 0 0 18px 0; }
+  .tiles2__col1 {
+    width: 66%;
+    float: left; }
+  .tiles2__col2 {
+    width: 32%;
+    float: right; }
+  .tiles2__col3 {
+    width: 49%;
+    float: left; }
+  .tiles2__col4 {
+    width: 49%;
+    float: right; }
+  .tiles2__title {
+    font: bold 20px "BenguiatGothicC";
+    color: #0a5a98;
+    margin: 0 0 10px 0; }
+  .tiles2__text {
+    font: bold 14px "BenguiatGothicC"; }
+  .tiles2--bg-lpink {
+    background: #fefced; }
+  .tiles2--bg-skyblue {
+    background: #e2eff0; }
+  .tiles2--bg-blue {
+    background: #285181; }
+  .tiles2--pad {
+    padding: 34px 26px; }
+  .tiles2--border-shadow {
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1); }
+  .tiles2--par {
+    padding-bottom: 17px; }
+  .tiles2--h-265 {
+    height: 265px; }
+  .tiles2--h-240 {
+    height: 240px; }
+  .tiles2--h-200 {
+    height: 200px; }
+  .tiles2--h-185 {
+    height: 185px; }
+  .tiles2--c-white {
+    color: #fff; }
+    .tiles2--c-white p, .tiles2--c-white h2 {
+      color: #fff; }
+  @media screen and (max-width: 1000px) {
+    .tiles2__wr {
+      padding: 0 30px; }
+    .tiles2__title {
+      font-size: 18px; }
+    .tiles2__text {
+      color: #404041;
+      font-size: 12px;
+      line-height: 14px; }
+    .tiles2--pad {
+      padding: 22px 25px; } }
+  @media screen and (max-width: 680px) {
+    .tiles2__col1, .tiles2__col2, .tiles2__col3, .tiles2__col4, .tiles2__col5 {
+      float: none;
+      width: auto;
+      height: auto; }
+    .tiles2__row {
+      margin: 0 !important; }
+    .tiles2__col1, .tiles2__col2, .tiles2__col3, .tiles2__col4 {
+      margin-bottom: 13px; }
+    .tiles2__wr {
+      padding: 0 16px 22px; }
+    .tiles2__title {
+      font-size: 12px; }
+    .tiles2--pad {
+      padding: 10px 8px; } }
+
+.b-circle {
+  position: relative;
+  overflow: hidden;
+  padding: 32px 0 24px; }
+  .b-circle__left-txt {
+    position: absolute;
+    top: 99px;
+    left: 0;
+    text-align: left; }
+  .b-circle__right-txt {
+    position: absolute;
+    top: 320px;
+    right: 0;
+    text-align: right; }
+  .b-circle__img img {
+    height: 610px;
+    margin: 0 auto;
+    display: block; }
+  .b-circle--txt-lg {
+    font: bold 31px "Myriad Pro", sans-serif;
+    color: #999999;
+    line-height: 25px; }
+  .b-circle--txt-sm {
+    font: normal 16px "Avanti", sans-serif;
+    color: #999999;
+    line-height: 14px;
+    margin-top: 0; }
+  .b-circle__top-txt-m, .b-circle__bottom-txt-m {
+    display: none; }
+  .b-circle__bottom-txt-m {
+    text-align: right; }
+  @media screen and (max-width: 950px) {
+    .b-circle__img img {
+      max-height: 465px;
+      height: auto; }
+    .b-circle--txt-lg {
+      font-size: 22px; }
+    .b-circle--txt-sm {
+      font-size: 12px; } }
+  @media screen and (max-width: 735px) {
+    .b-circle {
+      padding: 0; }
+      .b-circle__img img {
+        max-height: 279px; }
+      .b-circle__left-txt, .b-circle__right-txt {
+        display: none; }
+      .b-circle__top-txt-m, .b-circle__bottom-txt-m {
+        display: block; } }
+
+.cf:before, .page-body:before, .footer__top:before, .top-search:before, .news__nav:before, .thumb:before, .reviews:before, .research-items:before, .tiles2__row:before,
 .cf:after,
 .page-body:after,
 .footer__top:after,
 .top-search:after,
 .news__nav:after,
-.tiles2__row:after,
 .thumb:after,
 .reviews:after,
-.research-items:after {
+.research-items:after,
+.tiles2__row:after {
   content: " ";
   display: table; }
 
-.cf:after, .page-body:after, .footer__top:after, .top-search:after, .news__nav:after, .tiles2__row:after, .thumb:after, .reviews:after, .research-items:after {
+.cf:after, .page-body:after, .footer__top:after, .top-search:after, .news__nav:after, .thumb:after, .reviews:after, .research-items:after, .tiles2__row:after {
   clear: both; }
 
 .fl {

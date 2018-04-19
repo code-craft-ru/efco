@@ -8,11 +8,12 @@
 
             <div class="wrapper">
                 <div class="page-body page-body--white">
-                        <div class="contain">
+                        <div class="contain live-food-contain1">
                             <img src="../images/baner-livefood1.jpg" alt="" class="baner">
+                            <img src="../images/livefood-baner1-m.jpg" alt="" class="baner2">
                         </div>
                         
-                        <div class="text-block4">
+                        <div class="text-block4 live-food-contain2">
                             <p>Что мы называем «живой» едой? Продукты, которые способны придать организму здоровье и энергию для того, чтобы человек мог жить полной благополучной жизнью. Это продукты под брендом «Слобода» — настоящая «живая» еда.</p>
                             <h2>УЗНАЙ,КАК НАЙТИ НАСТОЯЩУЮ «ЖИВУЮ» ЕДУ...</h2>
                         </div>
@@ -55,11 +56,18 @@
                                     <p class="b-circle--txt-lg">МЫ <br>ЦЕНИМ <br>И<br>БЕРЕЖНО<br>СОХРАНЯЕМ<br>ТО,<br>ЧТО ДАЕТ<br>НАМ<br>ПРИРОДА</p>
                                     <p class="b-circle--txt-sm">Система ОК<br>позволяет<br>выбирать<br>для продуктов<br>Слобода<br>только самые<br>качественные<br>и свежие<br>из природных<br>ингредиентов</p>
                                 </div>
+                                <div class="b-circle__top-txt-m">
+                                    <p class="b-circle--txt-lg">МЫ ЦЕНИМ И<br>БЕРЕЖНО СОХРАНЯЕМ ТО,<br>ЧТО ДАЕТ НАМ ПРИРОДА</p>
+                                    <p class="b-circle--txt-sm">Система ОК позволяет выбирать<br>для продуктов Слобода только самые<br>качественные и свежие<br>из природных<br>ингредиентов</p>
+                                </div>
                                 <div class="b-circle__img">
                                     <img src="../images/organic-control.jpg" alt="">
                                 </div>
                                 <div class="b-circle__right-txt">
-                                    <p class="b-circle--txt-sm">Молоко<br>Слобода А2 - <br>это абсолютно<br>натуральный<br>продукт,<br>показатель чистоты<br>которого в 4 раза<br>превышает <br>показатель<br>ГОСТ по молоку<br>№13277-79.</p>
+                                    <p class="b-circle--txt-sm">Молоко<br>Слобода А2 - <br>это абсолютно<br>натуральный<br>продукт,<br>показатель чистоты<br>которого в 4 раза<br>превышает <br>показатель<br>ГОСТ по молоку<br>№13277-79.</p>
+                                </div>
+                                <div class="b-circle__bottom-txt-m">
+                                    <p class="b-circle--txt-sm">Молоко<br>Слобода А2 - <br>это абсолютно натуральный<br>продукт, показатель чистоты которого<br> в 4 раза превышает показатель<br>ГОСТ по молоку №13277-79.</p>
                                 </div>
                             </div>
                         </div>

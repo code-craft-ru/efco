@@ -1,996 +1,929 @@
 @import 'burger-link.sass'
 
 .top-search
-    width: 110px
-    display: inline-block
-    background: #fff
-    height: 14px
-    border-top: 1px solid #a3a3a3
-    border-bottom: 1px solid #a3a3a3
-    margin-top: 0
-    position: relative
-    @extend .cf
-    input
-        height: 100%
-        width: 97px
-        float: left
-        padding: 0 3px
-        font-size: 12px
-    button
-        width: 10px
-        font-size: 10px
-        color: #b0b0b0
-        cursor: pointer
-    input,button
-        display: block
+	width: 110px
+	display: inline-block
+	background: #fff
+	height: 14px
+	border-top: 1px solid #a3a3a3
+	border-bottom: 1px solid #a3a3a3
+	margin-top: 0
+	position: relative
+	@extend .cf
+	input
+		height: 100%
+		width: 97px
+		float: left
+		padding: 0 3px
+		font-size: 12px
+	button
+		width: 10px
+		font-size: 10px
+		color: #b0b0b0
+		cursor: pointer
+	input,button
+		display: block
 
 
 .social
-    li
-        display: inline-block
-        padding: 0 1px
+	li
+		display: inline-block
+		padding: 0 1px
 
 
 
 .stick
-    position: absolute
-    right: 94px
-    top: -5px
-    transition: top 0.3s
-    width: 93px
-    height: 125px
-    background: url(../images/sticker.png) no-repeat 0 0
-    &:hover
-        top: -1px
-    p
-        font-size: 15px
-        font-weight: bold
-        color: #676761
-        text-align: center
-        margin: 16px 0 3px
+	position: absolute
+	right: 94px
+	top: -5px
+	transition: top 0.3s
+	width: 93px
+	height: 125px
+	background: url(../images/sticker.png) no-repeat 0 0
+	&:hover
+		top: -1px
+	p
+		font-size: 15px
+		font-weight: bold
+		color: #676761
+		text-align: center
+		margin: 16px 0 3px
 
-    img
-        display: block
-        margin: 0 auto
+	img
+		display: block
+		margin: 0 auto
 
-    a
-        text-decoration: none
+	a
+		text-decoration: none
 
 
 .sticker2
-    position: absolute
-    top: -110px
-    right: 40px
-    &--bottom
-        top: auto
-        bottom: -60px
+	position: absolute
+	top: -110px
+	right: 40px
+	&--bottom
+		top: auto
+		bottom: -60px
 
 .news
-    position: relative
-    overflow: hidden
-    text-align: center
-    &__title
-        margin: 15px 0 32px
-        text-transform: uppercase
-        font-size: 18px
-        font-weight: 700
-        position: relative
-        letter-spacing: 1px
-        color: #373737
-        &:after
-            content: ''
-            display: block
-            width: 46px
-            height: 4px
-            background: #4c8bca
-            position: absolute
-            top: 100%
-            left: 50%
-            margin-left: -23px
-            margin-top: 12px
+	position: relative
+	overflow: hidden
+	text-align: center
+	&__title
+		margin: 15px 0 32px
+		text-transform: uppercase
+		font-size: 18px
+		font-weight: 700
+		position: relative
+		letter-spacing: 1px
+		color: #373737
+		&:after
+			content: ''
+			display: block
+			width: 46px
+			height: 4px
+			background: #4c8bca
+			position: absolute
+			top: 100%
+			left: 50%
+			margin-left: -23px
+			margin-top: 12px
 
-    &__nav
-        @extend .cf
-        li
-            float: left
-            width: 50%
-            list-style: none
-            a
-                display: block
-                text-decoration: none
-                font: bold 14px $baseFont
-                color: #fff
-                padding: 7px
-                text-transform: uppercase
-                text-align: center
-                background: #373737
-            &._active
-                a
-                    background: #4c8bca 
+	&__nav
+		@extend .cf
+		li
+			float: left
+			width: 50%
+			list-style: none
+			a
+				display: block
+				text-decoration: none
+				font: bold 14px $baseFont
+				color: #fff
+				padding: 7px
+				text-transform: uppercase
+				text-align: center
+				background: #373737
+			&._active
+				a
+					background: #4c8bca 
 
-        &--color2
-            &.news__nav
-                li 
-                   
-                    a
-                        background: #e85d45 
-                    &._active
-                        a
-                            background: #4c8bca
-        
-        +max-screen($screenSM)
-            li a
-                font-size: 10px
-
-
-    &__items
-        margin: 16px 0 10px
-        display: flex
-        justify-content: center
-        flex-wrap: wrap
+		&--color2
+			&.news__nav
+				li 
+				   
+					a
+						background: #e85d45 
+					&._active
+						a
+							background: #4c8bca
+		
+		+max-screen($screenSM)
+			li a
+				font-size: 10px
 
 
-    &__more-btn
-        position: absolute
-        bottom: 50px
-        width: 100%
-        z-index: 9
+	&__items
+		margin: 16px 0 10px
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
 
-    &__mobile
-        display: none
 
-    &__mobile-container
-        h2
-            background-color: #4c8bca
-            padding: 5px
-            color: #fff
-            font-size: 11px
-            font-weight: 700
-            margin: 0
+	&__more-btn
+		position: absolute
+		bottom: 50px
+		width: 100%
+		z-index: 9
 
-    &__mobile-items
-        margin: 12px 16px 0
+	&__mobile
+		display: none
 
-        .news-item
-            width: auto
+	&__mobile-container
+		h2
+			background-color: #4c8bca
+			padding: 5px
+			color: #fff
+			font-size: 11px
+			font-weight: 700
+			margin: 0
 
-    &__mobile-btn-more
-        color: #6a6a6a
-        text-transform: uppercase
-        font-size: 8px
-        font-weight: 700
-        padding: 7px 11px
-        border: 1px solid #6a6a6a
-        border-radius: 4px
-        display: inline-block
-        margin: 21px 0
-        cursor: pointer
+	&__mobile-items
+		margin: 12px 16px 0
 
-    +max-screen($screenSM_xs)
-        .tabs,
-        &__nav,
-        &__more-btn
-            display: none
+		.news-item
+			width: auto
 
-        &__mobile
-            display: block
+	&__mobile-btn-more
+		color: #6a6a6a
+		text-transform: uppercase
+		font-size: 8px
+		font-weight: 700
+		padding: 7px 11px
+		border: 1px solid #6a6a6a
+		border-radius: 4px
+		display: inline-block
+		margin: 21px 0
+		cursor: pointer
+
+	+max-screen($screenSM_xs)
+		.tabs,
+		&__nav,
+		&__more-btn
+			display: none
+
+		&__mobile
+			display: block
 
 
 .news-item
-    width: 304px
-    border: 1px solid #f6f6f6
-    margin: 3px
-    transition: all 0.3s
-    cursor: pointer
+	width: 304px
+	border: 1px solid #f6f6f6
+	margin: 3px
+	transition: all 0.3s
+	cursor: pointer
 
-    &:hover
-        border: 1px solid #4c8bca
-    a
-        text-decoration: none
-    &__content
-        padding: 5px 7px 22px 7px
-        color: #000
+	&:hover
+		border: 1px solid #4c8bca
+	a
+		text-decoration: none
+	&__content
+		padding: 5px 7px 22px 7px
+		color: #000
 
-    &__title
-        font-size: 11px
-        font-weight: bold
-        text-align: left
-        position: relative
-        margin: 0 0 14px
-        font-family: $fGotic
-        &:after
-            content: ''
-            display: block
-            width: 40px
-            height: 2px 
-            position: absolute
-            top: 100%
-            left: 0
-            margin-top: 2px
-            background: #4c8bca
+	&__title
+		font-size: 11px
+		font-weight: bold
+		text-align: left
+		position: relative
+		margin: 0 0 14px
+		font-family: $fGotic
+		&:after
+			content: ''
+			display: block
+			width: 40px
+			height: 2px 
+			position: absolute
+			top: 100%
+			left: 0
+			margin-top: 2px
+			background: #4c8bca
 
-    &__desc
-        font-size: 11px
-        text-align: left
-        font-family: $fGotic
+	&__desc
+		font-size: 11px
+		text-align: left
+		font-family: $fGotic
 
 
 .text-block
-    overflow: hidden
-    text-align: center
-    margin: 60px 0 0 0
-    padding: 0 30px
-    p
-        font: normal 15px $fBenguiat
-        line-height: 19px
+	overflow: hidden
+	text-align: center
+	margin: 60px 0 0 0
+	padding: 0 30px
+	p
+		font: normal 15px $fBenguiat
+		line-height: 19px
 
-    .par
-        margin-bottom: 20px
+	.par
+		margin-bottom: 20px
 
-    &--t2
-        margin: 71px 0 10px 0
+	&--t2
+		margin: 71px 0 10px 0
 
-    +max-screen($screenSM)
-        p
-            font-size: 12px
+	+max-screen($screenSM)
+		p
+			font-size: 12px
 
-        &--t2
-            margin: 55px 0 10px 0
+		&--t2
+			margin: 55px 0 10px 0
 
-    +max-screen($screenSM_xs)
-        padding: 0 16px
-        margin-bottom: 0
-        p
-            font-size: 13px
-            font-weight: bold
-            line-height: 14.21px
-            opacity: 0.95
+	+max-screen($screenSM_xs)
+		padding: 0 16px
+		margin-bottom: 0
+		p
+			font-size: 13px
+			font-weight: bold
+			line-height: 14.21px
+			opacity: 0.95
 
 .text-block2
-    overflow: hidden
-    text-align: center
-    padding: 0 16px
-    color: #525351
-    margin: 29px 0 33px 0
-    h2
-        font: bold 16px $baseFont
-        text-transform: uppercase
-        margin: 0 0 9px 0
+	overflow: hidden
+	text-align: center
+	padding: 0 16px
+	color: #525351
+	margin: 29px 0 33px 0
+	h2
+		font: bold 16px $baseFont
+		text-transform: uppercase
+		margin: 0 0 9px 0
 
-    p 
-        font: bold 14px $baseFont
-        line-height: 18px
-        text-transform: uppercase
+	p 
+		font: bold 14px $baseFont
+		line-height: 18px
+		text-transform: uppercase
 
-    &--font-avanty
-        h2,p
-            font-family: $baseFont
+	&--font-avanty
+		h2,p
+			font-family: $baseFont
 
-    &--color-gray
-        h2,p
-            color: #888b8b
+	&--color-gray
+		h2,p
+			color: #888b8b
 
-    +max-screen($screenSM_xs)
-        margin: 0 0 10px
-        h2
-            font-size: 15px
+	+max-screen($screenSM_xs)
+		margin: 0 0 10px
+		h2
+			font-size: 15px
 
-        p
-            font-size: 13px
+		p
+			font-size: 13px
 
 .text-block3
-    display: flex
-    padding: 15px 0
-    &__text
-        width: 68%
-        text-align: center
-        h2
-            text-transform: uppercase
-            font: normal 16px $fBenguiat
-            margin: 25px 0 0
-        p
-            font: normal 16px $fBenguiat
-            margin: 0
+	display: flex
+	padding: 15px 0
+	&__text
+		width: 68%
+		text-align: center
+		h2
+			text-transform: uppercase
+			font: normal 16px $fBenguiat
+			margin: 25px 0 0
+		p
+			font: normal 16px $fBenguiat
+			margin: 0
 
-    &__items
-        width: 32%
-        display: flex
-        
-    &__item
-        width: 110px
-        height: 95px
-        text-align: center
+	&__items
+		width: 32%
+		display: flex
+		
+	&__item
+		width: 110px
+		height: 95px
+		text-align: center
 
-        img
-            width: 61px
-            margin: 0 auto 7px
-            display: block
+		img
+			width: 61px
+			margin: 0 auto 7px
+			display: block
 
-        p
-            font: normal 10px $fBenguiat
+		p
+			font: normal 10px $fBenguiat
 
 
 .text-block4
-    overflow: hidden
-    text-align: center
-    padding: 0 100px
-    p
-        font: normal 15px $fBenguiat
-        margin: 47px 0 0
+	overflow: hidden
+	text-align: center
+	padding: 0 100px
+	p
+		font: bold 15px $fBenguiat
+		margin: 45px 0 0
 
-    h2
-        font: bold 27px $fBenguiat
-        text-transform: uppercase
-        margin: 35px 0 25px
+	h2
+		font: bold 27px $fBenguiat
+		text-transform: uppercase
+		margin: 35px 0 25px
+
+	+max-screen($screenSM)
+		padding: 0 50px
+		
+		p
+			font-size: 14px
+			margin: 30px 0 0
+
+		h2
+			font-size: 21px
+			margin: 16px 0 18px
+
+	+max-screen($screenSM_xs)
+		padding: 0 20px
+
+		p
+			font-size: 12px
+			font-weight: 400
+			line-height: 13.74px
+			color: #000028
+			margin: 17px 0 0
+
+		h2
+			margin: 28px 0 11px
+			font-size: 15px
+			line-height: 12.49px
+
 
 
 $screenTilesTablet: 1000px
 .tiles
-    margin: 24px 0 0 0
-    overflow: hidden
-    position: relative
-    &__row
-        // @extend .cf
-        height: 312px
-        margin: 0 0 20px 0
-        display: flex
-        justify-content: space-between
-        align-items: stretch
-        
-    &__col1
-        width: 658px
-        // float: left
-        margin-right: 24px
-        position: relative
-        img
-            height: 100%
+	margin: 24px 0 0 0
+	overflow: hidden
+	position: relative
+	&__row
+		// @extend .cf
+		height: 312px
+		margin: 0 0 20px 0
+		display: flex
+		justify-content: space-between
+		align-items: stretch
+		
+	&__col1
+		width: 658px
+		// float: left
+		margin-right: 24px
+		position: relative
+		img
+			height: 100%
 
-    &__col2
-        width: 324px
-        // float: right
-        padding: 20px 25px 
-        background: #e2eff0
-        box-shadow: 0 2px 0px 1px rgba(0,0,0,0.1)
-        // height: 311px
+	&__col2
+		width: 324px
+		// float: right
+		padding: 20px 25px 
+		background: #e2eff0
+		box-shadow: 0 2px 0px 1px rgba(0,0,0,0.1)
+		// height: 311px
 
-    &__col3
-        width: 487px
-        padding: 22px 31px 
-        background: #e2eff0
-        box-shadow: 0 1px 1px 1px rgba(0,0,0,0.1)
-        // float: left
-        margin-right: 24px
-        height: 317px
+	&__col3
+		width: 487px
+		padding: 22px 31px 
+		background: #e2eff0
+		box-shadow: 0 1px 1px 1px rgba(0,0,0,0.1)
+		// float: left
+		margin-right: 24px
+		height: 317px
 
-    &__col4
-        width: 493px
-        // float: right
+	&__col4
+		width: 493px
+		// float: right
 
-    &__title
-        font: bold 20px $fBenguiat
-        color: #0a5a98
-        margin: 0 0 6px 0
+	&__title
+		font: bold 20px $fBenguiat
+		color: #0a5a98
+		margin: 0 0 6px 0
 
-    &__text
-        font: bold 16px $fBenguiat
-        line-height: 21px
+	&__text
+		font: bold 16px $fBenguiat
+		line-height: 21px
 
-    +max-screen($screenTilesTablet)
-        margin: 24px 30px 0
+	+max-screen($screenTilesTablet)
+		margin: 24px 30px 0
 
-        &__row
-            height: 236px
-            justify-content: center
+		&__row
+			height: 236px
+			justify-content: center
 
-        &__col1
-            width: 462px
+		&__col1
+			width: 462px
 
-        &__col2
-            width: 219px
-            padding: 19px
+		&__col2
+			width: 219px
+			padding: 19px
 
-        &__col3
-            width: 345px
-            padding: 19px
+		&__col3
+			width: 345px
+			padding: 19px
 
-        &__col4
-            width: 342px
+		&__col4
+			width: 342px
 
-        &__title
-            font-size: 15px
+		&__title
+			font-size: 15px
 
-        &__text
-            font-size: 12px
-            line-height: 15.95px
+		&__text
+			font-size: 12px
+			line-height: 15.95px
 
-    +max-screen($screenSM)
-        margin: 24px 16px 0
-        &__col1,
-        &__col2,
-        &__col3,
-        &__col4
-            width: auto
-            height: auto
-            margin-right: 0
-            margin-bottom: 20px
+	+max-screen($screenSM)
+		margin: 24px 16px 0
+		&__col1,
+		&__col2,
+		&__col3,
+		&__col4
+			width: auto
+			height: auto
+			margin-right: 0
+			margin-bottom: 20px
 
-            img
-                height: auto
+			img
+				height: auto
 
-        &__row
-            display: block
-            height: auto
-            margin: 0
-
-
-.tiles2
-    margin: 0
-    position: relative
-
-    &__wr
-        padding: 0 50px
-
-
-    &__row
-        @extend .cf
-        margin: 0 0 18px 0
-        
-    &__col1
-        width: 66%
-        float: left
-
-    &__col2
-        width: 32%
-        float: right
-
-    &__col3
-        width: 49%
-        float: left
-
-    &__col4
-        width: 49%
-        float: right
-
-    &__title
-        font: bold 20px $fBenguiat
-        color: #0a5a98
-        margin: 0 0 10px 0
-
-    &__text
-        font: bold 14px $fBenguiat
-
-    &--bg
-        &-lpink
-            background: #fefced
-
-        &-skyblue
-            background: #e2eff0
-
-        &-blue
-            background: #285181
-
-    &--pad
-        padding: 34px 26px
-
-    &--border-shadow
-        box-shadow: 0 1px 1px 1px rgba(0,0,0,0.1)
-
-    &--par
-        padding-bottom: 17px
-
-    &--h
-        &-265
-            height: 265px
-
-        &-240
-            height: 240px
-
-        &-200
-            height: 200px
-        &-185
-            height: 185px
-
-    &--c
-        &-white
-            color: #fff
-            p,h2
-                color: #fff
-
-
-
-
+		&__row
+			display: block
+			height: auto
+			margin: 0
 
 
 .maps
-    padding-bottom: 11px
-    position: relative
-    &:before
-        content: ''
-        display: block
-        width: 100%
-        height: 13px
-        position: absolute
-        background: linear-gradient(to bottom , #8597a7 , transparent)
-        top: 0
-        left: 0
-        z-index: 9
+	padding-bottom: 11px
+	position: relative
+	&:before
+		content: ''
+		display: block
+		width: 100%
+		height: 13px
+		position: absolute
+		background: linear-gradient(to bottom , #8597a7 , transparent)
+		top: 0
+		left: 0
+		z-index: 9
 
-    &:after
-        content: ''
-        display: block
-        width: 100%
-        height: 13px
-        position: absolute
-        background: linear-gradient(to top , #8597a7 , transparent)
-        bottom: 11px
-        left: 0
-        z-index: 9
-
-.b-circle
-    position: relative
-    overflow: hidden
-    padding: 10px 0 24px
-    
-    &__left-txt
-        position: absolute
-        top: 99px
-        left: 0
-        text-align: left
-
-    &__right-txt
-        position: absolute
-        top: 320px
-        right: 0
-        text-align: right
-
-    &__img
-        img
-            height: 610px
-            margin: 0 auto
-            display: block
-
-    &--txt-lg
-        font: bold 31px $fMaryedpro
-        color: #999999
-        line-height: 25px
-
-    &--txt-sm
-        font: normal 16px $baseFont
-        color: #999999
-        line-height: 14px
-        margin-top: 0
+	&:after
+		content: ''
+		display: block
+		width: 100%
+		height: 13px
+		position: absolute
+		background: linear-gradient(to top , #8597a7 , transparent)
+		bottom: 11px
+		left: 0
+		z-index: 9
 
 
 .text-block5
-    text-align: center
-    overflow: hidden
-    p
-        font: normal 13px $fBenguiat
-        color: #000
-        margin: 0 0 17px
+	text-align: center
+	overflow: hidden
+	p
+		font: normal 13px $fBenguiat
+		color: #000
+		margin: 0 0 17px
+
+	+max-screen($screenSM)
+		padding: 0 16px
+		p
+			font-size: 12px
+			font-weight: bold
+
 
 .text-block6
-    text-align: center
-    overflow: hidden
-    padding: 0 0 44px
-    p
-        font: bold 33px $baseFont
-        color: #27821b
-        line-height: 41px
-        letter-spacing: -1px
+	text-align: center
+	overflow: hidden
+	padding: 0 0 44px
+	p
+		font: bold 33px $baseFont
+		color: #27821b
+		line-height: 41px
+		letter-spacing: -1px
+
+	+max-screen($screenSM)
+		p
+			font-size: 25px
+			line-height: 32.23px
+
+	+max-screen($screenSM_xs)
+		padding: 0 0 20px
+		p
+			font-size: 18px
+			line-height: 23.37px
 
 .text-block7
-    text-align: justify
-    
-    &__wr
-        padding: 59px 62px 27px
+	text-align: justify
+	
+	&__wr
+		padding: 59px 62px 27px
 
-    &__wr2
-        padding: 32px 62px 40px
+	&__wr2
+		padding: 32px 62px 40px
 
 
-    h2
-        font: bold 27px $fBenguiat
-        margin: 0 0 11px
-        color: #0a5a98
-        letter-spacing: -0.4px
+	h2
+		font: bold 27px $fBenguiat
+		margin: 0 0 11px
+		color: #0a5a98
+		letter-spacing: -0.4px
 
-    &__p
-        font: normal 19px $fBenguiat
-        line-height: 25px
+	&__p
+		font: normal 19px $fBenguiat
+		line-height: 25px
 
-    &__style-title
-        font: bold 20px $fBenguiat
-        line-height: 25px
-        color: #0a5a98
-        padding-right: 20px
+	&__style-title
+		font: bold 20px $fBenguiat
+		line-height: 25px
+		color: #0a5a98
+		padding-right: 20px
 
-    &__img
-        margin: 0 auto
-        display: block
-        height: 232px
-        position: relative
-        left: 22px
+	&__img
+		margin: 0 auto
+		display: block
+		height: 232px
+		position: relative
+		left: 22px
 
 
 .thumb
-    padding: 50px 0 0
-    text-align: center
-    @extend .cf
-    position: relative
-    &:after
-        content: ''
-        display: block
-        bottom: 0
-        left: 0
-        width: 100%
-        height: 25px
-        background: linear-gradient(to bottom , #d6e1e0 , transparent)
-    &__title
-        font-size: 25px
-        font-weight: bold
-        margin: 19px 0 0
-        color: #777777
+	padding: 50px 0 0
+	text-align: center
+	@extend .cf
+	position: relative
+	&:after
+		content: ''
+		display: block
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 25px
+		background: linear-gradient(to bottom , #d6e1e0 , transparent)
+	&__title
+		font-size: 25px
+		font-weight: bold
+		margin: 19px 0 0
+		color: #777777
 
-    &__sub
-        font-size: 14px
-        font-weight: bold
-        color: #777777
-        margin: 2px 0 20px
+	&__sub
+		font-size: 14px
+		font-weight: bold
+		color: #777777
+		margin: 2px 0 20px
 
 
 
 .text-block8
-    text-align: justify
-    overflow: hidden
-    h2
-        font: bold 27px $fBenguiat 
-        color: #0a5a98
-        margin: 0 0 12px
+	text-align: justify
+	overflow: hidden
+	h2
+		font: bold 27px $fBenguiat 
+		color: #0a5a98
+		margin: 0 0 12px
 
-    p
-        font: normal 20px $fBenguiat 
+	p
+		font: normal 20px $fBenguiat 
 
 .text-block13
-    text-align: justify
-    overflow: hidden
-    h2
-        font: bold 27px $fBenguiat 
-        color: #0a5a98
-        margin: 0 0 9px
-        letter-spacing: -0.4px
+	text-align: justify
+	overflow: hidden
+	h2
+		font: bold 27px $fBenguiat 
+		color: #0a5a98
+		margin: 0 0 9px
+		letter-spacing: -0.4px
 
-    p
-        font: normal 20px $fBenguiat 
-        line-height: 24px
+	p
+		font: normal 20px $fBenguiat 
+		line-height: 24px
 
 
 .box-shadow
-    width: 760px
-    margin: 0 auto
-    box-shadow: 0 0 12px 12px rgba(241,241,241,1)
-    background: #fff
-    overflow: hidden
-    padding: 26px 0
+	width: 760px
+	margin: 0 auto
+	box-shadow: 0 0 12px 12px rgba(241,241,241,1)
+	background: #fff
+	overflow: hidden
+	padding: 26px 0
 
-    &--pad3
-        padding: 15px 0 18px 
+	&--pad3
+		padding: 15px 0 18px 
 
-    &--pad2
-        padding: 30px 35px 35px 40px
+	&--pad2
+		padding: 30px 35px 35px 40px
 
-    &__line
-        height: 1px 
-        background: #333333
+	&__line
+		height: 1px 
+		background: #333333
 
-    &__p
-        font: normal 12.5px $fBenguiat
-        color: #333333
+	&__p
+		font: normal 12.5px $fBenguiat
+		color: #333333
 
 
 
 .accordion
-    overflow: hidden
+	overflow: hidden
 
-    &__wr
-        max-width: 770px
-        margin: 0 auto
-    &__item
-        border-bottom: 1px solid #b7b7b8
-        position: relative
-        .accordion
-            &__content
-                height: 0
-                visibility: hidden
-            &__arr
-                transform: rotate(0deg)
+	&__wr
+		max-width: 770px
+		margin: 0 auto
+	&__item
+		border-bottom: 1px solid #b7b7b8
+		position: relative
+		.accordion
+			&__content
+				height: 0
+				visibility: hidden
+			&__arr
+				transform: rotate(0deg)
 
-        &._open
-            .accordion
-                &__content
-                    height: auto
-                    visibility: visible
-                &__arr
-                    transform: rotate(180deg)
+		&._open
+			.accordion
+				&__content
+					height: auto
+					visibility: visible
+				&__arr
+					transform: rotate(180deg)
 
-    &__title
-        cursor: pointer
-        position: relative
-        p
-            font: bold 20px $fBenguiat
-            color: #0e5a98
-            padding: 5px 0 6px
+	&__title
+		cursor: pointer
+		position: relative
+		p
+			font: bold 20px $fBenguiat
+			color: #0e5a98
+			padding: 5px 0 6px
 
-    &__arr
-        position: absolute
-        top: 50%
-        margin-top: -2px
-        right: 3px
-        transition: transform 0.3s
+	&__arr
+		position: absolute
+		top: 50%
+		margin-top: -2px
+		right: 3px
+		transition: transform 0.3s
 
-    &__content
-        p
-            font: bold 15px $fBenguiat
-            color: #888b8b
-            margin: 0 0 18px
+	&__content
+		p
+			font: bold 15px $fBenguiat
+			color: #888b8b
+			margin: 0 0 18px
 
-    +max-screen($screenSM)
-        &__title p
-            font-size: 15px
-            padding: 5px 17px 6px 0
+	+max-screen($screenSM)
+		&__title p
+			font-size: 15px
+			padding: 5px 17px 6px 0
 
-        &__content p
-            font-size: 10px
+		&__content p
+			font-size: 10px
 
-    +max-screen($screenSM_xs)
-        &__title p
-            font-size: 12px
-            padding: 12px 17px 12px 0
+	+max-screen($screenSM_xs)
+		&__title p
+			font-size: 12px
+			padding: 12px 17px 12px 0
 
-        &__content p
-            font-size: 12px
+		&__content p
+			font-size: 12px
 
 .slider-popup
-    position: relative
-    &__arrows
-        width: 100%
-        height: 100%
-        position: absolute
+	position: relative
+	&__arrows
+		width: 100%
+		height: 100%
+		position: absolute
 
 
-    &__arrow-l
-        position: absolute
-        top: 50%
-        left: -45px
-        margin-top: -20px
-        cursor: pointer
-    &__arrow-r
-        position: absolute
-        top: 50%
-        right: -45px
-        margin-top: -20px
-        cursor: pointer
+	&__arrow-l
+		position: absolute
+		top: 50%
+		left: -45px
+		margin-top: -20px
+		cursor: pointer
+	&__arrow-r
+		position: absolute
+		top: 50%
+		right: -45px
+		margin-top: -20px
+		cursor: pointer
 
-    &__date
-        margin: 15px 0 0 0
-        font: normal 14px $fBenguiat
-        color: #000
-        text-align: right
+	&__date
+		margin: 15px 0 0 0
+		font: normal 14px $fBenguiat
+		color: #000
+		text-align: right
 
-    &__slide
-        outline: none
-        img
-            width: 100%
+	&__slide
+		outline: none
+		img
+			width: 100%
 
-    &__slide-title
-        position: relative
-        font: normal 18px $fBenguiat
-        margin: 18px 0
-        padding: 0 20px
+	&__slide-title
+		position: relative
+		font: normal 18px $fBenguiat
+		margin: 18px 0
+		padding: 0 20px
 
-    &__magnific
-        position: absolute
-        top: 0
-        right: 20px
-        cursor: pointer
+	&__magnific
+		position: absolute
+		top: 0
+		right: 20px
+		cursor: pointer
 
 
 .milkimg
-    position: absolute
-    top: 38px
-    left: 81px
+	position: absolute
+	top: 38px
+	left: 81px
 
 .js-tabs-tab
-    display: none !important
-    &._active
-        display: flex !important
+	display: none !important
+	&._active
+		display: flex !important
 
 
 .webcamera-sl
 
-    .slick-dots
-        text-align: center
-        position: relative
-        top: 3px
-        li
-            display: inline-block
-            &.slick-active
-                button
-                    background: #373737
-        button
-            width: 12px
-            height: 12px
-            background: #4c8bca
-            margin: 0 2px
-            display: inline-block
-            border-radius: 100%
-            color: #4c8bca
-            font-size: 0
-            cursor: pointer
+	.slick-dots
+		text-align: center
+		position: relative
+		top: 3px
+		li
+			display: inline-block
+			&.slick-active
+				button
+					background: #373737
+		button
+			width: 12px
+			height: 12px
+			background: #4c8bca
+			margin: 0 2px
+			display: inline-block
+			border-radius: 100%
+			color: #4c8bca
+			font-size: 0
+			cursor: pointer
 
 .notfound
-    margin: 150px 0 230px
-    text-align: center
-    overflow: hidden
+	margin: 150px 0 230px
+	text-align: center
+	overflow: hidden
 
-    h1
-        font-size: 36px
-        text-transform: uppercase
-        color: #0a5a98
-        font-weight: bold
-        font-weight: $baseFont
-        margin: 0 0 180px
+	h1
+		font-size: 36px
+		text-transform: uppercase
+		color: #0a5a98
+		font-weight: bold
+		font-weight: $baseFont
+		margin: 0 0 180px
 
-    p
-        color: #000
-        font-size: 23px
-        font-weight: $fBenguiat
-        margin: 0
+	p
+		color: #000
+		font-size: 23px
+		font-weight: $fBenguiat
+		margin: 0
 
 
 .supermama
-    width: 950px
-    margin: 0 auto
-    position: relative
-    font-family: $fBenguiat
+	width: 950px
+	margin: 0 auto
+	position: relative
+	font-family: $fBenguiat
 
-    &__bg
-        width: 950px
-        height: 713px
-    
-    &__close
-        width: 38px
-        height: 31px
-        position: absolute
-        right: 16px
-        top: 14px
-        z-index: 2
-        cursor: pointer
-        padding: 0 !important
-        opacity: 1
+	&__bg
+		width: 950px
+		height: 713px
+	
+	&__close
+		width: 38px
+		height: 31px
+		position: absolute
+		right: 16px
+		top: 14px
+		z-index: 2
+		cursor: pointer
+		padding: 0 !important
+		opacity: 1
 
 
 
-    &__content-main
-        position: absolute
-        width: 699px
-        z-index: 2
-        top: 286px
-        left: 133px
+	&__content-main
+		position: absolute
+		width: 699px
+		z-index: 2
+		top: 286px
+		left: 133px
 
-        .title
-            font-size: 52px
-            font-weight: 700
-            line-height: 50.35px
-            text-transform: uppercase
-            letter-spacing: -1.25px
-            color: #68c4d8
-            margin: 0
-            position: relative
-            display: inline-block
-            .icon
-                position: absolute
-                right: -90px
-                bottom: 0
+		.title
+			font-size: 52px
+			font-weight: 700
+			line-height: 50.35px
+			text-transform: uppercase
+			letter-spacing: -1.25px
+			color: #68c4d8
+			margin: 0
+			position: relative
+			display: inline-block
+			.icon
+				position: absolute
+				right: -90px
+				bottom: 0
 
-        .txt
-            color: #fff
-            font-size: 28px
-            font-weight: 700
-            line-height: 24.25px
-            margin: 0
+		.txt
+			color: #fff
+			font-size: 28px
+			font-weight: 700
+			line-height: 24.25px
+			margin: 0
 
-        .blue
-            color: #68c4d8
+		.blue
+			color: #68c4d8
 
-        .block
-            margin-bottom: 14px
+		.block
+			margin-bottom: 14px
 
-    &__content2
-        width: 308px
-        position: absolute
-        right: 9px
-        top: 139px
-        z-index: 1
+	&__content2
+		width: 308px
+		position: absolute
+		right: 9px
+		top: 139px
+		z-index: 1
 
-        .links
-            padding: 0 28px 0 0
-            margin: 0
-            list-style-type: none
-            text-align: right
-            li
-                position: relative
-                margin-bottom: 9px
-                display: inline-block
-                .icon
+		.links
+			padding: 0 28px 0 0
+			margin: 0
+			list-style-type: none
+			text-align: right
+			li
+				position: relative
+				margin-bottom: 9px
+				display: inline-block
+				.icon
 
-                    position: absolute
-                    right: -28px
-                    top: -6px
+					position: absolute
+					right: -28px
+					top: -6px
 
-            a
-                text-decoration: none
-                color: #fff
-                font-size: 23px
-                font-weight: 700
-                line-height: 20.03px
-                letter-spacing: -0.50px
+			a
+				text-decoration: none
+				color: #fff
+				font-size: 23px
+				font-weight: 700
+				line-height: 20.03px
+				letter-spacing: -0.50px
 
-        .txt1
-            color: #fff
-            font-size: 26px
-            font-weight: 700
-            line-height: 28.06px
-            margin: 10px 0 0
-            text-align: right
+		.txt1
+			color: #fff
+			font-size: 26px
+			font-weight: 700
+			line-height: 28.06px
+			margin: 10px 0 0
+			text-align: right
 
-        .yellow
-            color: #ffed00
+		.yellow
+			color: #ffed00
 
-        .block-present
-            position: relative
-            margin: 15px 0 0 51px
-            p
-                margin: 0
+		.block-present
+			position: relative
+			margin: 15px 0 0 51px
+			p
+				margin: 0
 
-            .str1
-                color: #fff
-                font-size: 21px
-                font-weight: 700
-                line-height: 17.8px
+			.str1
+				color: #fff
+				font-size: 21px
+				font-weight: 700
+				line-height: 17.8px
 
-            .str2
-                color: #fff
-                font-size: 25px
-                font-weight: 700
-                line-height: 17.8px
-            .str3
-                font-size: 39px
-                font-weight: 700
-                line-height: 33.18px
-                text-transform: uppercase
-                color: #68c4d8
-            .str4
-                font-size: 20px
-                font-weight: 700
-                line-height: 33.18px
-                text-transform: uppercase
-                color: #68c4d8
-            .str5
-                font-size: 20px
-                font-weight: 700
-                line-height: 17.26px
-                color: #fff
-            .str6
-                font-size: 21px
-                font-weight: 700
-                line-height: 17.26px
-                color: #fff
+			.str2
+				color: #fff
+				font-size: 25px
+				font-weight: 700
+				line-height: 17.8px
+			.str3
+				font-size: 39px
+				font-weight: 700
+				line-height: 33.18px
+				text-transform: uppercase
+				color: #68c4d8
+			.str4
+				font-size: 20px
+				font-weight: 700
+				line-height: 33.18px
+				text-transform: uppercase
+				color: #68c4d8
+			.str5
+				font-size: 20px
+				font-weight: 700
+				line-height: 17.26px
+				color: #fff
+			.str6
+				font-size: 21px
+				font-weight: 700
+				line-height: 17.26px
+				color: #fff
 
-            .img
-                position: absolute
-                top: 100%
-                right: 32px
-                margin-top: -23px
-                width: 208px
+			.img
+				position: absolute
+				top: 100%
+				right: 32px
+				margin-top: -23px
+				width: 208px
 

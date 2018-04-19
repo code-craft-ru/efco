@@ -1,0 +1,195 @@
+.live-food-contain1
+	.baner2
+		display: none
+
+	+max-screen($screenSM_xs)
+		.baner
+			display: none
+
+		.baner2
+			display: block
+
+live-food-contain2
+
+.tiles2
+	margin: 0
+	position: relative
+
+	&__wr
+		padding: 0 50px
+
+
+	&__row
+		@extend .cf
+		&:not(:last-child)
+			margin: 0 0 18px 0
+		
+	&__col1
+		width: 66%
+		float: left
+
+	&__col2
+		width: 32%
+		float: right
+
+	&__col3
+		width: 49%
+		float: left
+
+	&__col4
+		width: 49%
+		float: right
+
+	&__title
+		font: bold 20px $fBenguiat
+		color: #0a5a98
+		margin: 0 0 10px 0
+
+	&__text
+		font: bold 14px $fBenguiat
+
+	&--bg
+		&-lpink
+			background: #fefced
+
+		&-skyblue
+			background: #e2eff0
+
+		&-blue
+			background: #285181
+
+	&--pad
+		padding: 34px 26px
+
+	&--border-shadow
+		box-shadow: 0 1px 1px 1px rgba(0,0,0,0.1)
+
+	&--par
+		padding-bottom: 17px
+
+	&--h
+		&-265
+			height: 265px
+
+		&-240
+			height: 240px
+
+		&-200
+			height: 200px
+		&-185
+			height: 185px
+
+	&--c
+		&-white
+			color: #fff
+			p,h2
+				color: #fff
+
+	+max-screen(1000px)
+		&__wr
+			padding: 0 30px
+
+		&__title
+			font-size: 18px
+
+		&__text
+			color: #404041
+			font-size: 12px
+			line-height: 14px
+
+		&--pad
+			padding: 22px 25px
+
+	+max-screen(680px)
+		&__col1,
+		&__col2,
+		&__col3,
+		&__col4,
+		&__col5
+			float: none
+			width: auto
+			height: auto
+
+		&__row
+			margin: 0 !important
+
+		&__col1,
+		&__col2,
+		&__col3,
+		&__col4
+			margin-bottom: 13px
+
+		&__wr
+			padding: 0 16px 22px
+
+		&__title
+			font-size: 12px
+
+		&--pad
+			padding: 10px 8px
+
+
+.b-circle
+	position: relative
+	overflow: hidden
+	padding: 32px 0 24px
+	
+	&__left-txt
+		position: absolute
+		top: 99px
+		left: 0
+		text-align: left
+
+	&__right-txt
+		position: absolute
+		top: 320px
+		right: 0
+		text-align: right
+
+	&__img
+		img
+			height: 610px
+			margin: 0 auto
+			display: block
+
+	&--txt-lg
+		font: bold 31px $fMaryedpro
+		color: #999999
+		line-height: 25px
+
+	&--txt-sm
+		font: normal 16px $baseFont
+		color: #999999
+		line-height: 14px
+		margin-top: 0
+
+	&__top-txt-m,
+	&__bottom-txt-m
+		display: none
+
+	&__bottom-txt-m
+		text-align: right
+
+	+max-screen(950px)
+		&__img img
+			max-height: 465px
+			height: auto
+
+		&--txt-lg
+			font-size: 22px
+
+		&--txt-sm
+			font-size: 12px
+
+	+max-screen(735px)
+		padding: 0
+		&__img img
+			max-height: 279px
+
+		&__left-txt,
+		&__right-txt
+			display: none
+
+		&__top-txt-m,
+		&__bottom-txt-m,
+			display: block
