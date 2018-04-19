@@ -1,0 +1,144 @@
+.form
+
+	&-feedback
+		max-width: 760px
+		margin: 0 auto
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+		background: #fff
+		overflow: hidden
+		padding: 40px 24px 23px
+
+
+		&__row
+			margin-bottom: 12px
+			&--no-m
+				margin-bottom: 0
+				padding: 0
+
+			input
+				font-size: 15px
+
+		&__footer
+			padding: 18px 0 0
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+
+
+.box-shadow
+	max-width: 760px
+	margin: 0 auto
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+	background: #fff
+	overflow: hidden
+	padding: 26px 0
+
+	&--pad3
+		padding: 24px 
+
+	&--pad2
+		padding: 30px 35px 35px 40px
+
+	&__line
+		height: 1px 
+		background: #333333
+
+	&__p
+		font: normal 12.5px $fBenguiat
+		color: #333333
+		&:not(:last-child)
+			margin-bottom: 18px
+
+.term-agree-checkbox
+	font-size: 16px
+	color: #9a9a9a
+	font-family: $fBenguiat
+
+	p
+		display: inline-block
+
+	input[type="checkbox"]
+		appearance: none
+		display: none
+	
+	.checkbox
+		display: inline-block
+		vertical-align: middle
+		margin-right: 22px
+		width: 27px
+		height: 27px
+
+	label
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		width: 27px
+		height: 27px
+		border: 1px solid #9a9a9a
+		cursor: pointer
+
+		&::after
+			content: ''
+			display: none
+			position: absolute
+			top: 10px
+			right: -8px
+			width: 26px
+			height: 1px
+			background: #9a9a9a
+			transform: rotate(-45deg)
+
+		&::before
+			content: ''
+			display: none
+			position: absolute
+			top: 15px
+			right: 12px
+			width: 12px
+			height: 1px
+			background: #9a9a9a
+			transform: rotate(45deg)
+
+	input[type="checkbox"]:checked + label
+		&::after,
+		&::before
+			display: block
+
+.feedback-contain1
+	margin-top: 62px
+	+max-screen($screenSM_xs)
+		margin-top: 0
+
+		.form-feedback
+			margin-top: 0 !important
+			box-shadow: none
+			padding: 16px
+
+			&__footer
+				flex-direction: column
+
+				.term-agree-checkbox
+					display: flex
+					align-items: center
+					justify-content: center
+					margin-bottom: 15px
+
+.feedback-contain2
+	margin: 50px 0 48px
+
+	+max-screen($screenSM_xs)
+		box-shadow: none
+		margin: 0
+		padding: 16px
+
+		.cols
+			flex-direction: column
+
+		.col--70
+			width: auto
+			margin-bottom: 10px
+
+		.col--30
+			width: auto
+			text-align: center

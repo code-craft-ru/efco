@@ -185,6 +185,9 @@
 				left: 0
 				background: linear-gradient(to bottom , #d7e1e1 , transparent)
 				z-index: 9
+				+max-screen($screenSM_xs)
+					&:after
+						display: none
 
 	&__top-search
 		float: right

@@ -618,6 +618,9 @@ IMG {
       left: 0;
       background: linear-gradient(to bottom, #d7e1e1, transparent);
       z-index: 9; }
+      @media screen and (max-width: 640px) {
+        .header__menu--theme-shadow-bottom:after:after {
+          display: none; } }
   .header__top-search {
     float: right;
     text-align: right;
@@ -941,11 +944,11 @@ IMG {
   .btn--feedback-submit {
     color: #fff;
     font-size: 16px;
-    padding: 8px 36px;
-    border-radius: 15px;
+    padding: 10px 36px;
+    border-radius: 20px;
     background: #4c8ccc; }
     .btn--feedback-submit--min {
-      padding: 8px 15px; }
+      padding: 10px 15px; }
 
 .link {
   color: inherit;
@@ -1114,19 +1117,6 @@ IMG {
     font: normal 16px "BenguiatGothicC"; }
   .textarea.error {
     border-bottom: 1px solid red; }
-
-.form-feedback {
-  width: 760px;
-  margin: 0 auto;
-  box-shadow: 0 0 12px 12px #f1f1f1;
-  background: #fff;
-  overflow: hidden;
-  padding: 30px 0 33px; }
-  .form-feedback__row {
-    padding: 0 26px 0 9px;
-    margin-bottom: 12px; }
-    .form-feedback__row--no-m {
-      margin-bottom: 0; }
 
 .table {
   width: 100%;
@@ -1762,24 +1752,6 @@ IMG {
   .text-block13 p {
     font: normal 20px "BenguiatGothicC";
     line-height: 24px; }
-
-.box-shadow {
-  width: 760px;
-  margin: 0 auto;
-  box-shadow: 0 0 12px 12px #f1f1f1;
-  background: #fff;
-  overflow: hidden;
-  padding: 26px 0; }
-  .box-shadow--pad3 {
-    padding: 15px 0 18px; }
-  .box-shadow--pad2 {
-    padding: 30px 35px 35px 40px; }
-  .box-shadow__line {
-    height: 1px;
-    background: #333333; }
-  .box-shadow__p {
-    font: normal 12.5px "BenguiatGothicC";
-    color: #333333; }
 
 .accordion {
   overflow: hidden; }
@@ -2912,6 +2884,147 @@ IMG {
   .about-ferma-contain2 .btn--link {
     font-size: 24px;
     margin-bottom: 30px !important; } }
+
+.form-feedback {
+  max-width: 760px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  overflow: hidden;
+  padding: 40px 24px 23px; }
+  .form-feedback__row {
+    margin-bottom: 12px; }
+    .form-feedback__row--no-m {
+      margin-bottom: 0;
+      padding: 0; }
+    .form-feedback__row input {
+      font-size: 15px; }
+  .form-feedback__footer {
+    padding: 18px 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.box-shadow {
+  max-width: 760px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  overflow: hidden;
+  padding: 26px 0; }
+  .box-shadow--pad3 {
+    padding: 24px; }
+  .box-shadow--pad2 {
+    padding: 30px 35px 35px 40px; }
+  .box-shadow__line {
+    height: 1px;
+    background: #333333; }
+  .box-shadow__p {
+    font: normal 12.5px "BenguiatGothicC";
+    color: #333333; }
+    .box-shadow__p:not(:last-child) {
+      margin-bottom: 18px; }
+
+.term-agree-checkbox {
+  font-size: 16px;
+  color: #9a9a9a;
+  font-family: "BenguiatGothicC"; }
+  .term-agree-checkbox p {
+    display: inline-block; }
+  .term-agree-checkbox input[type="checkbox"] {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    display: none; }
+  .term-agree-checkbox .checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 22px;
+    width: 27px;
+    height: 27px; }
+  .term-agree-checkbox label {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 27px;
+    height: 27px;
+    border: 1px solid #9a9a9a;
+    cursor: pointer; }
+    .term-agree-checkbox label::after {
+      content: "";
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: -8px;
+      width: 26px;
+      height: 1px;
+      background: #9a9a9a;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+    .term-agree-checkbox label::before {
+      content: "";
+      display: none;
+      position: absolute;
+      top: 15px;
+      right: 12px;
+      width: 12px;
+      height: 1px;
+      background: #9a9a9a;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+  .term-agree-checkbox input[type="checkbox"]:checked + label::after, .term-agree-checkbox input[type="checkbox"]:checked + label::before {
+    display: block; }
+
+.feedback-contain1 {
+  margin-top: 62px; }
+  @media screen and (max-width: 640px) {
+    .feedback-contain1 {
+      margin-top: 0; }
+      .feedback-contain1 .form-feedback {
+        margin-top: 0 !important;
+        box-shadow: none;
+        padding: 16px; }
+        .feedback-contain1 .form-feedback__footer {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column; }
+          .feedback-contain1 .form-feedback__footer .term-agree-checkbox {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            margin-bottom: 15px; } }
+
+.feedback-contain2 {
+  margin: 50px 0 48px; }
+  @media screen and (max-width: 640px) {
+    .feedback-contain2 {
+      box-shadow: none;
+      margin: 0;
+      padding: 16px; }
+      .feedback-contain2 .cols {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+      .feedback-contain2 .col--70 {
+        width: auto;
+        margin-bottom: 10px; }
+      .feedback-contain2 .col--30 {
+        width: auto;
+        text-align: center; } }
 
 .cf:before, .page-body:before, .footer__top:before, .top-search:before, .news__nav:before, .reviews:before, .research-items:before, .tiles2__row:before, .thumb:before,
 .cf:after,
