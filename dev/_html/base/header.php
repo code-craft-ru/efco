@@ -35,7 +35,7 @@
 	</div>
 	<ul class="header__menu js-header-fix <?php if(isset($menuTheme)){echo $menuTheme;}?>">
 		<li><a href="#!">Молоко</a></li>
-		<li>
+		<li class="active">
 			<a href="#!">Правильный белок</a>
 			<ul>
 				<li><a href="#!">пункт меню</a></li>

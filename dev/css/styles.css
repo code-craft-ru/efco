@@ -569,6 +569,8 @@ IMG {
       .header__menu li:hover > ul {
         opacity: 1;
         visibility: visible; }
+      .header__menu li.active a {
+        color: #0a5a98; }
     .header__menu ul {
       visibility: hidden;
       overflow: hidden;
@@ -779,7 +781,7 @@ IMG {
     .wherebuy-map .textblock b {
       font-family: "BenguiatGothicC"; }
   .wherebuy-map-modal {
-    max-width: 600px;
+    width: 600px;
     background-color: #fff;
     position: fixed;
     top: 10px;
@@ -1123,7 +1125,7 @@ IMG {
 
 .popup__mailing {
   position: relative;
-  width: 610px;
+  max-width: 610px;
   padding: 25px;
   margin: 0 auto;
   border-radius: 3px;
@@ -1152,7 +1154,7 @@ IMG {
       font: bold 18px "BenguiatGothicC";
       color: #bfbcbc; }
 .popup__about-milk {
-  width: 924px;
+  max-width: 924px;
   height: 622px;
   padding: 40px 12px;
   margin: 0 auto;
@@ -1179,7 +1181,7 @@ IMG {
     padding-left: 80px;
     position: relative; }
 .popup__webcamera {
-  width: 750px;
+  max-width: 750px;
   padding: 40px 12px 20px;
   margin: 0 auto;
   background: #fff;
@@ -2978,7 +2980,7 @@ IMG {
             margin-bottom: 15px; } }
 
 .feedback-contain2 {
-  margin: 50px 0 48px; }
+  margin: 50px auto 48px; }
   @media screen and (max-width: 640px) {
     .feedback-contain2 {
       box-shadow: none;
