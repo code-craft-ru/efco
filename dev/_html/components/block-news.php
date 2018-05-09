@@ -166,10 +166,10 @@
     </div>
 
     <div class="news__mobile">
-        <div class="news__mobile-container">
+        <div class="news__mobile-container js-load-post-mobile" data-showpost="1">
             <h2>СТАТЬИ</h2>
             <div class="news__mobile-items">
-                <div class="news-item js-load-post__item">
+                <div class="news-item js-load-post-mobile__item">
                     <a  class='js-load-post' data-url='components/post.php'>
                         <div class="news-item__content">
                             <div class="news-item__title">Lorem ipsum dolor.</div>
@@ -180,13 +180,35 @@
                         </div>
                     </a>
                 </div>
+                <div class="news-item js-load-post-mobile__item">
+                    <a  class='js-load-post' data-url='components/post.php'>
+                        <div class="news-item__content">
+                            <div class="news-item__title">Lorem ipsum dolor.2</div>
+                            <div class="news-item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aut iste ducimus quae, blanditiis, perspiciatis optio maiores odio culpa sit!</div>
+                        </div>
+                        <div class="news-item__img">
+                            <img src="../images/userfiles/news1.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="news-item js-load-post-mobile__item">
+                    <a  class='js-load-post' data-url='components/post.php'>
+                        <div class="news-item__content">
+                            <div class="news-item__title">Lorem ipsum dolor.3</div>
+                            <div class="news-item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aut iste ducimus quae, blanditiis, perspiciatis optio maiores odio culpa sit!</div>
+                        </div>
+                        <div class="news-item__img">
+                            <img src="../images/userfiles/news1.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="news__mobile-btn-more">СМОТРЕТЬ БОЛЬШЕ</div>
+            <div class="news__mobile-btn-more js-load-post-mobile__more">СМОТРЕТЬ БОЛЬШЕ</div>
         </div>
-        <div class="news__mobile-container">
+        <div class="news__mobile-container js-load-post-mobile" data-showpost="1">
             <h2>ВИДЕО</h2>
             <div class="news__mobile-items">
-                <div class="news-item js-load-post__item">
+                <div class="news-item js-load-post-mobile__item">
                     <a  class='js-load-post' data-url='components/post.php'>
                         <div class="news-item__content">
                             <div class="news-item__title">Lorem ipsum dolor.</div>
@@ -197,8 +219,30 @@
                         </div>
                     </a>
                 </div>
+                <div class="news-item js-load-post-mobile__item">
+                    <a  class='js-load-post' data-url='components/post.php'>
+                        <div class="news-item__content">
+                            <div class="news-item__title">Lorem ipsum dolor.2</div>
+                            <div class="news-item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aut iste ducimus quae, blanditiis, perspiciatis optio maiores odio culpa sit!</div>
+                        </div>
+                        <div class="news-item__img">
+                            <img src="../images/userfiles/news2.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="news-item js-load-post-mobile__item">
+                    <a  class='js-load-post' data-url='components/post.php'>
+                        <div class="news-item__content">
+                            <div class="news-item__title">Lorem ipsum dolor.3</div>
+                            <div class="news-item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aut iste ducimus quae, blanditiis, perspiciatis optio maiores odio culpa sit!</div>
+                        </div>
+                        <div class="news-item__img">
+                            <img src="../images/userfiles/news2.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="news__mobile-btn-more">СМОТРЕТЬ БОЛЬШЕ</div>
+            <div class="news__mobile-btn-more js-load-post-mobile__more">СМОТРЕТЬ БОЛЬШЕ</div>
         </div>
     </div>
 </div>

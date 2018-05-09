@@ -154,9 +154,27 @@ $(function(){
         }
 
         if(inst.currItem.src === "#popup-webcamera"){
-            $('.js-webcamera-slider').slick({
+            var slider = $('.js-webcamera-slider');
+            slider.on('init', function(e, sl) {
+                var currentSlideLabel = sl.$slides.filter('.slick-active').find('iframe').attr('alt');
+                $('.js-webcamera-slider__label').text(currentSlideLabel);
+            });
+
+            slider.slick({
                 arrows: false,
                 dots: true
+            });
+
+            slider.on('afterChange', function(e, sl) {
+                var currentSlideLabel = sl.$slides.filter('.slick-active').find('iframe').attr('alt');
+                $('.js-webcamera-slider__label').text(currentSlideLabel);
+            });
+
+            $('.js-webcamera-slider__left').on('click', function() {
+                slider.slick('slickPrev');
+            });
+            $('.js-webcamera-slider__right').on('click', function() {
+                slider.slick('slickNext');
             });
         }
     }
@@ -278,6 +296,39 @@ $(function(){
 
 
     init();
+});
+
+$(function() {
+    $('.js-load-post-mobile').each(function() {
+        var self = $(this);
+        var btnLoad = $(this).find('.js-load-post-mobile__more');
+        var numberItemsShow = $(this).data('showpost');
+
+        hideItems(numberItemsShow);
+
+        btnLoad.on('click', function(){
+            var currShowPosts = self.data('showpost');
+            var nextShowPosts = Number(currShowPosts) + 1;
+            self.data('showpost', nextShowPosts);
+            hideItems(nextShowPosts);
+        })
+
+        function hideItems(num) {
+            var lengthPosts = self.find('.js-load-post-mobile__item').length; 
+            self.find('.js-load-post-mobile__item').each(function(i, item) {
+                if ((i+1) > num) {
+                    $(item).hide();
+                } else {
+                    $(item).show();
+                }
+
+                if (num === lengthPosts) {
+                    btnLoad.hide();
+                }
+            });
+        }
+    })
+
 });
 
 $(function(){

@@ -3,7 +3,13 @@
 		<div class="wrapper">
 			<ul class="header__top-menu">
 				<li><a href="#!">ГЛАВНАЯ</a></li>
-				<li><a href="#!">КОНТАКТЫ</a></li>
+				<li>
+					<a href="#!">КОНТАКТЫ</a>
+					<ul>
+						<li><a href="">Контакты дистрибьютеров</a></li>
+						<li><a href="">Где купить</a></li>
+					</ul>
+				</li>
 				<li><a href="#!">ОБРАТНАЯ СВЯЗЬ</a></li>
 			</ul>
 
@@ -46,5 +52,10 @@
 		<li><a href="#!">А2 в мире</a></li>
 		<li><a href="#!">Живая еда</a></li>
 		<li><a href="#!">Наша ферма</a></li>
+		<div class="header__m-items">
+			<li><a href="#!">Контакты</a></li>
+			<li><a href="#!">Обратная связь</a></li>
+			<li><a href="#!">Где купить?</a></li>
+		</div>
 	</ul>
 </div>

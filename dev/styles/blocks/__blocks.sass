@@ -214,6 +214,9 @@
 		text-align: left
 		font-family: $fGotic
 
+	+max-screen($screenSM_xs)
+		margin-bottom: 16px
+
 
 .text-block
 	overflow: hidden
@@ -658,8 +661,11 @@ $screenTilesTablet: 1000px
 
 .webcamera-sl
 
+	&.slick-slider
+		margin: 0 34px
+
 	.slick-dots
-		text-align: center
+		text-align: right
 		position: relative
 		top: 3px
 		li

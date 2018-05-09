@@ -18,7 +18,7 @@
 
                             <form action="/" class="form-feedback h-mrg-t-35 js-form">
                                 <div class="form-feedback__row">
-                                    <input type="text" name='feedback[name]' class="input" placeholder="Ваша фамилия и имя" >
+                                    <input type="text" name='feedback[name]' class="input" placeholder="Ваша фамилия и имя*" required>
                                 </div>
                                 <div class="form-feedback__row">
                                     <input type="email" name='feedback[email]' class="input" placeholder="Эл. почта" >

@@ -7,9 +7,9 @@
 				<p>наши продукты в социальных сетях</p>
 				<ul class="social">
 					<li><a href="#!"><span class="icon icon--fb"></span></a></li>
-					<li><a href="#!"><span class="icon icon--tw"></span></a></li>
-					<li><a href="#!"><span class="icon icon--google"></span></a></li>
-					<li><a href="#!"><span class="icon icon--pint"></span></a></li>
+					<!-- <li><a href="#!"><span class="icon icon--tw"></span></a></li> -->
+					<!-- <li><a href="#!"><span class="icon icon--google"></span></a></li> -->
+					<li><a href="#!"><span class="icon icon--vk"></span></a></li>
 					<li><a href="#!"><span class="icon icon--inst"></span></a></li>
 					<li><a href="#!"><span class="icon icon--youtube"></span></a></li>
 				</ul>

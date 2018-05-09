@@ -92,9 +92,9 @@
                             </div>
                             <div class="news-more__mobile">
                                 <h2>Хотите узнать больше?</h2>
-                                <a href="#!" class="news-more__item-mobile">Что такое белок А2? </a>
-                                <a href="#!" class="news-more__item-mobile">Почему мы верим,  что «Слобода» А2лучше, чем  обычное молокок А2? </a>
-                                <a href="#!" class="news-more__item-mobile">Молоко А2 от коров с собственных ферм </a>
+                                <a href="#!" class="news-more__item-mobile">Что такое белок А2?</a>
+                                <a href="#!" class="news-more__item-mobile">Почему мы верим, что «Слобода» А2лучше, чем обычное молокок А2?</a>
+                                <a href="#!" class="news-more__item-mobile">Молоко А2 от коров с собственных ферм</a>
                             </div>
                         </div>
 

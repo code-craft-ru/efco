@@ -39,7 +39,7 @@
                                         <div class="prod-info__wr2">
                                             <ul class="prod-info__ul">
                                                 <li><span class="icon icon--ok"></span>Менее аллергенно</li>
-                                                <li><span class="icon icon--ok"></span>Белковый состав аналогичный <br>материнскому молоку</li>
+                                                <li><span class="icon icon--ok"></span>Содержит правильный белок А2,<br>аналогичный белку в молоке матери</li>
                                                 <li><span class="icon icon--ok"></span>Усваивается лучше,чем обычное молоко</li>
                                             </ul>
                                         </div>

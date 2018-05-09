@@ -37,14 +37,19 @@
     <span class="icon icon--close"></span>
   </div>
   <div class="popup__content">
-     <div class="js-webcamera-slider webcamera-sl">
-       <div class="webcamera-sl__slide">
-         <iframe width="100%" height="340" src="https://www.youtube.com/embed/JDtnNt0_j30" frameborder="0" allowfullscreen></iframe>
-       </div>
-       <div class="webcamera-sl__slide">
-         <iframe width="100%" height="340" src="https://www.youtube.com/embed/JDtnNt0_j30" frameborder="0" allowfullscreen></iframe>
-       </div>
-     </div>
+    <div class="popup__arrows">
+      <div class="popup__arrow-left js-webcamera-slider__left"></div>
+      <div class="popup__arrow-right js-webcamera-slider__right"></div>
+    </div>
+    <div class="js-webcamera-slider webcamera-sl">
+      <div class="webcamera-sl__slide">
+        <iframe width="100%" height="340" alt="MTФ 'Ландыш'" src="https://www.youtube.com/embed/JDtnNt0_j30" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="webcamera-sl__slide">
+        <iframe width="100%" height="340" alt="MTФ 'Ландыш2'" src="https://www.youtube.com/embed/JDtnNt0_j30" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <p class="popup__label js-webcamera-slider__label"></p>
   </div>
 </div>
 
