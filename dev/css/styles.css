@@ -512,7 +512,9 @@ IMG {
     color: #444;
     font-size: 9px;
     font-weight: 700;
-    padding: 9px 0 0 1px; }
+    padding: 9px 0 0 1px;
+    font-family: "Myriad Pro", sans-serif;
+    font-style: italic; }
   @media screen and (max-width: 768px) {
     .header__logo img {
       width: 195px;
@@ -552,7 +554,8 @@ IMG {
       min-width: 110px;
       border-radius: 0 0 2px 2px;
       background-color: #444444;
-      transition: opacity 0.3s; }
+      transition: opacity 0.3s;
+      z-index: 1; }
       .header__top-menu li ul li {
         margin-right: 0 !important;
         padding-left: 0 !important; }
@@ -691,18 +694,27 @@ IMG {
       margin-left: 15px; }
     @media screen and (max-width: 768px) {
       .footer__left p {
-        font-size: 10px; } }
+        font-size: 12px; } }
     @media screen and (max-width: 640px) {
       .footer__left {
         padding: 10px;
         float: none;
         text-align: center;
         border-bottom: 2px solid #1a171b; }
+        .footer__left p {
+          font-size: 14px; }
         .footer__left .social {
           display: block;
           margin-left: 0; }
           .footer__left .social li {
-            margin: 0 4px; } }
+            margin: 0 4px; }
+        .footer__left .social {
+          margin-top: 8px; }
+          .footer__left .social li {
+            margin: 0 20px; }
+            .footer__left .social li .icon {
+              width: 22px;
+              height: 22px; } }
   .footer__right {
     text-align: right;
     padding: 5px 21px 5px 0;
@@ -733,7 +745,9 @@ IMG {
         font-size: 10px; } }
     @media screen and (max-width: 640px) {
       .footer__bottom {
-        padding: 0 15px 0 0; } }
+        padding: 0 15px 0 0; }
+        .footer__bottom p {
+          font-size: 12px; } }
 
 .wherebuy-map {
   overflow: hidden;
@@ -853,17 +867,19 @@ IMG {
     height: 22px;
     margin: 0; }
   .icon--fb {
-    width: 14px;
-    height: 14px;
-    background: url(../images/icons/facebook.png) no-repeat 0 0; }
+    width: 18px;
+    height: 18px;
+    background: url(../images/icons/fb.svg) no-repeat 0 0;
+    background-size: contain; }
   .icon--google {
     width: 13px;
     height: 14px;
     background: url(../images/icons/google.png) no-repeat 0 0; }
   .icon--inst {
-    width: 14px;
-    height: 14px;
-    background: url(../images/icons/inst.png) no-repeat 0 0; }
+    width: 18px;
+    height: 18px;
+    background: url(../images/icons/instagram.svg) no-repeat 0 0;
+    background-size: contain; }
   .icon--mail {
     width: 20px;
     height: 15px;
@@ -878,13 +894,15 @@ IMG {
     height: 14px;
     background: url(../images/icons/twitter.png) no-repeat 0 0; }
   .icon--vk {
-    width: 17px;
-    height: 14px;
-    background: url(../images/icons/vk.png) no-repeat 0 0; }
+    width: 18px;
+    height: 18px;
+    background: url(../images/icons/vk.svg) no-repeat 0 0;
+    background-size: contain; }
   .icon--youtube {
-    width: 30px;
-    height: 13px;
-    background: url(../images/icons/youtube.png) no-repeat 0 0; }
+    width: 18px;
+    height: 18px;
+    background: url(../images/icons/youtube.svg) no-repeat 0 0;
+    background-size: contain; }
   .icon--mail-white {
     width: 18px;
     height: 13px;
@@ -921,7 +939,7 @@ IMG {
   .icon--search {
     width: 21px;
     height: 21px;
-    background: url(../images/icons/search.png) no-repeat 0 0; }
+    background: url(../images/icons/magnifying-glass.svg) no-repeat 0 0; }
 
 .btn {
   display: inline-block;
@@ -1462,9 +1480,9 @@ IMG {
   .news__mobile-btn-more {
     color: #6a6a6a;
     text-transform: uppercase;
-    font-size: 8px;
-    font-weight: 700;
-    padding: 7px 11px;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 9px 13px;
     border: 1px solid #6a6a6a;
     border-radius: 4px;
     display: inline-block;
